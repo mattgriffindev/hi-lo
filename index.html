@@ -14,33 +14,53 @@
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col">
-            <div class="card"></div>
-        </div>
-        <div class="col">
-            <div class="card"></div>
-        </div>
-        <div class="col">
-            <div class="card"></div>
-         </div>
-        <div class="col">
-            <div class="card"></div>
-         </div>
-        <div class="col">
-            <div class="card"></div>
-        </div>
-        <div class="col">
-            <div class="card"></div>
-        </div>
-        <div class="col">
-            <button id="start" onclick="revealStartCard()">Start</button>
+<body>
+    <div id="result"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="card"></div>
+                <div class="numberIndicator">GO</div>
+            </div>
+            <div class="col">
+                <div class="card"></div>
+                <div class="numberIndicator">1</div>
+            </div>
+            <div class="col">
+                <div class="card"></div>
+                <div class="numberIndicator">2</div>
+            </div>
+            <div class="col">
+                <div class="card"></div>
+                <div class="numberIndicator">3</div>
+            </div>
+            <div class="col">
+                <div class="card"></div>
+                <div class="numberIndicator">4</div>
+            </div>
+            <div class="col">
+                <div class="card"></div>
+                <div class="numberIndicator">5</div>
+            </div>
+            <div class="col">
+                <button id="start" onclick="revealStartCard()">Start</button>
+                <button id="higher-button" class="button" onclick="higher(); addCount()">Higher <i
+                        class="fas fa-arrow-up"></i></button>
+                <button id="lower-button" class="button" onclick="lower(); addCount()">Lower <i
+                        class="fas fa-arrow-down"></i></button>
+            </div>
         </div>
     </div>
-</div>
 
-<body>
+        <!--audio-->
+        <audio id="winAudio">
+            <source src="win.wav" type="audio/wav">
+        </audio>
+        <audio id="loseAudio">
+            <source src="lose.wav" type="audio/wav">
+        </audio>
+        <!--/audio-->
+
     <script src="script.js"></script>
 </body>
 

@@ -1,12 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Pacifico&display=swap');
+
 * {
 	box-sizing: border-box;
 }
 
 :root {
 	--card-back-color: navy;
-	--card-front-color: white;
+	--card-front-color: #f0f0f0;
 	--card-number-color: navy;
 	--card-border-color: darkgoldenrod;
+	--number-indicator: #99d0e0;
+
+	--font: 'Irish Grover', cursive;
+}
+
+/*--------------------------------------------------canvas-*/
+
+.container-fluid {
+	background-color: #d4ebf2;
+}
+
+.col {
+	border: 1px solid hotpink;
+}
+
+/*--------------------------------------------------button-*/
+
+.button {
+	height: 3rem;
+	width: 8rem;
+	color: #fc5185;
+	font-family: var(--font);
+	font-size: 1.5rem;
+	border: 1px ridge #fc5185;
+	border-radius: 15px;
+	background-color: #c0eccb;
 }
 
 /*----------------------------------------------------card-*/
@@ -24,10 +52,52 @@
 	border-radius: 15px;
 }
 
+#result {
+	height: 6rem;
+	width: 18rem;
+	position: absolute;
+	top: 40vh;
+	left: 35vw;
+	font-size: 2rem;
+	font-family: var(--font);
+	color: #fc5185;
+	text-shadow: 2px 2px 4px #fff;
+	border-radius: 50%;
+	background: #add8e6;
+	display: flex;
+  align-items: center;
+	justify-content: center;
+	border: 2px ridge #fc5185;
+	visibility: hidden;
+	z-index: 999;
+}
+
+/*------------------------------------number-indicator-*/
+
+.numberIndicator {
+	height: 4rem;
+	width: 4rem;
+	margin: auto;
+	padding-top: 0.25rem;
+	color: var(--number-indicator);
+	text-align: center;
+	font-size: 2rem;
+	border: 2px solid;
+	border-color: var(--number-indicator);
+	border-radius: 50%;
+}
+
 /*-------------------------------------------animation-*/
 
-@keyframes spinCard {
+ @keyframes spinCard {
 	20% {transform: rotateY(180deg);}
 	90% {background-color: var(--card-back-color);}
 	100% {background-color: var(--card-front-color);}
+}
+
+@keyframes showResult {
+	50% {transform: scale(2);
+			visibility: visible;}
+	100% {transform: scale(1.75);
+			 visibility: visible;}
 }
