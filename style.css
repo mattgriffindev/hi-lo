@@ -23,3 +23,11 @@
 	border: 2px solid var(--card-border-color);
 	border-radius: 15px;
 }
+
+/*-------------------------------------------animation-*/
+
+@keyframes spinCard {
+	20% {transform: rotateY(180deg);}
+	90% {background-color: var(--card-back-color);}
+	100% {background-color: var(--card-front-color);}
+}
