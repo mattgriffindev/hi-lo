@@ -15,53 +15,22 @@
 </head>
 
 <body>
-    <div id="result"></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <div class="card"></div>
-                <div class="numberIndicator">GO</div>
-            </div>
-            <div class="col">
-                <div class="card"></div>
-                <div class="numberIndicator">1</div>
-            </div>
-            <div class="col">
-                <div class="card"></div>
-                <div class="numberIndicator">2</div>
-            </div>
-            <div class="col">
-                <div class="card"></div>
-                <div class="numberIndicator">3</div>
-            </div>
-            <div class="col">
-                <div class="card"></div>
-                <div class="numberIndicator">4</div>
-            </div>
-            <div class="col">
-                <div class="card"></div>
-                <div class="numberIndicator">5</div>
-            </div>
-            <div class="col">
-                <button id="start" onclick="revealStartCard()">Start</button>
-                <button id="higher-button" class="button" onclick="higher(); addCount()">Higher <i
-                        class="fas fa-arrow-up"></i></button>
-                <button id="lower-button" class="button" onclick="lower(); addCount()">Lower <i
-                        class="fas fa-arrow-down"></i></button>
-            </div>
+    <body>
+
+        <div class="container-fluid home d-flex justify-content-center align-items-center">
+                <div id="home-text-box">
+                    <h1 class="heading">Hi-Lo</h1>
+                    <h2 class="subheading">Start</h2>
+                    <h2 class="subheading" onclick="showHowToPlay()">How to play</h2>
+                    <h2 class="subheading">Hall of fame</h2>
+        
+                    <div id="how-to-play">Lorem <strong>test</strong>ipsum dolor sit amet consectetur adipisicing elit.</div>
+        
+                </div>
         </div>
-    </div>
-
-        <!--audio-->
-        <audio id="winAudio">
-            <source src="win.wav" type="audio/wav">
-        </audio>
-        <audio id="loseAudio">
-            <source src="lose.wav" type="audio/wav">
-        </audio>
-        <!--/audio-->
-
-    <script src="script.js"></script>
-</body>
-
-</html>
+        
+            
+          <script src="script.js"></script>
+        </body>
+        
+        </html>

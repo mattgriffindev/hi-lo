@@ -14,6 +14,45 @@
 	--font: 'Irish Grover', cursive;
 }
 
+/*----------------------------------------------------home-*/
+
+.home {
+	height: 100vh;
+}
+
+#home-text-box {
+	height: 20rem;
+	width: 20rem;
+	border: 1px solid hotpink;
+	color: #fc5185;
+	text-align: center;
+	box-shadow: 2px 2px 4px #fff;
+}
+
+.heading,
+.subheading {
+	padding-top: 1.5rem;
+	font-family: var(--font);
+	text-shadow: 2px 2px 4px #fff;
+}
+
+.heading {
+	font-size: 3rem;
+}
+
+.subheading {
+	font-size: 2rem;
+}
+
+.subheading:hover {
+	color: navy;
+	cursor: pointer;
+}
+
+#how-to-play {
+	display: none;
+}
+
 /*--------------------------------------------------canvas-*/
 
 .container-fluid {

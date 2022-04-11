@@ -4,6 +4,16 @@
 	document.getElementById("main").innerHTML = "<p>Hello, " + username + ". It's nice to meet you!</p>";
 }*/
 
+/*------------------------------------------------home-*/
+
+let homeTextBox = document.getElementById("home-text-box");
+let howToPlay = document.getElementById("how-to-play");
+
+function showHowToPlay() {
+	howToPlay.style.display = "inherit";
+	homeTextBox.innerHTML = howToPlay.innerHTML;
+}
+
 /*-----------------------------------------------count-*/
 
 let cardArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
