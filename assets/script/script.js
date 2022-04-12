@@ -56,38 +56,40 @@ function getNumber() {
 
 /*-----------------------------------------------audio-*/
 
+let winSound = document.getElementById("win");
+let loseSound = document.getElementById("lose");
+
 function winAudio() {
-	document.getElementById("winAudio").play();
+	winSound.play();
 }
 
 function loseAudio() {
-	document.getElementById("loseAudio").play();
+	loseSound.play();
 }
 
-function muteOn() {
-	winAudio().muted = true;
-	loseAudio().muted = true;
+function soundOff() {
+	winSound.muted = true;
+	loseSound.muted = true;
 }
 
-function muteOff() {
-	winAudio().muted = false;
-	loseAudio().muted = false;
+function soundOn() {
+	winSound.muted = false;
+	loseSound.muted = false;
 }
-
-
 
 function audioToggle() {
 	let x = document.getElementById("audioToggle");
 	let y = document.getElementById("test");
 	if (x.innerHTML === "Sound ON") {
-	  x.innerHTML = "Sound OFF";
-	  y.innerHTML = "Sound OFF";
+		x.innerHTML = "Sound OFF";
+		y.innerHTML = "Sound OFF";
+		soundOff();
 	} else {
-	  x.innerHTML = "Sound ON";
-	  y.innerHTML = "Sound OFF";
+		x.innerHTML = "Sound ON";
+		y.innerHTML = "Sound ON";
+		soundOn();
 	}
   }
-
 
 /*------------------------------------number-indicator-*/
 
