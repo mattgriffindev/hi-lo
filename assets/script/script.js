@@ -6,6 +6,8 @@
 
 /*------------------------------------------------home-*/
 
+let canvas = document.getElementById("canvas");
+let game = document.getElementById("game");
 let menuContainer = document.getElementById("menu-container");
 let howToPlay = document.getElementById("how-to-play");
 let hallOfFame = document.getElementById("hall-of-fame");
@@ -25,6 +27,11 @@ function showHallOfFame() {
 function showSettings() {
 	settings.style.display = "inherit";
 	menuContainer.innerHTML = settings.innerHTML;
+}
+
+function playGame() {
+	game.style.display = "inherit";
+	canvas.innerHTML = game.innerHTML;
 }
 
 function showMenu() {
@@ -57,15 +64,30 @@ function loseAudio() {
 	document.getElementById("loseAudio").play();
 }
 
-function audioButton() {
-	if (document.getElementById("audioSwitch").value = "yes") {
-		winAudio().muted = false;
-		loseAudio().muted = false;
-	} else {
-		winAudio().muted = true;
-		loseAudio().muted = true;
-	}
+function muteOn() {
+	winAudio().muted = true;
+	loseAudio().muted = true;
 }
+
+function muteOff() {
+	winAudio().muted = false;
+	loseAudio().muted = false;
+}
+
+
+
+function audioToggle() {
+	let x = document.getElementById("audioToggle");
+	let y = document.getElementById("test");
+	if (x.innerHTML === "Sound ON") {
+	  x.innerHTML = "Sound OFF";
+	  y.innerHTML = "Sound OFF";
+	} else {
+	  x.innerHTML = "Sound ON";
+	  y.innerHTML = "Sound OFF";
+	}
+  }
+
 
 /*------------------------------------number-indicator-*/
 
