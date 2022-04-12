@@ -49,7 +49,9 @@
 	cursor: pointer;
 }
 
-#how-to-play {
+#how-to-play,
+#hall-of-fame,
+#settings {
 	display: none;
 }
 
