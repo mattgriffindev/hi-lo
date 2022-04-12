@@ -15,39 +15,84 @@
     <link rel="apple-touch-icon" href="assets/image/cards.svg">
     <link href="assets/style/style.css" rel="stylesheet" type="text/css">
 </head>
-    <body>
 
-        <div class="container-fluid home d-flex justify-content-center align-items-center">
-            <div id="menu-container">
-                <div id="menu">
-                    <h1 class="menu-title">Hi-Lo</h1>
-                    <h2 class="menu-item">Start</h2>
-                    <h2 class="menu-item menu-link" onclick="showHowToPlay()"><i class="fas fa-gamepad"></i> How to play</h2>
-                    <h2 class="menu-item menu-link" onclick="showHallOfFame()"><i class="fas fa-trophy"></i> Hall of fame</h2>
-                    <h2 class="menu-item menu-link" onclick="showSettings()"><i class="fas fa-cog"></i> Settings</h2>
-                </div>
-                <div id="how-to-play">
-                    how to play sample text
-                    <h6 class="menu-link" onclick="showMenu()"><i class="fas fa-home"></i> BACK</h6>
-                </div>
-                <div id="hall-of-fame">
-                    hall of fame sample text
-                    <h6 class="menu-link" onclick="showMenu()"><i class="fas fa-home"></i> BACK</h6>
-                </div>
-                <div id="settings">
+<body><div id="test">Sound ON</div>
+    <div id="canvas" class="container-fluid d-flex justify-content-center align-items-center">
+        <div id="menu-container">
+            <div id="menu">
+                <h1 class="menu-title">Hi-Lo</h1>
+                <h2 class="menu-item menu-link" onclick="playGame()">Start</h2>
+                <h2 class="menu-item menu-link" onclick="showHowToPlay()"><i class="fas fa-gamepad"></i> How to play
+                </h2>
+                <h2 class="menu-item menu-link" onclick="showHallOfFame()"><i class="fas fa-trophy"></i> Hall of fame
+                </h2>
+                <h2 class="menu-item menu-link" onclick="showSettings()"><i class="fas fa-cog"></i> Settings</h2>
+            </div>
+            <div id="how-to-play">
+                how to play sample text
+                <h6 class="menu-link" onclick="showMenu()"><i class="fas fa-home"></i> BACK</h6>
+            </div>
+            <div id="hall-of-fame">
+                hall of fame sample text
+                <h6 class="menu-link" onclick="showMenu()"><i class="fas fa-home"></i> BACK</h6>
+            </div>
+            <div id="settings">
+                <button id="audioToggle" onclick="audioToggle()">Sound ON</button>
+                <h6 class="menu-link" onclick="showMenu()"><i class="fas fa-home"></i> BACK</h6>
+            </div>
+        </div>
 
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="audioSwitch" value="yes" checked>
-                        <label class="form-check-label" for="audioSwitch"><i class="fas fa-volume-up"></i> Toggle sound on/off</label>
-                      </div>
-                   
-                    <h6 class="menu-link" onclick="showMenu()"><i class="fas fa-home"></i> BACK</h6>
+        <div id="game">
+            <div id="result"></div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="card"></div>
+                        <div class="numberIndicator">GO</div>
+                    </div>
+                    <div class="col">
+                        <div class="card"></div>
+                        <div class="numberIndicator">1</div>
+                    </div>
+                    <div class="col">
+                        <div class="card"></div>
+                        <div class="numberIndicator">2</div>
+                    </div>
+                    <div class="col">
+                        <div class="card"></div>
+                        <div class="numberIndicator">3</div>
+                    </div>
+                    <div class="col">
+                        <div class="card"></div>
+                        <div class="numberIndicator">4</div>
+                    </div>
+                    <div class="col">
+                        <div class="card"></div>
+                        <div class="numberIndicator">5</div>
+                    </div>
+                    <div class="col">
+                        <button id="start" onclick="revealStartCard()">Start</button>
+                        <button id="higher-button" class="button" onclick="higher(); addCount()">Higher <i
+                                class="fas fa-arrow-up"></i></button>
+                        <button id="lower-button" class="button" onclick="lower(); addCount()">Lower <i
+                                class="fas fa-arrow-down"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
-        
-            
-          <script src="assets/script/script.js"></script>
-        </body>
-        
-        </html>
+    </div>
+
+
+    <!--audio-->
+    <audio id="winAudio">
+        <source src="assets/audio/win.wav" type="audio/wav">
+    </audio>
+    <audio id="loseAudio">
+        <source src="assets/audio/lose.wav" type="audio/wav">
+    </audio>
+    <!--/audio-->
+
+    <script src="assets/script/script.js"></script>
+</body>
+
+</html>
