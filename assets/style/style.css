@@ -19,32 +19,30 @@
 	height: 100vh;
 }
 
-#home-text-box {
+#menu-container {
 	height: 20rem;
 	width: 20rem;
 	padding: 1rem;
+	font-family: var(--font);
 	border: 1px solid hotpink;
 	color: #fc5185;
 	text-align: center;
 	box-shadow: 2px 2px 4px #fff;
 }
 
-.heading,
-.subheading {
-	padding: 0.5rem;
-	font-family: var(--font);
-	text-shadow: 2px 2px 4px #fff;
+.menu-item {
+	padding-top: 0.5rem;
 }
 
-.heading {
+.menu-title {
 	font-size: 3rem;
 }
 
-.subheading {
+.menu-item {
 	font-size: 2rem;
 }
 
-.subheading:hover {
+.menu-link:hover {
 	color: navy;
 	cursor: pointer;
 }
