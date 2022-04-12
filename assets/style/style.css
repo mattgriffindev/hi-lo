@@ -13,10 +13,15 @@
 	--font: 'Irish Grover', cursive;
 }
 
-/*----------------------------------------------------home-*/
+/*--------------------------------------------------canvas-*/
 
-.home {
+#canvas {
 	height: 100vh;
+}
+
+#game {
+	display: none;
+	z-index: 888;
 }
 
 #menu-container {
