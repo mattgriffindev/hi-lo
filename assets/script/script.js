@@ -57,14 +57,14 @@ function loseAudio() {
 	document.getElementById("loseAudio").play();
 }
 
-function mutedOn() {
-	winAudio().muted = true;
-	loseAudio().muted = true;
-}
-
-function mutedOff() {
-	winAudio().muted = false;
-	loseAudio().muted = false;
+function audioButton() {
+	if (document.getElementById("audioSwitch").value = "yes") {
+		winAudio().muted = false;
+		loseAudio().muted = false;
+	} else {
+		winAudio().muted = true;
+		loseAudio().muted = true;
+	}
 }
 
 /*------------------------------------number-indicator-*/
