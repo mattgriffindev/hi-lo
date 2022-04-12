@@ -8,10 +8,27 @@
 
 let homeTextBox = document.getElementById("home-text-box");
 let howToPlay = document.getElementById("how-to-play");
+let hallOfFame = document.getElementById("hall-of-fame");
+let settings = document.getElementById("settings");
+let menu = document.getElementById("menu");
 
 function showHowToPlay() {
 	howToPlay.style.display = "inherit";
 	homeTextBox.innerHTML = howToPlay.innerHTML;
+}
+
+function showHallOfFame() {
+	hallOfFame.style.display = "inherit";
+	homeTextBox.innerHTML = hallOfFame.innerHTML;
+}
+
+function showSettings() {
+	settings.style.display = "inherit";
+	homeTextBox.innerHTML = settings.innerHTML;
+}
+
+function showMenu() {
+	homeTextBox.innerHTML = menu.innerHTML;
 }
 
 /*-----------------------------------------------count-*/
