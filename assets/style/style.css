@@ -10,7 +10,6 @@
 	--card-number-color: navy;
 	--card-border-color: darkgoldenrod;
 	--number-indicator: #99d0e0;
-
 	--font: 'Irish Grover', cursive;
 }
 
@@ -23,6 +22,7 @@
 #home-text-box {
 	height: 20rem;
 	width: 20rem;
+	padding: 1rem;
 	border: 1px solid hotpink;
 	color: #fc5185;
 	text-align: center;
@@ -31,7 +31,7 @@
 
 .heading,
 .subheading {
-	padding-top: 1.5rem;
+	padding: 0.5rem;
 	font-family: var(--font);
 	text-shadow: 2px 2px 4px #fff;
 }
@@ -106,7 +106,7 @@
 	border-radius: 50%;
 	background: #add8e6;
 	display: flex;
-  align-items: center;
+  	align-items: center;
 	justify-content: center;
 	border: 2px ridge #fc5185;
 	visibility: hidden;
