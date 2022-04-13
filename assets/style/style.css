@@ -73,46 +73,27 @@
 
 /*--------------------------------------------------speech-*/
 
-.speech-bubble-left {
+.speech-bubble {
 	width: 100%;
 	padding: 0.5rem;
 	position: relative;
 	background: #31af85;
-	border-radius: .5rem;
-}
-.speech-bubble-left:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 50%;
-	width: 0;
-	height: 0;
-	border: 1em solid transparent;
-	border-right-color: #31af85;
-	border-left: 0;
-	margin-top: -1rem;
-	margin-left: -1rem;
-}
+	border-radius: 15px;
 
-.speech-bubble-right {
-	width: 100%;
-	padding: 0.5rem;
-	position: relative;
-	background: #31af85;
-	border-radius: .4rem;
 }
-.speech-bubble-right:after {
+.speech-bubble:after {
 	content: '';
 	position: absolute;
-	right: 0;
-	top: 50%;
+	bottom: 0;
+	left: 50%;
 	width: 0;
 	height: 0;
 	border: 1rem solid transparent;
-	border-left-color: #31af85;
+	border-top-color: #00aabb;
+	border-bottom: 0;
 	border-right: 0;
-	margin-top: -1rem;
-	margin-right: -1rem;
+	margin-left: -0.5rem;
+	margin-bottom: -1rem;
 }
 
 #messages {
@@ -125,11 +106,11 @@
 	width: 4rem;
 }
 
-.speech {
+.speech-bubble {
 	display: none;
 }
 
-.speech p {
+.speech-bubble p {
 	margin: 0;
 }
 

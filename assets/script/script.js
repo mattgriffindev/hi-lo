@@ -85,7 +85,7 @@ function audioToggle() {
 
 /*----------------------------------------------speech-*/
 
-let message = document.getElementsByClassName("speech");
+let message = document.getElementsByClassName("speech-bubble");
 
 function showMessages() {
 	message[0].style.display = "inherit";
