@@ -71,22 +71,27 @@
                         <div class="numberIndicator">5</div>
                     </div>
                     <div class="col">
-                        <button id="higher-button" class="button" onclick="higher(); addCount()">Higher <i
+                        <!-- <button id="higher-button" class="button" onclick="higher(); addCount()">Higher <i
                                 class="fas fa-arrow-up"></i></button>
                         <button id="lower-button" class="button" onclick="lower(); addCount()">Lower <i
-                                class="fas fa-arrow-down"></i></button>
+                                class="fas fa-arrow-down"></i></button> -->
 
-                        <div class="speech speech-bubble-right">Hello, there! My name is Gerry. What's your
-                            name?</div>
-                        <br>
-                        <div class="speech speech-bubble-left">My name is <input type="text" id="userName"
-                                placeholder="Enter name"><span onclick="getUsername()">SEND</span></div>
-                        <br>
-                        <div class="speech speech-bubble-right"></div>
-                        <br>
-                        <div class="speech speech-bubble-left">Yes, let's <span id="start"
-                                onclick="revealStartCard()">GO!</span</div>
-                    </div>
+                        <div id="messages">
+                            <span onclick="showMessages()">SHOW MSGS</span>
+                            <div class="speech speech-bubble-right">
+                                <p>Hello, there! My name is Gerry. What's your name?</p>
+                            </div>
+                            <br>
+                            <div class="speech speech-bubble-left">
+                                </p>My name is <input type="text" id="userName" placeholder="Enter name"><span
+                                    onclick="getUsername()">SEND</span></p>
+                            </div>
+                            <br>
+                            <div class="speech speech-bubble-right"></div>
+                            <br>
+                            <div class="speech speech-bubble-left"><p>Yes, let's <span id="start"
+                                    onclick="revealStartCard()">GO!</p></div>
+                        </div>
                 </div>
             </div>
         </div>
