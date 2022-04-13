@@ -95,12 +95,12 @@ function showMessages() {
 function getUsername(){
 	let username = document.getElementById("userName").value;
 	let greeting = document.getElementById("greeting");
-	if (username.length == 0) {
-		alert("WHAT?!")
-	} else {
+	if (username.length != 0) {
 		message[1].style.display = "inherit";
 		greeting.innerHTML = username;
 		message[0].style.display = "none";
+	} else {
+		alert("Please enter your name");
 	}
 }
 
