@@ -27,6 +27,7 @@ function showSettings() {
 function playGame() {
 	game.style.display = "inherit";
 	canvas.innerHTML = game.innerHTML;
+	setTimeout(showMessages, 1000);
 }
 
 function showMenu() {
@@ -89,15 +90,18 @@ let message = document.getElementsByClassName("speech-bubble");
 
 function showMessages() {
 	message[0].style.display = "inherit";
-	setTimeout(function(){ message[1].style.display = "inherit"; }, 2000);
 }
 
 function getUsername(){
 	let username = document.getElementById("userName").value;
-	message[2].style.display = "inherit";
-	message[2].innerHTML = "Hello, " + username + ". It's nice to meet you! Are you ready to start?";
-	message[0].style.display = "none";
-	message[1].style.display = "none";
+	let greeting = document.getElementById("greeting");
+	if (username.length == 0) {
+		alert("WHAT?!")
+	} else {
+		message[1].style.display = "inherit";
+		greeting.innerHTML = username;
+		message[0].style.display = "none";
+	}
 }
 
 function myFunction(event) {
@@ -147,7 +151,8 @@ function lose() {
 
 /*-----------------------------------------------start-*/
 
-function revealStartCard() {
+function startGame() {
+	message[1].style.display = "none";
 	selectCard[0].style.animation = spinCard;
 	selectCard[0].innerHTML = getNumber();
 	numberIndicator[0].style.cssText = "border-color: green; color: green";

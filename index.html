@@ -79,18 +79,16 @@
                                 class="fas fa-arrow-down"></i></button> -->
 
                         <div id="messages">
-                            <span onclick="showMessages()">SHOW MSGS</span>
                             <div class="speech-bubble">
                                 <p>Hello, there! I'm your host. What's your name?</p>
-                                <input type="text" id="userName" onkeydown="myFunction(event)" placeholder="Enter name"><span
-                                    onclick="getUsername()">SEND</span>
+                                <br>
+                                <input type="text" id="userName" onkeydown="myFunction(event)" placeholder="Enter name" required>
+                                <p type="submit" class="next" onclick="getUsername()">Next <i class="far fa-arrow-alt-circle-right"></i></p>
                             </div>
-                            <br>
                             <div class="speech-bubble">
                                 <p>It's great to meet you, 
-                                <span id="greeting"></span>
-                                ! If you're ready, press the button below to begin.</p>
-                                <p><span id="start" onclick="revealStartCard()">GO!</p>
+                                <span id="greeting"></span>! If you're ready, press the button below to begin.</p>
+                                <p><span id="start" onclick="startGame()">GO!</p>
                             </div>
                         </div>
                 </div>

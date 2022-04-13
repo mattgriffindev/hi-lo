@@ -103,7 +103,7 @@
 }
 
 #userName {
-	width: 4rem;
+	width: 100%;
 }
 
 .speech-bubble {
@@ -112,6 +112,10 @@
 
 .speech-bubble p {
 	margin: 0;
+}
+
+.next {
+	text-align: right;
 }
 
 /*--------------------------------------------------button-*/
