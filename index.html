@@ -23,7 +23,7 @@
         <div id="menu-container">
             <div id="menu">
                 <h1 class="menu-title">Hi-Lo</h1>
-                <h2 class="menu-item menu-link" onclick="playGame()">Start</h2>
+                <h2 class="menu-item menu-link" onclick="playGame()">Play</h2>
                 <h2 class="menu-item menu-link" onclick="showHowToPlay()"><i class="fas fa-gamepad"></i> How to play
                 </h2>
                 <h2 class="menu-item menu-link" onclick="showHallOfFame()"><i class="fas fa-trophy"></i> Hall of fame
@@ -39,7 +39,7 @@
                 <h6 class="menu-link" onclick="showMenu()"><i class="fas fa-home"></i> BACK</h6>
             </div>
             <div id="settings">
-                <button id="audioToggle" onclick="audioToggle()">Sound ON</button>
+                <button id="audioToggle" onclick="audioToggle()">Toggle Sound ON/OFF</button>
                 <h6 class="menu-link" onclick="showMenu()"><i class="fas fa-home"></i> BACK</h6>
             </div>
         </div>
@@ -81,18 +81,17 @@
                         <div id="messages">
                             <span onclick="showMessages()">SHOW MSGS</span>
                             <div class="speech-bubble">
-                                <p>Hello, there! My name is Gerry. What's your name?</p>
+                                <p>Hello, there! I'm your host. What's your name?</p>
+                                <input type="text" id="userName" onkeydown="myFunction(event)" placeholder="Enter name"><span
+                                    onclick="getUsername()">SEND</span>
                             </div>
                             <br>
                             <div class="speech-bubble">
-                                </p>My name is <input type="text" id="userName" onkeydown="myFunction(event)" placeholder="Enter name"><span
-                                    onclick="getUsername()">SEND</span></p>
+                                <p>It's great to meet you, 
+                                <span id="greeting"></span>
+                                ! If you're ready, press the button below to begin.</p>
+                                <p><span id="start" onclick="revealStartCard()">GO!</p>
                             </div>
-                            <br>
-                            <div class="speech-bubble"></div>
-                            <br>
-                            <div class="speech-bubble"><p>Yes, let's <span id="start"
-                                    onclick="revealStartCard()">GO!</p></div>
                         </div>
                 </div>
             </div>
