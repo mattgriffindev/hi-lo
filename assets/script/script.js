@@ -73,19 +73,16 @@ function soundOn() {
 }
 
 function audioToggle() {
-	let x = document.getElementById("audioToggle");
-	let y = document.getElementById("soundNotification");
+	let x = document.getElementById("soundNotification");
 	if (x.innerHTML === "Sound ON") {
 		x.innerHTML = "Sound OFF";
-		y.innerHTML = "Sound OFF";
 		soundOff();
 	} else {
 		x.innerHTML = "Sound ON";
-		y.innerHTML = "Sound ON";
 		soundOn();
 	}
   }
-0
+
 /*----------------------------------------------speech-*/
 
 let message = document.getElementsByClassName("speech");
