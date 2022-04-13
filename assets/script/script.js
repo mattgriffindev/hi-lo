@@ -74,7 +74,7 @@ function soundOn() {
 
 function audioToggle() {
 	let x = document.getElementById("audioToggle");
-	let y = document.getElementById("test");
+	let y = document.getElementById("soundNotification");
 	if (x.innerHTML === "Sound ON") {
 		x.innerHTML = "Sound OFF";
 		y.innerHTML = "Sound OFF";

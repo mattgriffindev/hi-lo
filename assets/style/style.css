@@ -17,7 +17,20 @@
 
 #canvas {
 	height: 100vh;
+	background-color: #d4ebf2;
 }
+
+.col {
+	border: 1px solid hotpink;
+}
+
+#soundNotification {
+	position: absolute;
+	top: 1rem;
+	right: 2rem;
+}
+
+/*----------------------------------------------------menu-*/
 
 #game {
 	display: none;
@@ -58,17 +71,28 @@
 	display: none;
 }
 
-/*--------------------------------------------------canvas-*/
-
-.container-fluid {
-	background-color: #d4ebf2;
-}
-
-.col {
-	border: 1px solid hotpink;
-}
-
 /*--------------------------------------------------speech-*/
+
+.speech-bubble-left {
+	width: 100%;
+	padding: 0.5rem;
+	position: relative;
+	background: #31af85;
+	border-radius: .5rem;
+}
+.speech-bubble-left:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 1em solid transparent;
+	border-right-color: #31af85;
+	border-left: 0;
+	margin-top: -1rem;
+	margin-left: -1rem;
+}
 
 .speech-bubble-right {
 	width: 100%;
@@ -76,7 +100,6 @@
 	position: relative;
 	background: #31af85;
 	border-radius: .4rem;
-
 }
 .speech-bubble-right:after {
 	content: '';
@@ -108,27 +131,6 @@
 
 .speech p {
 	margin: 0;
-}
-
-.speech-bubble-left {
-	width: 100%;
-	padding: 0.5rem;
-	position: relative;
-	background: #31af85;
-	border-radius: .5rem;
-}
-.speech-bubble-left:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 50%;
-	width: 0;
-	height: 0;
-	border: 1em solid transparent;
-	border-right-color: #31af85;
-	border-left: 0;
-	margin-top: -1rem;
-	margin-left: -1rem;
 }
 
 /*--------------------------------------------------button-*/
