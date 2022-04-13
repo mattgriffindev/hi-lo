@@ -1,8 +1,3 @@
-/*function getUsername(){
-	let username = document.getElementById("name").value;
-	document.getElementsByClassName("content")[0].style.display="none";
-	document.getElementById("main").innerHTML = "<p>Hello, " + username + ". It's nice to meet you!</p>";
-}*/
 
 /*------------------------------------------------home-*/
 
@@ -90,13 +85,23 @@ function audioToggle() {
 		soundOn();
 	}
   }
-
+0
 /*----------------------------------------------speech-*/
 
-  function getUsername(){
+let message = document.getElementsByClassName("speech");
+
+function showMessages() {
+	message[0].style.display = "inherit";
+	setTimeout(function(){ message[1].style.display = "inherit"; }, 2000);
+}
+
+function getUsername(){
 	let username = document.getElementById("userName").value;
 	// document.getElementsByClassName("content")[0].style.display="none";
-	document.getElementsByClassName("speech")[2].innerHTML = "Hello, " + username + ". It's nice to meet you! Are you ready to start?";
+	message[2].style.display = "inherit";
+	message[2].innerHTML = "Hello, " + username + ". It's nice to meet you! Are you ready to start?";
+	message[0].style.display = "none";
+	message[1].style.display = "none";
 }
 
 /*------------------------------------number-indicator-*/
