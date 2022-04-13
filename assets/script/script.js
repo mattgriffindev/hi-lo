@@ -100,6 +100,13 @@ function getUsername(){
 	message[1].style.display = "none";
 }
 
+function myFunction(event) {
+	var x = event.key;
+	if (x == "Enter") { 
+	  getUsername();
+	}
+  }
+
 /*------------------------------------number-indicator-*/
 
 let numberIndicator = document.getElementsByClassName("numberIndicator");
