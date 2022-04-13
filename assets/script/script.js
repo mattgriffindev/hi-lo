@@ -94,7 +94,6 @@ function showMessages() {
 
 function getUsername(){
 	let username = document.getElementById("userName").value;
-	// document.getElementsByClassName("content")[0].style.display="none";
 	message[2].style.display = "inherit";
 	message[2].innerHTML = "Hello, " + username + ". It's nice to meet you! Are you ready to start?";
 	message[0].style.display = "none";
