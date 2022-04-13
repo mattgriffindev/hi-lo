@@ -91,6 +91,14 @@ function audioToggle() {
 	}
   }
 
+/*----------------------------------------------speech-*/
+
+  function getUsername(){
+	let username = document.getElementById("userName").value;
+	// document.getElementsByClassName("content")[0].style.display="none";
+	document.getElementsByClassName("speech")[2].innerHTML = "Hello, " + username + ". It's nice to meet you! Are you ready to start?";
+}
+
 /*------------------------------------number-indicator-*/
 
 let numberIndicator = document.getElementsByClassName("numberIndicator");
