@@ -21,13 +21,11 @@
 <body>
 
     <!--header-->
-    <header>
-        <div class="container-fluid text-end">
-            <div class="row">
-                <p class="test">Sound ON</p>
-            </div>	
-        </div>
-    </header>
+    <div id="header" class="container-fluid text-end">
+        <div class="row">
+            <p id="soundNotification">Sound ON</p>
+        </div>	
+    </div>
     <!--/header-->
 
     <div id="canvas" class="container-fluid d-flex justify-content-center align-items-center">
@@ -60,7 +58,7 @@
             </div>
         </div>
 
-        <div id="game">
+        <!-- <div id="game">
             <div id="result"></div>
             <div class="container-fluid">
                 <div class="row">
@@ -94,7 +92,7 @@
                         <button id="lower-button" class="button" onclick="lower(); addCount()">Lower <i
                                 class="fas fa-arrow-down"></i></button> -->
 
-                        <div id="messages">
+                        <!-- <div id="messages">
                             <div class="speech-bubble">
                                 <p>Hello, there! I'm your host. What's your name?</p>
                                 <br>
@@ -109,7 +107,7 @@
                         </div>
                 </div>
             </div>
-        </div>
+        </div> --> 
     </div>
 
 
@@ -123,17 +121,13 @@
     <!--/audio-->
 
     <!--footer-->
-    <footer>
-        <div class="container-fluid text-center">
-            <div class="row">
-                <p>&copy; 2022.<span class="d-inline d-sm-none"><br></span>Made with <i
-                        class="fas fa-heart hvr-pulse"></i> by <a href="https://github.com/mattgriffindev"
-                        target="_blank" class="signature">mattgriffindev</a></p>
-            </div>
+    <div id="footer" class="container-fluid text-center"> 
+        <div class="row">
+            <p>&copy; 2022.<span class="d-inline d-sm-none"><br></span>Made with <i class="fas fa-heart hvr-pulse"></i>
+                by <a href="https://github.com/mattgriffindev" target="_blank" class="signature">mattgriffindev</a></p>
         </div>
-    </footer>
+    </div>
     <!--/footer-->
-
 
     <script src="assets/script/script.js"></script>
 </body>
