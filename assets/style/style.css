@@ -13,22 +13,25 @@
 	--font: 'Irish Grover', cursive;
 }
 
+body {
+	background-color: #d4ebf2;
+}
+
 /*--------------------------------------------------canvas-*/
 
+#header,
+#footer {
+	height: 10vh;
+}
+
 #canvas {
-	height: 100vh;
-	background-color: #d4ebf2;
+	height: 80vh;
 }
 
 .col {
 	border: 1px solid hotpink;
 }
 
-#soundNotification {
-	position: absolute;
-	top: 1rem;
-	right: 2rem;
-}
 
 /*----------------------------------------------------menu-*/
 
