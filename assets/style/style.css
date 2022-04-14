@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=M+PLUS+1+Code&family=Pacifico&display=swap');
 
 * {
 	box-sizing: border-box;
@@ -195,6 +195,16 @@ body {
 	border: 2px solid;
 	border-color: var(--number-indicator);
 	border-radius: 50%;
+}
+
+/*----------------------------------------------footer-*/
+
+.signature {
+	font-family: 'M PLUS 1 Code', cursive;
+}
+
+.hvr-pulse:hover {
+	color: red;
 }
 
 /*-------------------------------------------animation-*/
