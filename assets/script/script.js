@@ -136,11 +136,15 @@ let loseText = "Sorry, you lose!";
 
 function intro() {
 	let introCard = document.getElementsByClassName("introCard");
+	let menuContainer = document.getElementById("menu-container");
+	let introContainer = document.getElementById("intro-container");
 	introCard[0].style.animation = spinCard;
 	setTimeout(function(){ introCard[1].style.animation = spinCard; }, 500);
 	setTimeout(function(){ introCard[2].style.animation = spinCard; }, 1000);
 	setTimeout(function(){ introCard[3].style.animation = spinCard; }, 1500);
-	setTimeout(function(){ introCard[4].style.animation = spinCard; }, 1600);
+	setTimeout(function(){ introCard[4].style.animation = spinCard; }, 2000);
+	setTimeout(function(){ introContainer.style.display = "none"; }, 6000);
+	setTimeout(function(){ menuContainer.style.display = "initial"; }, 6000);
 }
 
 

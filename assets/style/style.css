@@ -24,6 +24,14 @@ body {
 	height: 10vh;
 }
 
+#header {
+	text-align: right;
+}
+
+#footer {
+	text-align: center;
+}
+
 #canvas {
 	height: 80vh;
 }
@@ -55,6 +63,8 @@ body {
 #intro-container {
 	height: 20rem;
 	width: 40rem;
+	display: flex;
+  	align-items: center;
 	border: 1px solid hotpink;
 }
 
@@ -173,6 +183,14 @@ body {
 
 .introCard {
 	float: left;
+}
+
+.rotate-left {
+	transform: rotate(10deg);
+}
+
+.rotate-right {
+	transform: rotate(-10deg);
 }
 
 #result {
