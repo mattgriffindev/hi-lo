@@ -20,11 +20,6 @@ body {
 
 /*--------------------------------------------------canvas-*/
 
-#header,
-#footer {
-	height: 10vh;
-}
-
 #canvas {
 	height: 80vh;
 }
@@ -36,9 +31,11 @@ body {
 /*--------------------------------------------------header-*/
 
 #header {
-	padding-top: 0.25rem;
+	position: fixed;
+  	left: 0;
+  	top: 0;
+  	width: 100%;
 	display: flex;
-	justify-content: space-around;
 	color: var(--font-color);
 	font-family: var(--font);
 	font-size: 2rem;
@@ -86,6 +83,7 @@ body {
 	width: 40rem;
 	display: flex;
   	align-items: center;
+	justify-content: center;
 	border: 1px solid hotpink;
 }
 
@@ -195,7 +193,6 @@ body {
 .introCard {
 	height: 8rem;
 	width: 6rem;
-	margin: 2rem auto;
 	padding-top: 1rem;
 	color: var(--card-number-color);
 	font-family: var(--font);
@@ -206,16 +203,20 @@ body {
 	background-color: var(--card-back-color);
 }
 
+.card {
+	margin: 2rem auto;
+}
+
 .introCard {
 	float: left;
 }
 
 .rotate-left {
-	transform: rotate(10deg);
+	transform: rotate(15deg);
 }
 
 .rotate-right {
-	transform: rotate(-10deg);
+	transform: rotate(-15deg);
 }
 
 #result {
@@ -256,7 +257,11 @@ body {
 /*----------------------------------------------footer-*/
 
 #footer {
-	padding-top: 1rem;
+	position: fixed;
+  	left: 0;
+  	bottom: 0;
+  	width: 100%;
+	padding: 1rem 0;
 	color: var(--font-color);
 	text-align: center;
 }
