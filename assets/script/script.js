@@ -76,13 +76,13 @@ function soundOn() {
 function audioToggle() {
 	let audioOn = document.getElementById("audioOn");
 	let audioOff = document.getElementById("audioOff");
-	if (audioOn.style.display == "initial") {
-		audioOn.style.display = "none";
+	if (audioOn.style.display === "initial") {
 		audioOff.style.display = "initial";
+		audioOn.style.display = "none";
 		soundOff();
 	} else {
-		audioOff.style.display = "none";
 		audioOn.style.display = "initial";
+		audioOff.style.display = "none";
 		soundOn();
 	}
 }
