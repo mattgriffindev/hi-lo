@@ -52,7 +52,7 @@
     <div id="menu-container">
         <div id="menu">
             <h1 class="menu-title">Menu</h1>
-            <h2 class="menu-link" onclick="showMessages()">Play</h2>
+            <h2 class="menu-link" onclick="showMessage()">Play</h2>
             <h2 class="menu-link" onclick="showHowToPlay()"><i class="fas fa-gamepad"></i> How to play
             </h2>
             <h2 class="menu-link" onclick="showHallOfFame()"><i class="fas fa-trophy"></i> Hall of fame
@@ -78,14 +78,14 @@
     <!--/menu-->
 
     <!--messages-->
-    <div id="messages">
-        <div class="speech-bubble">
+    <div id="message">
+        <div class="messageBubble">
             <p>Hello, there! I'm your host. What's your name?</p>
             <br>
             <input type="text" id="userName" onkeydown="myFunction(event)" placeholder="Enter name" required>
             <p type="submit" class="next" onclick="getUsername()">Next <i class="far fa-arrow-alt-circle-right"></i></p>
         </div>
-        <div class="speech-bubble">
+        <div class="messageBubble">
             <p>It's great to meet you,
                 <span id="greeting"></span>! If you're ready, press the button below to begin.</p>
             <p><span id="start" onclick="startGame()">GO!</p>

@@ -24,11 +24,11 @@ function showSettings() {
 	menuContainer.innerHTML = settings.innerHTML;
 }
 
-function playGame() {
-	game.style.display = "inherit";
-	canvas.innerHTML = game.innerHTML;
-	setTimeout(showMessages, 1000);
-}
+// function playGame() {
+// 	game.style.display = "inherit";
+// 	canvas.innerHTML = game.innerHTML;
+// 	setTimeout(showMessages, 1000);
+// }
 
 function showMenu() {
 	menuContainer.innerHTML = menu.innerHTML;
@@ -87,21 +87,24 @@ function audioToggle() {
 	}
 }
 
-/*----------------------------------------------speech-*/
+/*--------------------------------------------messages-*/
 
-let message = document.getElementsByClassName("speech-bubble");
+let messageContainer = document.getElementById("message");
+let messageBubble = document.getElementsByClassName("messageBubble");
 
-function showMessages() {
-	message[0].style.display = "inherit";
+function showMessage() {
+	menuContainer.style.display = "none";
+	messageContainer.style.display = "inherit";
+	messageBubble[0].style.display = "inherit";
 }
 
 function getUsername(){
 	let username = document.getElementById("userName").value;
 	let greeting = document.getElementById("greeting");
 	if (username.length != 0) {
-		message[1].style.display = "inherit";
+		messageBubble[1].style.display = "inherit";
 		greeting.innerHTML = username;
-		message[0].style.display = "none";
+		messageBubble[0].style.display = "none";
 	} else {
 		alert("Please enter your name");
 	}
