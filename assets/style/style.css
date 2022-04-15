@@ -45,7 +45,17 @@ body {
 }
 
 #header .row {
-	flex-wrap: nowrap;
+	width: 100%;
+}
+
+.leftDiv,
+.rightDiv {
+	width: 50%;
+}
+
+
+.rightDiv {
+	text-align: right;
 }
 
 #audioOff {
