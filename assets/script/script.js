@@ -134,6 +134,15 @@ let loseText = "Sorry, you lose!";
 // let drawText = "You don't get anything for a pair!";
 
 
+function intro() {
+	let introCard = document.getElementsByClassName("introCard");
+	introCard[0].style.animation = spinCard;
+	setTimeout(function(){ introCard[1].style.animation = spinCard; }, 500);
+	setTimeout(function(){ introCard[2].style.animation = spinCard; }, 1000);
+	setTimeout(function(){ introCard[3].style.animation = spinCard; }, 1500);
+	setTimeout(function(){ introCard[4].style.animation = spinCard; }, 1600);
+}
+
 
 function win() {
 	// result.innerHTML = winText;	
