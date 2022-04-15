@@ -146,8 +146,8 @@ function intro() {
 	setTimeout(function(){ introCard[2].style.animation = spinCard; }, 1000);
 	setTimeout(function(){ introCard[3].style.animation = spinCard; }, 1500);
 	setTimeout(function(){ introCard[4].style.animation = spinCard; }, 2000);
-	setTimeout(function(){ introContainer.style.display = "none"; }, 6000);
-	setTimeout(function(){ menuContainer.style.display = "initial"; }, 6000);
+	setTimeout(function(){ introContainer.style.display = "none"; }, 10000);
+	setTimeout(function(){ menuContainer.style.display = "initial"; }, 10000);
 }
 
 
