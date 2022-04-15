@@ -23,10 +23,11 @@
 <body onload="intro()">
 
     <!--header-->
-    <div id="header" class="container-fluid border border-danger">
+    <div id="header" class="container-fluid text-end border border-danger">
         <div class="row">
-            <p id="soundNotification">Sound ON</p>
-        </div>	
+            <p id="soundNotification"><span id="audioOn"><i class="fas fa-volume-up"></i></span><span id="audioOff"><i
+                        class="fas fa-volume-mute"></i></span</p>
+        </div>
     </div>
     <!--/header-->
 
@@ -44,7 +45,7 @@
     <!--menu-->
         <div id="menu-container">
             <div id="menu">
-                <h1 class="menu-title">Hi-Lo</h1>
+                <h1 class="menu-title">Menu</h1>
                 <h2 class="menu-link" onclick="playGame()">Play</h2>
                 <h2 class="menu-link" onclick="showHowToPlay()"><i class="fas fa-gamepad"></i> How to play
                 </h2>
