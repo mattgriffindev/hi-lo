@@ -89,20 +89,20 @@ function audioToggle() {
 
 /*--------------------------------------------messages-*/
 
-let messageContainer = document.getElementById("message");
+let messageContainer = document.getElementById("message-container");
 let messageBubble = document.getElementsByClassName("messageBubble");
 
 function showMessage() {
 	menuContainer.style.display = "none";
 	messageContainer.style.display = "inherit";
-	messageBubble[0].style.display = "inherit";
+	messageBubble[0].style.display = "initial";
 }
 
 function getUsername(){
 	let username = document.getElementById("userName").value;
 	let greeting = document.getElementById("greeting");
 	if (username.length != 0) {
-		messageBubble[1].style.display = "inherit";
+		messageBubble[1].style.display = "initial";
 		greeting.innerHTML = username;
 		messageBubble[0].style.display = "none";
 	} else {
@@ -110,7 +110,7 @@ function getUsername(){
 	}
 }
 
-function myFunction(event) {
+function enterUserName(event) {
 	var x = event.key;
 	if (x == "Enter") { 
 	  getUsername();

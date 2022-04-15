@@ -32,6 +32,7 @@
                 <p id="soundNotification"><i id="audioOn" class="fas fa-volume-up"></i><i
                     id="audioOff" class="fas fa-volume-mute"></i></p>
             </div>
+            <div style="clear: both;"></div>
         </div>
     </div>
     <!--/header-->
@@ -52,43 +53,43 @@
     <div id="menu-container">
         <div id="menu">
             <h1 class="menu-title">Menu</h1>
-            <h2 class="menu-link" onclick="showMessage()">Play</h2>
-            <h2 class="menu-link" onclick="showHowToPlay()"><i class="fas fa-gamepad"></i> How to play
+            <h2 class="itemLink" onclick="showMessage()">Play</h2>
+            <h2 class="itemLink" onclick="showHowToPlay()"><i class="fas fa-gamepad"></i> How to play
             </h2>
-            <h2 class="menu-link" onclick="showHallOfFame()"><i class="fas fa-trophy"></i> Hall of fame
+            <h2 class="itemLink" onclick="showHallOfFame()"><i class="fas fa-trophy"></i> Hall of fame
             </h2>
-            <h2 class="menu-link" onclick="showSettings()"><i class="fas fa-cog"></i> Settings</h2>
+            <h2 class="itemLink" onclick="showSettings()"><i class="fas fa-cog"></i> Settings</h2>
         </div>
         <div id="how-to-play">
             <h2>How to Play</h2>
             <p>Some sample text here</p>
-            <h6 class="menu-link" onclick="showMenu()"><i class="fas fa-home"></i> Menu</h6>
+            <h6 class="itemLink" onclick="showMenu()"><i class="fas fa-home"></i> Menu</h6>
         </div>
         <div id="hall-of-fame">
             <h2>Hall of Fame</h2>
             <p>Some sample text here</p>
-            <h6 class="menu-link" onclick="showMenu()"><i class="fas fa-home"></i> Menu</h6>
+            <h6 class="itemLink" onclick="showMenu()"><i class="fas fa-home"></i> Menu</h6>
         </div>
         <div id="settings">
             <h2>Settings</h2>
-            <p id="audioToggle" class="menu-link" onclick="audioToggle()">Toggle Sound ON/OFF</p>
-            <h6 class="menu-link" onclick="showMenu()"><i class="fas fa-home"></i> Menu</h6>
+            <p id="audioToggle" class="itemLink" onclick="audioToggle()">Toggle Sound ON/OFF</p>
+            <h6 class="itemLink" onclick="showMenu()"><i class="fas fa-home"></i> Menu</h6>
         </div>
     </div>
     <!--/menu-->
 
     <!--messages-->
-    <div id="message">
+    <div id="message-container">
         <div class="messageBubble">
             <p>Hello, there! I'm your host. What's your name?</p>
             <br>
-            <input type="text" id="userName" onkeydown="myFunction(event)" placeholder="Enter name" required>
-            <p type="submit" class="next" onclick="getUsername()">Next <i class="far fa-arrow-alt-circle-right"></i></p>
+            <input type="text" id="userName" onkeydown="enterUserName(event)" placeholder="Enter name" required>
+            <p type="submit" class="itemLink next" onclick="getUsername()">Next <i class="far fa-arrow-alt-circle-right"></i></p>
         </div>
         <div class="messageBubble">
             <p>It's great to meet you,
                 <span id="greeting"></span>! If you're ready, press the button below to begin.</p>
-            <p><span id="start" onclick="startGame()">GO!</p>
+            <p><span id="start" lclass="itemLink" onclick="startGame()">GO!</p>
         </div>
     </div>
     <!--/messages-->
@@ -144,7 +145,7 @@
     <div id="footer" class="container-fluid border border-danger"> 
         <div class="row">
             <div>&copy; 2022. Mochyn Fawr.<span class="d-inline d-sm-none"><br></span> Made with <i class="fas fa-heart hvr-pulse"></i>
-                by <a href="https://github.com/mattgriffindev" target="_blank" class="menu-link signature">mattgriffindev</a></div>
+                by <a href="https://github.com/mattgriffindev" target="_blank" class="itemLink signature">mattgriffindev</a></div>
         </div>
     </div>
     <!--/footer-->
