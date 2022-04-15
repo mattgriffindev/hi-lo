@@ -74,15 +74,18 @@ function soundOn() {
 }
 
 function audioToggle() {
-	let x = document.getElementById("soundNotification");
-	if (x.innerHTML === "Sound ON") {
-		x.innerHTML = "Sound OFF";
+	let audioOn = document.getElementById("audioOn");
+	let audioOff = document.getElementById("audioOff");
+	if (audioOn.style.display == "initial") {
+		audioOn.style.display = "none";
+		audioOff.style.display = "initial";
 		soundOff();
 	} else {
-		x.innerHTML = "Sound ON";
+		audioOff.style.display = "none";
+		audioOn.style.display = "initial";
 		soundOn();
 	}
-  }
+}
 
 /*----------------------------------------------speech-*/
 
