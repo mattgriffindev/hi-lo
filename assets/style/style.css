@@ -24,10 +24,6 @@ body {
 	height: 10vh;
 }
 
-#header {
-	text-align: right;
-}
-
 #footer {
 	text-align: center;
 }
@@ -40,6 +36,11 @@ body {
 	border: 1px solid hotpink;
 }
 
+/*--------------------------------------------------header-*/
+
+#audioOff {
+	display: none;
+}
 
 /*----------------------------------------------------menu-*/
 
