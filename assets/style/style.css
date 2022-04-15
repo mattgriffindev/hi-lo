@@ -5,9 +5,9 @@
 }
 
 :root {
-	--card-back-color: navy;
+	--card-back-color: #fc5185;
 	--card-front-color: #f0f0f0;
-	--card-number-color: navy;
+	--card-number-color: #fc5185;
 	--card-border-color: darkgoldenrod;
 	--number-indicator: #99d0e0;
 	--font-color: #fc5185;
@@ -194,12 +194,13 @@ body {
 	width: 6rem;
 	margin: 2rem auto;
 	padding-top: 1rem;
-	font-size: 3rem;
 	color: var(--card-number-color);
+	font-family: var(--font);
+	font-size: 3rem;
 	text-align: center;
-	background-color: var(--card-back-color);
 	border: 2px solid var(--card-border-color);
 	border-radius: 15px;
+	background-color: var(--card-back-color);
 }
 
 .introCard {
