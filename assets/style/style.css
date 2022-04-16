@@ -61,9 +61,8 @@ body {
 
 /*----------------------------------------------------menu-*/
 
-#game {
+#game-container {
 	display: none;
-	z-index: 888;
 }
 
 #menu-container {
@@ -187,13 +186,21 @@ body {
 	background-color: #c0eccb;
 }
 
+.buttonPlacement {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
 /*----------------------------------------------------card-*/
 
 .card,
 .introCard {
 	height: 8rem;
 	width: 6rem;
-	padding-top: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: var(--card-number-color);
 	font-family: var(--font);
 	font-size: 3rem;
@@ -216,14 +223,6 @@ body {
 .introCardThree { transform: matrix(1, 0, 0, 1, 0, -40); }
 .introCardFour { transform: matrix(1, 0.25, -0.25, 1, 0, -25); }
 .introCardFive { transform: matrix(1, 0.5, -0.5, 1, 0, 10); }
-
-/* .rotate-left {
-	transform: rotate(15deg);
-}
-
-.rotate-right {
-	transform: rotate(-15deg);
-} */
 
 #result {
 	height: 6rem;

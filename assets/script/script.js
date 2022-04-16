@@ -2,7 +2,7 @@
 /*------------------------------------------------home-*/
 
 let canvas = document.getElementById("canvas");
-let game = document.getElementById("game");
+let gameContainer = document.getElementById("game-container");
 let menuContainer = document.getElementById("menu-container");
 let howToPlay = document.getElementById("how-to-play");
 let hallOfFame = document.getElementById("hall-of-fame");
@@ -23,12 +23,6 @@ function showSettings() {
 	settings.style.display = "inherit";
 	menuContainer.innerHTML = settings.innerHTML;
 }
-
-// function playGame() {
-// 	game.style.display = "inherit";
-// 	canvas.innerHTML = game.innerHTML;
-// 	setTimeout(showMessages, 1000);
-// }
 
 function showMenu() {
 	menuContainer.innerHTML = menu.innerHTML;
@@ -149,8 +143,8 @@ function intro() {
 	setTimeout(function(){ introCard[2].style.animation = spinCard; }, 1000);
 	setTimeout(function(){ introCard[3].style.animation = spinCard; }, 1500);
 	setTimeout(function(){ introCard[4].style.animation = spinCard; }, 2000);
-	setTimeout(function(){ introContainer.style.display = "none"; }, 10000);
-	setTimeout(function(){ menuContainer.style.display = "initial"; }, 10000);
+	setTimeout(function(){ introContainer.style.display = "none"; }, 8000);
+	setTimeout(function(){ menuContainer.style.display = "initial"; }, 8000);
 }
 
 
@@ -171,7 +165,8 @@ function lose() {
 /*-----------------------------------------------start-*/
 
 function startGame() {
-	message[1].style.display = "none";
+	messageContainer.style.display = "none";
+	gameContainer.style.display = "initial";
 	selectCard[0].style.animation = spinCard;
 	selectCard[0].innerHTML = getNumber();
 	numberIndicator[0].style.cssText = "border-color: green; color: green";

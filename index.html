@@ -94,44 +94,51 @@
         </div>
     </div>
     <!--/messages-->
-</div>
 
-    <!--<div id="game">
-        <div id="result"></div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col">
-                        <div class="card"></div>
-                        <div class="numberIndicator">GO</div>
-                    </div>
-                    <div class="col">
-                        <div class="card"></div>
-                        <div class="numberIndicator">1</div>
-                    </div>
-                    <div class="col">
-                        <div class="card"></div>
-                        <div class="numberIndicator">2</div>
-                    </div>
-                    <div class="col">
-                        <div class="card"></div>
-                        <div class="numberIndicator">3</div>
-                    </div>
-                    <div class="col">
-                        <div class="card"></div>
-                        <div class="numberIndicator">4</div>
-                    </div>
-                    <div class="col">
-                        <div class="card"></div>
-                        <div class="numberIndicator">5</div>
-                    </div>
-                    <div class="col">
-                        <button id="higher-button" class="button" onclick="higher(); addCount()">Higher <i
-                                class="fas fa-arrow-up"></i></button>
-                        <button id="lower-button" class="button" onclick="lower(); addCount()">Lower <i
-                                class="fas fa-arrow-down"></i></button> 
-                    </div> -->
-       
-
+    <!--game-->
+    <div id="game-container" class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="card"></div>
+                <div class="numberIndicator">GO</div>
+            </div>
+            <div class="col">
+                <div class="card"></div>
+                <div class="numberIndicator">1</div>
+            </div>
+            <div class="col">
+                <div class="card"></div>
+                <div class="numberIndicator">2</div>
+            </div>
+            <div class="col">
+                <div class="card"></div>
+                <div class="numberIndicator">3</div>
+            </div>
+            <div class="col">
+                <div class="card"></div>
+                <div class="numberIndicator">4</div>
+            </div>
+            <div class="col">
+                <div class="card"></div>
+                <div class="numberIndicator">5</div>
+            </div>
+        </div>
+        <div class="row buttonPlacement py-1">
+            <div class="col col-md-2">
+                <button id="higher-button" class="button" onclick="higher(); addCount()">Higher <i
+                    class="fas fa-arrow-up"></i></button>
+            </div>
+            <div class="col col-md-2">
+                <button id="lower-button" class="button" onclick="lower(); addCount()">Lower <i
+                    class="fas fa-arrow-down"></i></button> 
+            </div>
+        </div>
+    </div>
+    <!--/game-->
+    
+    <!--result-->
+    <div id="result"></div>
+    <!--/result-->
 
     <!--audio-->
     <audio id="win">
@@ -141,6 +148,8 @@
         <source src="assets/audio/lose.wav" type="audio/wav">
     </audio>
     <!--/audio-->
+
+</div>
 
     <!--footer-->
     <div id="footer" class="container-fluid border border-danger"> 
