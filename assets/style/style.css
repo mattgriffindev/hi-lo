@@ -137,6 +137,10 @@ body {
 	display: none;
 }
 
+#message-container p {
+	font-size: 1.25rem;
+}
+
 .messageBubble {
 	height: 60%;
 	width: 100%;
