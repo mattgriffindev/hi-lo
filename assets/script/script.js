@@ -174,15 +174,24 @@ function startGame() {
 
 /*--------------------------------------higher-/-lower-*/
 
+let higherBtn = document.getElementById("higher-button");
+let lowerBtn = document.getElementById("lower-button");
+
+function disableBtn() {
+	higherBtn.disabled = true;
+	lowerBtn.disabled = true;
+	setTimeout(function(){higherBtn.disabled = false;}, 1000);
+	setTimeout(function(){lowerBtn.disabled = false;}, 1000);
+}
+
 function revealCard() {
 	selectCard[count].innerHTML = getNumber();
 	selectCard[count].style.animation = spinCard;
 }
 
-
-
 function higher() {
 	revealCard();
+	disableBtn();
 	let thisCard = selectCard[count].innerHTML;
 	let lastCard = selectCard[count-1].innerHTML;
 	if (thisCard > lastCard) { 
@@ -194,6 +203,7 @@ function higher() {
 
 function lower() {
 	revealCard();
+	disableBtn();
 	let thisCard = selectCard[count].innerHTML;
 	let lastCard = selectCard[count-1].innerHTML;
  	if (thisCard < lastCard) {
