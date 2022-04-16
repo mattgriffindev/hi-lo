@@ -105,8 +105,8 @@ function getUsername(){
 }
 
 function enterUserName(event) {
-	var x = event.key;
-	if (x == "Enter") { 
+	var x = event.keyCode;
+	if (x === 13) { 
 	  getUsername();
 	}
   }
