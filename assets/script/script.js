@@ -156,8 +156,8 @@ function win() {
 }
 
 function lose() {
-	// result.innerHTML = loseText;
-	// result.style.animation = showResult;
+	result.innerHTML = loseText;
+	result.style.animation = showResult;
 	setTimeout(loseAudio, 1000);
 	setTimeout(numberIndicatorRed, 1000);
 }
