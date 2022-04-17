@@ -30,11 +30,12 @@ function showMenu() {
 
 /*-----------------------------------------------count-*/
 
-let J = 10;
-let Q = 10;
-let K = 10;
+let cardArray = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
 
-let cardArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K];
+J = 10;
+Q = 10;
+K = 10;
+A = 11;
 
 let count = 1;
 
