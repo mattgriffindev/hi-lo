@@ -132,6 +132,8 @@ let showResult = "showResult 2s ease-in 1s forwards";
 let winText = document.getElementById("winText").innerHTML;
 let loseText = document.getElementById("loseText").innerHTML;
 let drawText = document.getElementById("drawText").innerHTML;
+let higherBtn = document.getElementById("higher-button");
+let lowerBtn = document.getElementById("lower-button");
 
 function intro() {
 	let introCard = document.getElementsByClassName("introCard");
@@ -155,6 +157,8 @@ function win() {
 }
 
 function lose() {
+	higherBtn.disabled = true;
+	lowerBtn.disabled = true;
 	result.innerHTML = loseText;
 	result.style.animation = showResult;
 	setTimeout(loseAudio, 1000);
@@ -162,6 +166,8 @@ function lose() {
 }
 
 function draw() {
+	higherBtn.disabled = true;
+	lowerBtn.disabled = true;
 	result.innerHTML = drawText;
 	result.style.animation = showResult;
 	setTimeout(loseAudio, 1000);
@@ -180,15 +186,12 @@ function startGame() {
 
 /*--------------------------------------higher-/-lower-*/
 
-let higherBtn = document.getElementById("higher-button");
-let lowerBtn = document.getElementById("lower-button");
-
-function disableBtn() {
-	higherBtn.disabled = true;
-	lowerBtn.disabled = true;
-	setTimeout(function(){higherBtn.disabled = false;}, 1000);
-	setTimeout(function(){lowerBtn.disabled = false;}, 1000);
-}
+// function disableBtn() {
+// 	higherBtn.disabled = true;
+// 	lowerBtn.disabled = true;
+// 	setTimeout(function(){higherBtn.disabled = false;}, 1000);
+// 	setTimeout(function(){lowerBtn.disabled = false;}, 1000);
+// }
 
 function revealCard() {
 	selectCard[count].innerHTML = getNumber();
@@ -197,7 +200,7 @@ function revealCard() {
 
 function higher() {
 	revealCard();
-	disableBtn();
+	// disableBtn();
 	let thisCard = selectCard[count].innerHTML;
 	let lastCard = selectCard[count-1].innerHTML;
 	if (thisCard > lastCard) { 
@@ -211,7 +214,7 @@ function higher() {
 
 function lower() {
 	revealCard();
-	disableBtn();
+	// disableBtn();
 	let thisCard = selectCard[count].innerHTML;
 	let lastCard = selectCard[count-1].innerHTML;
  	if (thisCard < lastCard) {
