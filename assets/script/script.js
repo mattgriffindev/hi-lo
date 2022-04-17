@@ -1,5 +1,5 @@
 
-/*------------------------------------------------home-*/
+/*-------------------------------------------variables-*/
 
 let canvas = document.getElementById("canvas");
 let gameContainer = document.getElementById("game-container");
@@ -8,6 +8,23 @@ let howToPlay = document.getElementById("how-to-play");
 let hallOfFame = document.getElementById("hall-of-fame");
 let settings = document.getElementById("settings");
 let menu = document.getElementById("menu");
+
+let messageContainer = document.getElementById("message-container");
+let messageBubble = document.getElementsByClassName("messageBubble");
+
+let numberIndicator = document.getElementsByClassName("numberIndicator");
+
+let selectCard = document.getElementsByClassName("card");
+let spinCard = "spinCard 1s linear forwards";
+let result = document.getElementById("result");
+let showResult = "showResult 2s ease-in 1s forwards";
+let winText = document.getElementById("winText").innerHTML;
+let loseText = document.getElementById("loseText").innerHTML;
+let drawText = document.getElementById("drawText").innerHTML;
+let higherBtn = document.getElementById("higher-button");
+let lowerBtn = document.getElementById("lower-button");
+
+/*------------------------------------------------menu-*/
 
 function showHowToPlay() {
 	howToPlay.style.display = "inherit";
@@ -28,16 +45,21 @@ function showMenu() {
 	menuContainer.innerHTML = menu.innerHTML;
 }
 
+/*-----------------------------------------------array-*/
+
+let A = Number(11);
+J = 10;
+
+let cardArray = [A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, "Q", "K"];
+
+
+let Q = Number(10);
+let K = Number(10);
+
+
 /*-----------------------------------------------count-*/
 
-let cardArray = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
-
-J = 10;
-Q = 10;
-let K = 10;
-let A = 11;
-
-let count = 1;
+var count = 1;
 
 function addCount() {
 	count+=1;
@@ -47,6 +69,28 @@ function addCount() {
 function getNumber() {
 	number = cardArray[Math.floor(Math.random() * 13)];
 	return number;
+}
+
+/*-----------------------------------------------start-*/
+
+function startGame() {
+	messageContainer.style.display = "none";
+	gameContainer.style.display = "initial";
+	selectCard[0].style.animation = spinCard;
+	selectCard[0].innerHTML = getNumber();
+	numberIndicator[0].style.cssText = "border-color: green; color: green";
+}
+
+function restartGame() {
+	result.style.animation = "initial";
+	for (var i = 0; i < selectCard.length; i++) {
+        selectCard[i].style.animation = "initial";
+				numberIndicator[i].style.cssText = "initial";
+    }
+	higherBtn.disabled = false;
+	lowerBtn.disabled = false;
+	startGame();
+	count = 1;
 }
 
 /*-----------------------------------------------audio-*/
@@ -88,9 +132,6 @@ function audioToggle() {
 
 /*--------------------------------------------messages-*/
 
-let messageContainer = document.getElementById("message-container");
-let messageBubble = document.getElementsByClassName("messageBubble");
-
 function showMessage() {
 	menuContainer.style.display = "none";
 	messageContainer.style.display = "inherit";
@@ -118,8 +159,6 @@ function enterUserName(event) {
 
 /*------------------------------------number-indicator-*/
 
-let numberIndicator = document.getElementsByClassName("numberIndicator");
-
 function numberIndicatorGreen() {
 	numberIndicator[count-1].style.cssText = "border-color: green; color: green";
 }
@@ -129,16 +168,6 @@ function numberIndicatorRed() {
 }
 
 /*-------------------------------------------win-/-lose-*/
-
-let selectCard = document.getElementsByClassName("card");
-let spinCard = "spinCard 1s linear forwards";
-let result = document.getElementById("result");
-let showResult = "showResult 2s ease-in 1s forwards";
-let winText = document.getElementById("winText").innerHTML;
-let loseText = document.getElementById("loseText").innerHTML;
-let drawText = document.getElementById("drawText").innerHTML;
-let higherBtn = document.getElementById("higher-button");
-let lowerBtn = document.getElementById("lower-button");
 
 function intro() {
 	let introCard = document.getElementsByClassName("introCard");
@@ -178,24 +207,7 @@ function draw() {
 	setTimeout(numberIndicatorRed, 1000);
 }
 
-/*-----------------------------------------------start-*/
 
-function startGame() {
-	messageContainer.style.display = "none";
-	gameContainer.style.display = "initial";
-	selectCard[0].style.animation = spinCard;
-	selectCard[0].innerHTML = getNumber();
-	numberIndicator[0].style.cssText = "border-color: green; color: green";
-}
-
-function restartGame() {
-	result.style.animation = "initial";
-	for (var i = 0; i < selectCard.length; i++) {
-        selectCard[i].style.animation = "initial";
-				numberIndicator[i].style.cssText = "initial";
-    }
-	startGame();
-}
 
 /*--------------------------------------higher-/-lower-*/
 
