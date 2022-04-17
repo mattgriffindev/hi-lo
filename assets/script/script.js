@@ -130,7 +130,7 @@ let spinCard = "spinCard 1s linear forwards";
 let result = document.getElementById("result");
 let showResult = "showResult 2s ease-in 1s forwards";
 let winText = "Yay! Well done!";
-let loseText = "Sorry, you lose!";
+let loseText = document.getElementById("loseText").innerHTML;
 // let drawText = "You don't get anything for a pair!";
 
 
