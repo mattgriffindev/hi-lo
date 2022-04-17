@@ -34,8 +34,8 @@ let cardArray = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
 
 J = 10;
 Q = 10;
-K = 10;
-A = 11;
+let K = 10;
+let A = 11;
 
 let count = 1;
 
@@ -114,7 +114,7 @@ function enterUserName(event) {
 	if (x === 13) { 
 	  getUsername();
 	}
-  }
+}
 
 /*------------------------------------number-indicator-*/
 
@@ -153,7 +153,6 @@ function intro() {
 	setTimeout(function(){ menuContainer.style.display = "initial"; }, 8000);
 }
 
-
 function win() {
 	// result.innerHTML = winText;	
 	// result.style.animation = showResult;
@@ -187,6 +186,15 @@ function startGame() {
 	selectCard[0].style.animation = spinCard;
 	selectCard[0].innerHTML = getNumber();
 	numberIndicator[0].style.cssText = "border-color: green; color: green";
+}
+
+function restartGame() {
+	result.style.animation = "initial";
+	for (var i = 0; i < selectCard.length; i++) {
+        selectCard[i].style.animation = "initial";
+				numberIndicator[i].style.cssText = "initial";
+    }
+	startGame();
 }
 
 /*--------------------------------------higher-/-lower-*/
