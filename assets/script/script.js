@@ -30,7 +30,11 @@ function showMenu() {
 
 /*-----------------------------------------------count-*/
 
-let cardArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let J = 10;
+let Q = 10;
+let K = 10;
+
+let cardArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K];
 
 let count = 1;
 
@@ -40,8 +44,8 @@ function addCount() {
 	}
 
 function getNumber() {
-	number = cardArray[Math.floor(Math.random() * 10)];
-	return Number(number);
+	number = cardArray[Math.floor(Math.random() * 13)];
+	return number;
 }
 
 /*-----------------------------------------------audio-*/
@@ -203,9 +207,9 @@ function higher() {
 	// disableBtn();
 	let thisCard = selectCard[count].innerHTML;
 	let lastCard = selectCard[count-1].innerHTML;
-	if (thisCard > lastCard) { 
+	if (Number(thisCard) > Number(lastCard)) { 
 		win(); 
-	} else if (thisCard === lastCard) {
+	} else if (Number(thisCard) === Number(lastCard)) {
 		draw();
 	} else {
 		lose();
@@ -217,9 +221,9 @@ function lower() {
 	// disableBtn();
 	let thisCard = selectCard[count].innerHTML;
 	let lastCard = selectCard[count-1].innerHTML;
- 	if (thisCard < lastCard) {
+ 	if (Number(thisCard) < Number(lastCard)) {
 	 win();
-	} else if (thisCard === lastCard) {
+	} else if (Number(thisCard) === Number(lastCard)) {
 		draw();
 	} else {
 		lose();
