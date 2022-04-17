@@ -228,9 +228,9 @@ function higher() {
 	// disableBtn();
 	let thisCard = selectCard[count].innerHTML;
 	let lastCard = selectCard[count-1].innerHTML;
-	if (Number(thisCard) > Number(lastCard)) { 
+	if (thisCard > lastCard) { 
 		win(); 
-	} else if (Number(thisCard) === Number(lastCard)) {
+	} else if (thisCard === lastCard) {
 		draw();
 	} else {
 		lose();
@@ -242,9 +242,9 @@ function lower() {
 	// disableBtn();
 	let thisCard = selectCard[count].innerHTML;
 	let lastCard = selectCard[count-1].innerHTML;
- 	if (Number(thisCard) < Number(lastCard)) {
+ 	if (thisCard < lastCard) {
 	 win();
-	} else if (Number(thisCard) === Number(lastCard)) {
+	} else if (thisCard === lastCard) {
 		draw();
 	} else {
 		lose();
