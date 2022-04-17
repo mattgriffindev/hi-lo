@@ -41,7 +41,7 @@ function addCount() {
 
 function getNumber() {
 	number = cardArray[Math.floor(Math.random() * 10)];
-	return number;
+	return Number(number);
 }
 
 /*-----------------------------------------------audio-*/
@@ -161,6 +161,13 @@ function lose() {
 	setTimeout(numberIndicatorRed, 1000);
 }
 
+function draw() {
+	result.innerHTML = drawText;
+	result.style.animation = showResult;
+	setTimeout(loseAudio, 1000);
+	setTimeout(numberIndicatorRed, 1000);
+}
+
 /*-----------------------------------------------start-*/
 
 function startGame() {
@@ -195,6 +202,8 @@ function higher() {
 	let lastCard = selectCard[count-1].innerHTML;
 	if (thisCard > lastCard) { 
 		win(); 
+	} else if (thisCard === lastCard) {
+		draw();
 	} else {
 		lose();
 	}
@@ -207,7 +216,9 @@ function lower() {
 	let lastCard = selectCard[count-1].innerHTML;
  	if (thisCard < lastCard) {
 	 win();
+	} else if (thisCard === lastCard) {
+		draw();
 	} else {
-	 lose();
+		lose();
 	}
 }
