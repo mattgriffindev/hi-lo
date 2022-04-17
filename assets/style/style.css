@@ -229,20 +229,18 @@ body {
 .introCardFive { transform: matrix(1, 0.5, -0.5, 1, 0, 10); }
 
 #result {
-	height: 6rem;
+	height: 8rem;
 	width: 18rem;
+	padding-top: 2rem;
 	position: absolute;
-	top: 40vh;
+	top: 30vh;
 	left: 40vw;
-	font-size: 2rem;
 	font-family: var(--font);
 	color: var(--font-color);
 	text-shadow: 2px 2px 4px #fff;
 	border-radius: 50%;
 	background: #add8e6;
-	display: flex;
-  	align-items: center;
-	justify-content: center;
+	text-align: center;
 	border: 2px ridge #fc5185;
 	visibility: hidden;
 	z-index: 999;
