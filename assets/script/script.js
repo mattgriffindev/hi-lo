@@ -24,6 +24,9 @@ let drawText = document.getElementById("drawText").innerHTML;
 let higherBtn = document.getElementById("higher-button");
 let lowerBtn = document.getElementById("lower-button");
 
+let green = "border-color: green; color: green;";
+let red = "border-color: red; color: red;";
+
 /*------------------------------------------------menu-*/
 
 function showHowToPlay() {
@@ -47,15 +50,12 @@ function showMenu() {
 
 /*-----------------------------------------------array-*/
 
-let A = Number(11);
-J = 10;
+let cardValues = [2, 3, 7, 8];
 
-let cardArray = [A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, "Q", "K"];
-
-
-let Q = Number(10);
-let K = Number(10);
-
+function getValue() {
+	value = cardValues[Math.floor(Math.random() * cardValues.length)];
+	return Number(value);
+}
 
 /*-----------------------------------------------count-*/
 
@@ -66,19 +66,14 @@ function addCount() {
 	return count;
 	}
 
-function getNumber() {
-	number = cardArray[Math.floor(Math.random() * 13)];
-	return number;
-}
-
 /*-----------------------------------------------start-*/
 
 function startGame() {
 	messageContainer.style.display = "none";
 	gameContainer.style.display = "initial";
 	selectCard[0].style.animation = spinCard;
-	selectCard[0].innerHTML = getNumber();
-	numberIndicator[0].style.cssText = "border-color: green; color: green";
+	selectCard[0].innerHTML = getValue();
+	numberIndicator[0].style.cssText = "border-color: green; color: green;";
 }
 
 function restartGame() {
@@ -160,11 +155,11 @@ function enterUserName(event) {
 /*------------------------------------number-indicator-*/
 
 function numberIndicatorGreen() {
-	numberIndicator[count-1].style.cssText = "border-color: green; color: green";
+	numberIndicator[count-1].style.cssText = green;
 }
 
 function numberIndicatorRed() {
-	numberIndicator[count-1].style.cssText = "border-color: red; color: red";
+	numberIndicator[count-1].style.cssText = red;
 }
 
 /*-------------------------------------------win-/-lose-*/
@@ -178,15 +173,22 @@ function intro() {
 	setTimeout(function(){ introCard[2].style.animation = spinCard; }, 1000);
 	setTimeout(function(){ introCard[3].style.animation = spinCard; }, 1500);
 	setTimeout(function(){ introCard[4].style.animation = spinCard; }, 2000);
-	setTimeout(function(){ introContainer.style.display = "none"; }, 8000);
-	setTimeout(function(){ menuContainer.style.display = "initial"; }, 8000);
+	setTimeout(function(){ introContainer.style.display = "none"; }, 6000);
+	setTimeout(function(){ menuContainer.style.display = "initial"; }, 6000);
 }
 
+
+
 function win() {
-	// result.innerHTML = winText;	
-	// result.style.animation = showResult;
 	setTimeout(winAudio, 1000);
 	setTimeout(numberIndicatorGreen, 1000);
+}
+
+function winGame() {
+	setTimeout(winAudio, 1000);
+	setTimeout(numberIndicatorGreen, 1000);
+	result.innerHTML = winText;	
+	result.style.animation = showResult;
 }
 
 function lose() {
@@ -207,8 +209,6 @@ function draw() {
 	setTimeout(numberIndicatorRed, 1000);
 }
 
-
-
 /*--------------------------------------higher-/-lower-*/
 
 // function disableBtn() {
@@ -219,18 +219,22 @@ function draw() {
 // }
 
 function revealCard() {
-	selectCard[count].innerHTML = getNumber();
 	selectCard[count].style.animation = spinCard;
+	selectCard[count].innerText = getValue();
 }
 
 function higher() {
 	revealCard();
-	// disableBtn();
-	let thisCard = selectCard[count].innerHTML;
-	let lastCard = selectCard[count-1].innerHTML;
-	if (thisCard > lastCard) { 
-		win(); 
-	} else if (thisCard === lastCard) {
+	
+	let thisCard = selectCard[count].innerText;
+	let lastCard = selectCard[count-1].innerText;
+
+
+	if (count == 5 && thisCard > lastCard) {
+		winGame();
+	} else if (thisCard > lastCard) {
+	 	win(); 
+	}	else if (thisCard === lastCard) {
 		draw();
 	} else {
 		lose();
@@ -239,12 +243,15 @@ function higher() {
 
 function lower() {
 	revealCard();
-	// disableBtn();
-	let thisCard = selectCard[count].innerHTML;
-	let lastCard = selectCard[count-1].innerHTML;
- 	if (thisCard < lastCard) {
-	 win();
-	} else if (thisCard === lastCard) {
+
+	let thisCard = selectCard[count].innerText;
+	let lastCard = selectCard[count-1].innerText;
+
+	if (count == 5 && thisCard < lastCard) {
+		winGame();
+	} else if (thisCard < lastCard) {
+		win();
+	}	else if (thisCard === lastCard) {
 		draw();
 	} else {
 		lose();
