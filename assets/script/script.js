@@ -50,7 +50,7 @@ function showMenu() {
 
 /*-----------------------------------------------array-*/
 
-let cardValues = [8];
+let cardValues = [2, 8];
 
 function getValue() {
 	value = cardValues[Math.floor(Math.random() * cardValues.length)];
@@ -125,7 +125,7 @@ function audioToggle() {
 	}
 }
 
-/*--------------------------------------------messages-*/
+/*--------------------------------------------username-*/
 
 function showMessage() {
 	menuContainer.style.display = "none";
@@ -149,6 +149,23 @@ function enterUserName(event) {
 	var x = event.keyCode;
 	if (x === 13) { 
 	  getUsername();
+	}
+}
+
+/*-------------------high-score-*/
+
+var highScore = ["Matthew", "Mark", "Luke"];
+ 
+function addHighScore() {
+	let username = document.getElementById("userName").value;
+	highScore.push(username);
+	localStorage.setItem("highScoreName", JSON.stringify(highScore));
+	
+	let retrievedData = localStorage.getItem("highScoreName");
+	let highScoreList = JSON.parse(retrievedData);
+
+	for (var i = 0; i < highScoreList.length; i++) {
+    document.getElementById("showHighScore").innerHTML += highScoreList[i] +"<br>";
 	}
 }
 
@@ -229,6 +246,7 @@ function higher() {
 	let thisCard = selectCard[count].innerText;
 	let lastCard = selectCard[count-1].innerText;
 
+
 	if (count == 5 && thisCard >= lastCard) {
 		winGame();
 	} else if (thisCard >= lastCard) {
@@ -262,4 +280,5 @@ function goHallFame() {
 	gameContainer.style.display = "none";
 	menuContainer.style.display = "initial";
 	showHallFame();
+	addHighScore();
 }
