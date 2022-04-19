@@ -36,7 +36,7 @@ function showHowToPlay() {
 
 function showHallOfFame() {
 	hallOfFame.style.display = "inherit";
-	menuContainer.innerHTML = hallOfFame.innerHTML;
+	menuContainer.innerHTML = hallFame.innerHTML;
 }
 
 function showSettings() {
