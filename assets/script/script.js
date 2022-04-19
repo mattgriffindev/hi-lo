@@ -5,7 +5,7 @@ let canvas = document.getElementById("canvas");
 let gameContainer = document.getElementById("game-container");
 let menuContainer = document.getElementById("menu-container");
 let howToPlay = document.getElementById("how-to-play");
-let hallOfFame = document.getElementById("hall-of-fame");
+let hallFame = document.getElementById("hall-of-fame");
 let settings = document.getElementById("settings");
 let menu = document.getElementById("menu");
 
@@ -34,8 +34,8 @@ function showHowToPlay() {
 	menuContainer.innerHTML = howToPlay.innerHTML;
 }
 
-function showHallOfFame() {
-	hallOfFame.style.display = "inherit";
+function showHallFame() {
+	hallFame.style.display = "inherit";
 	menuContainer.innerHTML = hallFame.innerHTML;
 }
 
@@ -50,7 +50,7 @@ function showMenu() {
 
 /*-----------------------------------------------array-*/
 
-let cardValues = [2, 3, 7, 8];
+let cardValues = [8];
 
 function getValue() {
 	value = cardValues[Math.floor(Math.random() * cardValues.length)];
@@ -229,13 +229,12 @@ function higher() {
 	let thisCard = selectCard[count].innerText;
 	let lastCard = selectCard[count-1].innerText;
 
-
-	if (count == 5 && thisCard > lastCard) {
+	if (count == 5 && thisCard >= lastCard) {
 		winGame();
-	} else if (thisCard > lastCard) {
+	} else if (thisCard >= lastCard) {
 	 	win(); 
-	}	else if (thisCard === lastCard) {
-		draw();
+	// }	else if (thisCard === lastCard) {
+	// 	draw();
 	} else {
 		lose();
 	}
@@ -247,13 +246,20 @@ function lower() {
 	let thisCard = selectCard[count].innerText;
 	let lastCard = selectCard[count-1].innerText;
 
-	if (count == 5 && thisCard < lastCard) {
+	if (count == 5 && thisCard <= lastCard) {
 		winGame();
-	} else if (thisCard < lastCard) {
+	} else if (thisCard <= lastCard) {
 		win();
-	}	else if (thisCard === lastCard) {
-		draw();
+	// }	else if (thisCard === lastCard) {
+	// 	draw();
 	} else {
 		lose();
 	}
+}
+
+function goHallFame() {
+	result.style.animation = "initial";
+	gameContainer.style.display = "none";
+	menuContainer.style.display = "initial";
+	showHallFame();
 }
