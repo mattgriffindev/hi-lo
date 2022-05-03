@@ -14,6 +14,10 @@
 	--font: 'Irish Grover', cursive;
 }
 
+html {
+	font-size: 16px;
+}
+
 body {
 	background-color: #d4ebf2;
 }
@@ -61,10 +65,6 @@ body {
 
 /*----------------------------------------------------menu-*/
 
-#game-container {
-	display: none;
-}
-
 #menu-container {
 	height: 20rem;
 	width: 20rem;
@@ -74,14 +74,13 @@ body {
 	color: var(--font-color);
 	text-align: center;
 	box-shadow: 2px 2px 4px #fff;
-	display: none;
 }
 
 #intro-container {
 	height: 20rem;
 	width: 40rem;
 	display: flex;
-  	align-items: center;
+  align-items: center;
 	justify-content: center;
 	border: 1px solid hotpink;
 }
@@ -117,6 +116,9 @@ body {
 	cursor: pointer;
 }
 
+#game-container,
+#menu-container,
+#menu,
 #how-to-play,
 #hall-of-fame,
 #settings {
