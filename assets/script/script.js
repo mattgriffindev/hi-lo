@@ -2,20 +2,18 @@
 
 // Load intro() on page load //
 $(document).ready(function() {
-	let introCard = $(".introCard");
-	let spinCard = "spinCard 1s linear forwards";
-	introCard[0].style.animation = spinCard;
-	setTimeout(function(){ introCard[1].style.animation = spinCard; }, 500);
-	setTimeout(function(){ introCard[2].style.animation = spinCard; }, 1000);
-	setTimeout(function(){ introCard[3].style.animation = spinCard; }, 1500);
-	setTimeout(function(){ introCard[4].style.animation = spinCard; }, 2000);
+	$(".introCard:eq(0)").addClass("spinCard");
+	setTimeout(function(){ $(".introCard:eq(1)").addClass("spinCard"); }, 500);
+	setTimeout(function(){ $(".introCard:eq(2)").addClass("spinCard"); }, 1000);
+	setTimeout(function(){ $(".introCard:eq(3)").addClass("spinCard"); }, 1500);
+	setTimeout(function(){ $(".introCard:eq(4)").addClass("spinCard"); }, 2000);
 	setTimeout(function(){ $("#intro-container").hide(); }, 6000);
 	setTimeout(function(){ $("#menu-container, #menu").show(); }, 6000);
 });
 
 /*---------------------------------------------------------count-*/
 
-var count = 1;
+let count = 1;
 
 function addCount() {
 	count+=1;
@@ -77,9 +75,10 @@ function enterUserName(event) {
 
 let cardValues = [2, 8];
 
+/** Get random card values from array */
 function getValue() {
-	value = cardValues[Math.floor(Math.random() * cardValues.length)];
-	return Number(value);
+	let value = cardValues[Math.floor(Math.random() * cardValues.length)];
+	return parseInt(value);
 }
 
 /*-----------------------------------------------start-*/
@@ -106,30 +105,28 @@ function restartGame() {
 	higherBtn.disabled = false;
 	lowerBtn.disabled = false;
 	startGame();
-	count = 1;
+	count = 0;
 }
 
 /*-----------------------------------------------audio-*/
 
-let winSound = document.getElementById("win");
-let loseSound = document.getElementById("lose");
 
 function winAudio() {
-	winSound.play();
+	document.getElementById("win").play();
 }
 
 function loseAudio() {
-	loseSound.play();
+	document.getElementById("lose").play();
 }
 
 function soundOff() {
-	winSound.muted = true;
-	loseSound.muted = true;
+	document.getElementById("win").muted = true;
+	document.getElementById("lose").muted = true;
 }
 
 function soundOn() {
-	winSound.muted = false;
-	loseSound.muted = false;
+	document.getElementById("win").muted = false;
+	document.getElementById("lose").muted = false;
 }
 
 function audioToggle() {
@@ -165,27 +162,17 @@ function addHighScore() {
 
 /*------------------------------------number-indicator-*/
 
+/** Change number indicator to green */
 function numberIndicatorGreen() {
-	let numberIndicator = document.getElementsByClassName("numberIndicator");
-	let green = "border-color: green; color: green;";
-	numberIndicator[count-1].style.cssText = green;
+	$(".numberIndicator").eq(count-1).removeClass("numInd-blank").addClass("numInd-green");
 }
 
+/** Change number indicator to red */
 function numberIndicatorRed() {
-	let numberIndicator = document.getElementsByClassName("numberIndicator");
-	let red = "border-color: red; color: red;";
-	numberIndicator[count-1].style.cssText = red;
+	$(".numberIndicator").eq(count-1).removeClass("numInd-blank").addClass("numInd-red");
 }
 
 /*-------------------------------------------win-/-lose-*/
-
-
-
-
-
-
-
-
 
 function win() {
 	setTimeout(winAudio, 1000);
@@ -232,29 +219,28 @@ function draw() {
 
 /*--------------------------------------higher-/-lower-*/
 
-// function disableBtn() {
-// 	higherBtn.disabled = true;
-// 	lowerBtn.disabled = true;
-// 	setTimeout(function(){higherBtn.disabled = false;}, 1000);
-// 	setTimeout(function(){lowerBtn.disabled = false;}, 1000);
-// }
-
+/** Reveal next card */
 function revealCard() {
-	let selectCard = document.getElementsByClassName("card");
-	let spinCard = "spinCard 1s linear forwards";
-	selectCard[count].style.animation = spinCard;
-	selectCard[count].innerText = getValue();
+	$(".card").eq(count).addClass("spinCard").html(getValue());
 }
+
+// Add click handler to #higher-button and run higher() and addCount() //
+$("#higher-button").click(function() {
+	higher();
+	addCount();
+});
+
+// Add click handler to #loweer-button and run lower() and addCount() //
+$("#lower-button").click(function() {
+	lower();
+	addCount();
+});
 
 /** Check if card is higher or lower on higher button click */
 function higher() {
-	let selectCard = document.getElementsByClassName("card");
 	revealCard();
-	
-	let thisCard = selectCard[count].innerText;
-	let lastCard = selectCard[count-1].innerText;
-
-
+	let thisCard = $(".card").eq(count).html();
+	let lastCard = $(".card").eq(count-1).html();
 	if (count == 5 && thisCard >= lastCard) {
 		winGame();
 	} else if (thisCard >= lastCard) {
@@ -267,12 +253,9 @@ function higher() {
 }
 
 function lower() {
-	let selectCard = document.getElementsByClassName("card");
 	revealCard();
-
-	let thisCard = selectCard[count].innerText;
-	let lastCard = selectCard[count-1].innerText;
-
+	let thisCard = $(".card").eq(count).html();
+	let lastCard = $(".card").eq(count-1).html();
 	if (count == 5 && thisCard <= lastCard) {
 		winGame();
 	} else if (thisCard <= lastCard) {
