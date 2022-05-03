@@ -127,52 +127,20 @@ body {
 
 /*-----------------------------------------------messages-*/
 
-#message-container {
-	height: 20rem;
-	width: 20rem;
+#welcome-message {
 	padding: 1rem;
 	font-family: var(--font);
-	border: 1px solid hotpink;
 	color: var(--font-color);
 	text-align: center;
-	box-shadow: 2px 2px 4px #fff;
 	display: none;
 }
 
-#message-container p {
+#welcome-message p {
 	font-size: 1.25rem;
-}
-
-.messageBubble {
-	height: 60%;
-	width: 100%;
-	padding: 0.5rem;
-	position: relative;
-	background: #f8f8ff;
-	border-radius: 15px;
-	display: none;
-}
-.messageBubble:after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 0;
-	height: 0;
-	border: 1rem solid transparent;
-	border-top-color: #f8f8ff;
-	border-bottom: 0;
-	border-right: 0;
-	margin-left: -0.5rem;
-	margin-bottom: -1rem;
 }
 
 #userName {
 	width: 50%;
-}
-
-.messageBubble p {
-	margin: 0;
 }
 
 .next {
@@ -255,12 +223,25 @@ body {
 	width: 4rem;
 	margin: auto;
 	padding-top: 0.25rem;
-	color: var(--number-indicator);
 	text-align: center;
 	font-size: 2rem;
 	border: 2px solid;
-	border-color: var(--number-indicator);
 	border-radius: 50%;
+}
+
+.numInd-blank {
+	color: var(--number-indicator);
+	border-color: var(--number-indicator);
+}
+
+.numInd-green {
+	color: green;
+	border-color: green;
+}
+
+.numInd-red {
+	color: red;
+	border-color: red;
 }
 
 /*----------------------------------------------footer-*/
@@ -294,6 +275,9 @@ body {
 
 /*-------------------------------------------animation-*/
 
+.spinCard {
+	animation: spinCard 1s linear forwards;
+}
  @keyframes spinCard {
 	20% {transform: rotateY(180deg);}
 	90% {background-color: var(--card-back-color);}

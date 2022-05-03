@@ -1,4 +1,4 @@
-/*---------------------------------------------on-load-*/
+/*-------------------------------------------------------on-load-*/
 
 // Load intro() on page load //
 $(document).ready(function() {
@@ -13,7 +13,7 @@ $(document).ready(function() {
 	setTimeout(function(){ $("#menu-container, #menu").show(); }, 6000);
 });
 
-/*-----------------------------------------------count-*/
+/*---------------------------------------------------------count-*/
 
 var count = 1;
 
@@ -22,7 +22,7 @@ function addCount() {
 	return count;
 	}
 
-/*------------------------------------------------menu-*/
+/*----------------------------------------------------------menu-*/
 	
 /** Show instructions to play game */
 function showHowToPlay() {
@@ -33,7 +33,7 @@ function showHowToPlay() {
 /** Show hall of fame */
 function showHallFame() {
 	$("#menu").hide();
-	$("#hall-of-fame").show;
+	$("#hall-of-fame").show();
 }
 
 /** Show settings menu */
@@ -48,7 +48,32 @@ function showMenu() {
 	$("#menu").show();
 }
 
-/*-----------------------------------------------array-*/
+/*------------------------------------------------------username-*/
+
+/** Show welcome message and get username */
+function welcomeMessage() {
+	$("#menu, #how-to-play, #hall-of-fame, #settings").hide();
+	$("#welcome-message").show();
+}
+
+/** Get username from welcome message */
+function getUsername(){
+	let username = $("#userName").val();
+	if (username.length != 0) {
+		startGame();
+	} else {
+		alert("Please enter your name");
+	}
+}
+
+/** Get username on Enter key press */
+function enterUserName(event) {
+	var x = event.keyCode;
+	if (x === 13) { 
+	  getUsername();
+	}
+}
+/*---------------------------------------------------------array-*/
 
 let cardValues = [2, 8];
 
@@ -59,18 +84,12 @@ function getValue() {
 
 /*-----------------------------------------------start-*/
 
+/** Start game by revealing first card */
 function startGame() {
-	let gameContainer = document.getElementById("game-container");
-	let messageContainer = document.getElementById("message-container");
-	let numberIndicator = document.getElementsByClassName("numberIndicator");
-	let selectCard = document.getElementsByClassName("card");
-	let spinCard = "spinCard 1s linear forwards";
-	let green = "border-color: green; color: green;";
-	messageContainer.style.display = "none";
-	gameContainer.style.display = "initial";
-	selectCard[0].style.animation = spinCard;
-	selectCard[0].innerHTML = getValue();
-	numberIndicator[0].style.cssText = green;
+	$("#menu-container").hide();
+	$("#game-container").show();
+	$(".numberIndicator:eq(0)").removeClass("numInd-blank").addClass("numInd-green");	
+	$(".card:eq(0)").addClass("spinCard").html(getValue());
 }
 
 function restartGame() {
@@ -124,37 +143,6 @@ function audioToggle() {
 		audioOn.style.display = "initial";
 		audioOff.style.display = "none";
 		soundOn();
-	}
-}
-
-/*--------------------------------------------username-*/
-
-function showMessage() {
-	let menuContainer = document.getElementById("menu-container");
-	let messageContainer = document.getElementById("message-container");
-	let messageBubble = document.getElementsByClassName("messageBubble");
-	menuContainer.style.display = "none";
-	messageContainer.style.display = "inherit";
-	messageBubble[0].style.display = "initial";
-}
-
-function getUsername(){
-	let username = document.getElementById("userName").value;
-	let greeting = document.getElementById("greeting");
-	let messageBubble = document.getElementsByClassName("messageBubble");
-	if (username.length != 0) {
-		messageBubble[1].style.display = "initial";
-		greeting.innerHTML = username;
-		messageBubble[0].style.display = "none";
-	} else {
-		alert("Please enter your name");
-	}
-}
-
-function enterUserName(event) {
-	var x = event.keyCode;
-	if (x === 13) { 
-	  getUsername();
 	}
 }
 
