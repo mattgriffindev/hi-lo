@@ -1,6 +1,6 @@
 /*-------------------------------------------------------on-load-*/
 
-// Load intro() on page load //
+// Load intro() on page load
 $(document).ready(function() {
 	$(".introCard:eq(0)").addClass("spinCard");
 	setTimeout(function(){ $(".introCard:eq(1)").addClass("spinCard"); }, 500);
@@ -21,7 +21,7 @@ function addCount() {
 	}
 
 /*----------------------------------------------------------menu-*/
-	
+
 /** Show instructions to play game */
 function showHowToPlay() {
 	$("#menu").hide();
@@ -40,11 +40,11 @@ function showSettings() {
 	$("#settings").show();
 }
 
-/** Show main menu */
-function showMenu() {
+// Show main menu 
+$(".show-menu-btn").click(function() {
 	$("#how-to-play, #hall-of-fame, #settings").hide();
 	$("#menu").show();
-}
+});
 
 /*------------------------------------------------------username-*/
 
@@ -110,55 +110,44 @@ function restartGame() {
 
 /*-----------------------------------------------audio-*/
 
-
+/** Play sound when player loses */
 function winAudio() {
 	document.getElementById("win").play();
 }
 
+/** Play sound when player loses */
 function loseAudio() {
 	document.getElementById("lose").play();
 }
 
+/** Mute all sounds */
 function soundOff() {
 	document.getElementById("win").muted = true;
 	document.getElementById("lose").muted = true;
 }
 
+/** Unmute all sounds */
 function soundOn() {
 	document.getElementById("win").muted = false;
 	document.getElementById("lose").muted = false;
 }
 
-function audioToggle() {
-	let audioOn = document.getElementById("audioOn");
-	let audioOff = document.getElementById("audioOff");
-	if (audioOn.style.display === "initial") {
-		audioOff.style.display = "initial";
-		audioOn.style.display = "none";
+// Toggle sound on/off and sound icon
+$("#audioToggle").click(function() {
+	if ($("#audioOn").is(":visible")) {
+		$("#audioOn").hide();
+		$("#audioOff").show();
 		soundOff();
 	} else {
-		audioOn.style.display = "initial";
-		audioOff.style.display = "none";
+		$("#audioOff").hide();
+		$("#audioOn").show();
 		soundOn();
 	}
-}
+});
 
-/*-------------------high-score-*/
+/*-----------------------------high-score-*/
 
-var highScore = ["Matthew", "Mark", "Luke"];
- 
-function addHighScore() {
-	let username = document.getElementById("userName").value;
-	highScore.push(username);
-	localStorage.setItem("highScoreName", JSON.stringify(highScore));
-	
-	let retrievedData = localStorage.getItem("highScoreName");
-	let highScoreList = JSON.parse(retrievedData);
 
-	for (var i = 0; i < highScoreList.length; i++) {
-    document.getElementById("showHighScore").innerHTML += highScoreList[i] +"<br>";
-	}
-}
 
 /*------------------------------------number-indicator-*/
 
@@ -224,13 +213,13 @@ function revealCard() {
 	$(".card").eq(count).addClass("spinCard").html(getValue());
 }
 
-// Add click handler to #higher-button and run higher() and addCount() //
+// Add click handler to #higher-button and run higher() and addCount()
 $("#higher-button").click(function() {
 	higher();
 	addCount();
 });
 
-// Add click handler to #loweer-button and run lower() and addCount() //
+// Add click handler to #loweer-button and run lower() and addCount()
 $("#lower-button").click(function() {
 	lower();
 	addCount();
@@ -267,13 +256,3 @@ function lower() {
 	}
 }
 
-function goHallFame() {
-	let menuContainer = document.getElementById("menu-container");
-	let gameContainer = document.getElementById("game-container");
-	let hallFame = document.getElementById("hall-of-fame");
-	result.style.animation = "initial";
-	gameContainer.style.display = "none";
-	menuContainer.style.display = "initial";
-	showHallFame();
-	addHighScore();
-}
