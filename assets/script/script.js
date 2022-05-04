@@ -28,10 +28,10 @@ function showHowToPlay() {
 	$("#how-to-play").show();
 }
 
-/** Show hall of fame */
-function showHallFame() {
+/** Show contact form */
+function showContactForm() {
 	$("#menu").hide();
-	$("#hall-of-fame").show();
+	$("#contact-form").show();
 }
 
 /** Show settings menu */
@@ -42,7 +42,7 @@ function showSettings() {
 
 // Show main menu 
 $(".show-menu-btn").click(function() {
-	$("#how-to-play, #hall-of-fame, #settings").hide();
+	$("#how-to-play, #contact-form, #settings").hide();
 	$("#menu").show();
 });
 
@@ -50,7 +50,7 @@ $(".show-menu-btn").click(function() {
 
 /** Show welcome message and get username */
 function welcomeMessage() {
-	$("#menu, #how-to-play, #hall-of-fame, #settings").hide();
+	$("#menu, #how-to-play, #contact-form, #settings").hide();
 	$("#welcome-message").show();
 }
 
@@ -145,9 +145,24 @@ $("#audioToggle").click(function() {
 	}
 });
 
-/*-----------------------------high-score-*/
+/*-----------------------------send-email-*/
 
-
+function sendMail(contactForm) {
+    emailjs.send("service_l0dqag3", "template_30ofgfw", {
+        "from_name": contactForm.name.value,
+        "from_email": contactForm.emailaddress.value,
+        "message": contactForm.messagebox.value
+    })
+    .then(
+        function(response) {
+            console.log("SUCCESS", response);
+        },
+        function(error) {
+            console.log("FAILED", error);
+        }
+    );
+    return false; 
+}
 
 /*------------------------------------number-indicator-*/
 
