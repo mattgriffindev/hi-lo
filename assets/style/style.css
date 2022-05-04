@@ -70,8 +70,8 @@ body {
 /*----------------------------------------------------menu-*/
 
 #menu-container {
-	height: 20rem;
-	width: 20rem;
+	height: 25rem;
+	width: 25rem;
 	padding: 1rem;
 	font-family: var(--font);
 	border: 1px solid hotpink;
@@ -124,7 +124,7 @@ body {
 #menu-container,
 #menu,
 #how-to-play,
-#hall-of-fame,
+#contact-form,
 #settings {
 	display: none;
 }
@@ -154,11 +154,8 @@ body {
 /*--------------------------------------------------button-*/
 
 .button {
-	height: 3rem;
-	width: 8rem;
 	color: var(--font-color);
 	font-family: var(--font);
-	font-size: 1.5rem;
 	border: 1px ridge #fc5185;
 	border-radius: 15px;
 	background-color: #c0eccb;
@@ -168,6 +165,18 @@ body {
 	display: flex;
 	justify-content: center;
 	text-align: center;
+}
+
+.gamebutton {
+	height: 3rem;
+	width: 8rem;
+	font-size: 1.5rem;
+}
+
+.sendbutton {
+	height: 2rem;
+  width: 4rem;
+	font-size: 1rem;
 }
 
 /*----------------------------------------------------card-*/
