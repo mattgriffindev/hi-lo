@@ -18,6 +18,13 @@
     <link rel="icon" type="image/svg" href="assets/image/cards.svg">
     <link rel="apple-touch-icon" href="assets/image/cards.svg">
     <link href="assets/style/style.css" rel="stylesheet" type="text/css">
+
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+		<script type="text/javascript">
+   			(function(){
+      		emailjs.init("jg53fM6y9nHAaBhsy");
+   			})();
+		</script>
 </head>
 
 <body>
@@ -57,7 +64,7 @@
                 <h2 class="itemLink" onclick="welcomeMessage()">Play</h2>
                 <h2 class="itemLink" onclick="showHowToPlay()"><i class="fas fa-gamepad"></i> How to play
                 </h2>
-                <h2 class="itemLink" onclick="showHallFame()"><i class="fas fa-trophy"></i> Hall of fame
+                <h2 class="itemLink" onclick="showContactForm()"><i class="fas fa-envelope"></i> Contact us
                 </h2>
                 <h2 class="itemLink" onclick="showSettings()"><i class="fas fa-cog"></i> Settings</h2>
             </div>
@@ -68,9 +75,14 @@
                     previous card.</p>
                 <h6 class="itemLink show-menu-btn"><i class="fas fa-home"></i> Menu</h6>
             </div>
-            <div id="hall-of-fame">
-                <h2>Hall of Fame</h2>
-                <p id="showHighScore"></p>
+            <div id="contact-form">
+                <h2>Contact</h2>
+								<form onsubmit="return sendMail(this);">
+                		<input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
+                    <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
+                    <textarea rows="3" name="messagebox" class="form-control" id="messagebox" placeholder="Your message" required></textarea>
+                    <button type="submit" class="button sendbutton mt-2">Send</button>
+                </form>							
                 <h6 class="itemLink show-menu-btn"><i class="fas fa-home"></i> Menu</h6>
             </div>
             <div id="settings">
@@ -119,11 +131,11 @@
             </div>
             <div class="row buttonPlacement py-1">
                 <div class="col col-md-2">
-                    <button id="higher-button" class="button">Higher <i
+                    <button id="higher-button" class="button gamebutton">Higher <i
                             class="fas fa-arrow-up"></i></button>
                 </div>
                 <div class="col col-md-2">
-                    <button id="lower-button" class="button">Lower <i
+                    <button id="lower-button" class="button gamebutton">Lower <i
                             class="fas fa-arrow-down"></i></button>
                 </div>
             </div>
