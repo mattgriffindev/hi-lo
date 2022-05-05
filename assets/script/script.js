@@ -156,6 +156,8 @@ function sendMail(contactForm) {
     .then(
         function(response) {
             console.log("SUCCESS", response);
+						alert("Your message has been sent");
+						document.getElementById("contactForm").reset();
         },
         function(error) {
             console.log("FAILED", error);
