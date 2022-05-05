@@ -77,10 +77,10 @@
             </div>
             <div id="contact-form">
                 <h2>Contact</h2>
-								<form onsubmit="return sendMail(this);">
-                		<input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
-                    <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
-                    <textarea rows="3" name="messagebox" class="form-control" id="messagebox" placeholder="Your message" required></textarea>
+								<form id="contactForm" onsubmit="return sendMail(this);">
+                		<input type="text" name="name" class="form-control mb-2" id="fullname" placeholder="Name" required/>
+                    <input type="text" name="emailaddress" class="form-control mb-2" id="emailaddress" placeholder="Email" required/>
+                    <textarea rows="3" name="messagebox" class="form-control mb-2" id="messagebox" placeholder="Your message" required></textarea>
                     <button type="submit" class="button sendbutton mt-2">Send</button>
                 </form>							
                 <h6 class="itemLink show-menu-btn"><i class="fas fa-home"></i> Menu</h6>
@@ -161,7 +161,7 @@
     <!--footer-->
     <div id="footer" class="container-fluid border border-danger">
         <div class="row">
-            <div>&copy; 2022. Mochyn Fawr.<span class="d-inline d-sm-none"><br></span> Made with <i
+            <div>&copy; 2022. Hi-Lo.<span class="d-inline d-sm-none"><br></span> Made with <i
                     class="fas fa-heart hvr-pulse"></i>
                 by <a href="https://github.com/mattgriffindev" target="_blank"
                     class="itemLink signature">mattgriffindev</a></div>
@@ -176,7 +176,7 @@
     </script>
     <script id="winText" type="text/html">
         <h4>You're a winner!</h4>
-        <p class="itemLink" onclick="goHallFame()"> See your name in our Hall of fame</p>
+        <a class="itemLink" href="https://www.twitter.com/share?text=I got 5 in a row on Hi-Lo! Take on the challenge:&url=https://www.google.com Made by @mattgriffindev" target="_blank" rel="noopener">Tweet your victory</a>
     </script>
     <script id="drawText" type="text/html">
         <h4>You don't get anything for a pair!</h4>
