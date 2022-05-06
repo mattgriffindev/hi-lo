@@ -121,28 +121,6 @@ p {
 	display: none;
 }
 
-/*-----------------------------------------------messages-*/
-
-#welcome-message {
-	padding: 1rem;
-	font-family: var(--font);
-	color: var(--font-color);
-	text-align: center;
-	display: none;
-	border: 1px solid orange; /*REMOVE WHEN COMPLETE*/
-	background-color: lightblue;
-  border-radius: 16px;
-  box-shadow: 2px 2px 4px #fff;
-}
-
-#userName {
-	width: 50%;
-}
-
-.next {
-	text-align: right;
-}
-
 /*--------------------------------------------------button-*/
 
 .button {
