@@ -61,7 +61,7 @@
         <div id="menu-container">
             <div id="menu">
                 <h1 class="menu-title">Menu</h1>
-                <button class="itemLink menu-item" onclick="welcomeMessage()">Play</button>
+                <button class="itemLink menu-item" onclick="startGame()">Play</button>
 								<br>
                 <button class="itemLink menu-item" onclick="showHowToPlay()"><i class="fas fa-gamepad"></i> How to play
                 </button>
@@ -93,12 +93,6 @@
                 <p id="audioToggle" class="itemLink">Toggle Sound ON/OFF</p>
                 <button class="itemLink show-menu-btn"><i class="fas fa-home"></i> Menu</button>
             </div>
-						<div id="welcome-message">
-	            <p>Hello, there! I'm your host. What's your name?</p>
-	            <br>
-	            <input type="text" id="userName" onkeydown="enterUserName(event)" placeholder="Enter name" required>
-	            <p type="submit" class="itemLink next" onclick="getUsername(); startGame()">Next <i class="far fa-arrow-alt-circle-right"></i></p>
-	          </div>
         </div>
         <!--/menu-->
 
