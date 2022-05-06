@@ -1,17 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=M+PLUS+1+Code&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=M+PLUS+1+Code&family=Roboto&display=swap');
 
 * {
 	box-sizing: border-box;
 }
 
 :root {
-	--card-back-color: #fc5185;
-	--card-front-color: #f0f0f0;
-	--card-number-color: #fc5185;
-	--card-border-color: darkgoldenrod;
+	--main-color: #d4ebf2;
+	--secondary-color: #fc5185;
+	--tertiary-color: #add8e6;
+	--card-primary-color: #fc5185;
+	--card-secondary-color: #f0f0f0;
+	--card-tertiary-color: darkgoldenrod;
 	--number-indicator: #99d0e0;
-	--font-color: #fc5185;
+	--item-link-color: #200484;
 	--font: 'Irish Grover', cursive;
+	--paragraph-font: 'Roboto', sans-serif;
+	--signature-font: 'M PLUS 1 Code', cursive;
 }
 
 html {
@@ -19,11 +23,12 @@ html {
 }
 
 body {
-	background-color: #d4ebf2;
+	background-color: var(--main-color);
 }
 
 p {
-	font-size: 1.25rem;
+	font-family: var(--paragraph-font);
+	font-size: 1rem;
 }
 
 /*--------------------------------------------------canvas-*/
@@ -44,7 +49,7 @@ p {
   left: 0;
   top: 0;
   width: 100%;
-	color: var(--font-color);
+	color: var(--secondary-color);
 	font-family: var(--font);
 	font-size: 2rem;
 }
@@ -70,7 +75,7 @@ p {
 	padding: 1rem;
 	font-family: var(--font);
 	border: 1px solid hotpink; /*REMOVE WHEN COMPLETE*/
-	color: var(--font-color);
+	color: var(--secondary-color);
 	text-align: center;
 	box-shadow: 2px 2px 4px #fff;
 }
@@ -103,12 +108,12 @@ p {
 }
 
 .itemLink {
-	color: var(--font-color);
+	color: var(--secondary-color);
 	text-decoration: none;
 }
 
 .itemLink:hover {
-	color: navy;
+	color: var(--item-link-color);
 	cursor: pointer;
 }
 
@@ -124,11 +129,11 @@ p {
 /*--------------------------------------------------button-*/
 
 .button {
-	color: var(--font-color);
+	color: var(--secondary-color);
 	font-family: var(--font);
-	border: 1px ridge #fc5185;
+	border: 1px ridge #var(--secondary-color);
 	border-radius: 15px;
-	background-color: #c0eccb;
+	background-color: var(--tertiary-color);
 }
 
 .buttonPlacement {
@@ -158,13 +163,13 @@ p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: var(--card-number-color);
+	color: var(--card-primary-color);
 	font-family: var(--font);
 	font-size: 3rem;
 	text-align: center;
-	border: 2px solid var(--card-border-color);
+	border: 2px solid var(--card-tertiary-color);
 	border-radius: 15px;
-	background-color: var(--card-back-color);
+	background-color: var(--card-primary-color);
 }
 
 .card {
@@ -187,12 +192,12 @@ p {
 	padding-top: 2rem;
 	position: absolute;
 	font-family: var(--font);
-	color: var(--font-color);
+	color: var(--secondary-color);
 	text-shadow: 2px 2px 4px #fff;
 	border-radius: 50%;
-	background: #add8e6;
+	background: var(--tertiary-color);
 	text-align: center;
-	border: 2px ridge #fc5185;
+	border: 2px ridge var(--secondary-color);
 	visibility: hidden;
 	z-index: 999;
 }
@@ -233,7 +238,7 @@ p {
   bottom: 0;
   width: 100%;
 	padding: 1rem 0;
-	color: var(--font-color);
+	color: var(--secondary-color);
 	text-align: center;
 }
 
@@ -243,11 +248,11 @@ p {
 }
 
 #footer a:hover {
-	color: navy;
+	color: var(--item-link-color);
 }
 
 .signature {
-	font-family: 'M PLUS 1 Code', cursive;
+	font-family: var(--signature-font);
 }
 
 .hvr-pulse:hover {
@@ -261,8 +266,9 @@ p {
 }
  @keyframes spinCard {
 	20% {transform: rotateY(180deg);}
-	90% {background-color: var(--card-back-color);}
-	100% {background-color: var(--card-front-color);}
+	90% {background-color: var(--card-primary-color);}
+	100% {background-color: var(--card-secondary-color);
+	}
 }
 
 @keyframes showResult {
