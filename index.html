@@ -32,14 +32,14 @@
     <!--header-->
     <div id="header" class="container-fluid border border-danger">
         <div class="row">
-            <div class="leftDiv">
+            <div class="col col-top-left">
                 <div id="brand">Hi-Lo</div>
             </div>
-            <div class="rightDiv">
+            <div class="col col-top-right d-flex justiny-contents-flex-end">
                 <div id="soundNotification"><i id="audioOn" class="fas fa-volume-up"></i><i id="audioOff"
                         class="fas fa-volume-mute"></i></div>
             </div>
-            <div style="clear: both;"></div>
+<!--             <div style="clear: both;"></div> -->
         </div>
     </div>
     <!--/header-->
@@ -61,19 +61,22 @@
         <div id="menu-container">
             <div id="menu">
                 <h1 class="menu-title">Menu</h1>
-                <h2 class="itemLink" onclick="welcomeMessage()">Play</h2>
-                <h2 class="itemLink" onclick="showHowToPlay()"><i class="fas fa-gamepad"></i> How to play
-                </h2>
-                <h2 class="itemLink" onclick="showContactForm()"><i class="fas fa-envelope"></i> Contact us
-                </h2>
-                <h2 class="itemLink" onclick="showSettings()"><i class="fas fa-cog"></i> Settings</h2>
+                <button class="itemLink menu-item" onclick="welcomeMessage()">Play</button>
+								<br>
+                <button class="itemLink menu-item" onclick="showHowToPlay()"><i class="fas fa-gamepad"></i> How to play
+                </button>
+								<br>
+                <button class="itemLink menu-item" onclick="showContactForm()"><i class="fas fa-envelope"></i> Contact us
+                </button>
+								<br>
+                <button class="itemLink menu-item" onclick="showSettings()"><i class="fas fa-cog"></i> Settings</button>
             </div>
             <div id="how-to-play">
                 <h2>How to Play</h2>
                 <p>The aim of the game could not be simpler!</p>
                 <p>All you need to do is guess whether the next card to be dealt will be higher or lower than the
                     previous card.</p>
-                <h6 class="itemLink show-menu-btn"><i class="fas fa-home"></i> Menu</h6>
+                <button class="itemLink show-menu-btn"><i class="fas fa-home"></i> Menu</button>
             </div>
             <div id="contact-form">
                 <h2>Contact</h2>
@@ -83,12 +86,12 @@
                     <textarea rows="3" name="messagebox" class="form-control mb-2" id="messagebox" placeholder="Your message" required></textarea>
                     <button type="submit" class="button sendbutton mt-2">Send</button>
                 </form>							
-                <h6 class="itemLink show-menu-btn"><i class="fas fa-home"></i> Menu</h6>
+                <button class="itemLink show-menu-btn"><i class="fas fa-home"></i> Menu</button>
             </div>
             <div id="settings">
                 <h2>Settings</h2>
                 <p id="audioToggle" class="itemLink">Toggle Sound ON/OFF</p>
-                <h6 class="itemLink show-menu-btn"><i class="fas fa-home"></i> Menu</h6>
+                <button class="itemLink show-menu-btn"><i class="fas fa-home"></i> Menu</button>
             </div>
 						<div id="welcome-message">
 	            <p>Hello, there! I'm your host. What's your name?</p>
