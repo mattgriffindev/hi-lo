@@ -46,31 +46,6 @@ $(".show-menu-btn").click(function() {
 	$("#menu").show();
 });
 
-/*------------------------------------------------------username-*/
-
-/** Show welcome message and get username */
-function welcomeMessage() {
-	$("#menu, #how-to-play, #contact-form, #settings").hide();
-	$("#welcome-message").show();
-}
-
-/** Get username from welcome message */
-function getUsername(){
-	let username = $("#userName").val();
-	if (username.length != 0) {
-		startGame();
-	} else {
-		alert("Please enter your name");
-	}
-}
-
-/** Get username on Enter key press */
-function enterUserName(event) {
-	var x = event.keyCode;
-	if (x === 13) { 
-	  getUsername();
-	}
-}
 /*---------------------------------------------------------array-*/
 
 let cardValues = [2, 8];
@@ -85,7 +60,7 @@ function getValue() {
 
 /** Start game by revealing first card */
 function startGame() {
-	$("#menu-container").hide();
+	$("#menu-container, #intro-container").hide();
 	$("#game-container").show();
 	$(".numberIndicator:eq(0)").removeClass("numInd-blank").addClass("numInd-green");	
 	$(".card:eq(0)").addClass("spinCard").html(getValue());
