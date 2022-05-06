@@ -22,12 +22,17 @@ body {
 	background-color: #d4ebf2;
 }
 
+p {
+	font-size: 1.25rem;
+}
+
 /*--------------------------------------------------canvas-*/
 
 #canvas {
 	height: 100vh;
 }
 
+/*REMOVE WHEN COMPLETE*/
 .col {
 	border: 1px solid hotpink;
 }
@@ -36,27 +41,17 @@ body {
 
 #header {
 	position: fixed;
-  	left: 0;
-  	top: 0;
-  	width: 100%;
-	display: flex;
+  left: 0;
+  top: 0;
+  width: 100%;
 	color: var(--font-color);
 	font-family: var(--font);
 	font-size: 2rem;
 }
 
-#header .row {
-	width: 100%;
-}
-
-.leftDiv,
-.rightDiv {
-	width: 50%;
-}
-
-
-.rightDiv {
-	text-align: right;
+.col-top-right {
+	display: flex;
+	justify-content: right;
 }
 
 #audioOn {
@@ -74,7 +69,7 @@ body {
 	width: 22rem;
 	padding: 1rem;
 	font-family: var(--font);
-	border: 1px solid hotpink;
+	border: 1px solid hotpink; /*REMOVE WHEN COMPLETE*/
 	color: var(--font-color);
 	text-align: center;
 	box-shadow: 2px 2px 4px #fff;
@@ -86,33 +81,25 @@ body {
 	display: flex;
   align-items: center;
 	justify-content: center;
-	border: 1px solid hotpink;
-}
-
-.menu-item {
-	padding-top: 0.5rem;
+	border: 1px solid hotpink; /*REMOVE WHEN COMPLETE*/
 }
 
 .menu-title {
 	font-size: 3rem;
 }
 
-#menu-container h2 {
-	padding-top: 0.5rem;
+.menu-item {
+	padding-top: 0.75rem;
 	font-size: 2rem;
+	border: none;
+	background-color: transparent;
 }
 
-/* #menu-container h5 {
-	font-size: 1.75rem;
-} */
-
-#menu-container h6 {
+.show-menu-btn {
 	margin-top: 1rem;
 	font-size: 1.5rem;
-}
-
-#menu-container p {
-	font-size: 1.25rem;
+	border: none;
+	background-color: transparent;
 }
 
 .itemLink {
@@ -142,10 +129,10 @@ body {
 	color: var(--font-color);
 	text-align: center;
 	display: none;
-}
-
-#welcome-message p {
-	font-size: 1.25rem;
+	border: 1px solid orange; /*REMOVE WHEN COMPLETE*/
+	background-color: lightblue;
+  border-radius: 16px;
+  box-shadow: 2px 2px 4px #fff;
 }
 
 #userName {
@@ -264,9 +251,9 @@ body {
 
 #footer {
 	position: fixed;
-  	left: 0;
-  	bottom: 0;
-  	width: 100%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 	padding: 1rem 0;
 	color: var(--font-color);
 	text-align: center;
