@@ -117,6 +117,14 @@ p {
 	cursor: pointer;
 }
 
+#audioToggleOn {
+	display: inline;
+}
+
+#audioToggleOff {
+	display: none;
+}
+
 #game-container,
 #menu-container,
 #menu,
@@ -131,9 +139,10 @@ p {
 .button {
 	color: var(--secondary-color);
 	font-family: var(--font);
-	border: 1px ridge #var(--secondary-color);
+	border: 1px ridge var(--secondary-color);
 	border-radius: 15px;
 	background-color: var(--tertiary-color);
+	box-shadow: 2px 2px 4px #fff;
 }
 
 .buttonPlacement {

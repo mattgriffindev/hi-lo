@@ -110,12 +110,12 @@ function soundOn() {
 // Toggle sound on/off and sound icon
 $("#audioToggle").click(function() {
 	if ($("#audioOn").is(":visible")) {
-		$("#audioOn").hide();
-		$("#audioOff").show();
+		$("#audioOn, #audioToggleOn").hide();
+		$("#audioOff, #audioToggleOff").show();
 		soundOff();
 	} else {
-		$("#audioOff").hide();
-		$("#audioOn").show();
+		$("#audioOff, #audioToggleOff").hide();
+		$("#audioOn, #audioToggleOn").show();
 		soundOn();
 	}
 });
