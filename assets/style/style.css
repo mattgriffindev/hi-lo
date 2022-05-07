@@ -66,17 +66,16 @@ p {
 	justify-content: right;
 }
 
-#themeLight,
-#themeToggleLight {
-	display: inline;
-}
+/*----------------------------------------------------menu-*/
 
-#themeDark,
-#themeToggleDark {
+#game-container,
+#menu-container,
+#menu,
+#how-to-play,
+#contact-form,
+#settings {
 	display: none;
 }
-
-/*----------------------------------------------------menu-*/
 
 #menu-container {
 	height: 22rem;
@@ -127,22 +126,24 @@ p {
 }
 
 #audioOn,
-#audioToggleOn {
+#audioToggleOn,
+#themeLight,
+#themeToggleLight {
 	display: inline;
 }
 
 #audioOff,
-#audioToggleOff {
+#audioToggleOff,
+#themeDark,
+#themeToggleDark {
 	display: none;
 }
 
-#game-container,
-#menu-container,
-#menu,
-#how-to-play,
-#contact-form,
-#settings {
-	display: none;
+.settings-item {
+	padding-top: 0.75rem;
+	font-size: 1.5rem;
+	border: none;
+	background-color: transparent;
 }
 
 /*--------------------------------------------------button-*/
