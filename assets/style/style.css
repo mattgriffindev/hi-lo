@@ -18,6 +18,13 @@
 	--signature-font: 'M PLUS 1 Code', cursive;
 }
 
+/*TEST - COLORS TO BE CONFIRMED*/
+.darkTheme {
+	--main-color: coral;
+	--secondary-color: orangered;
+	--tertiary-color: lawngreen;
+}
+
 html {
 	font-size: 16px;
 }
@@ -59,11 +66,13 @@ p {
 	justify-content: right;
 }
 
-#audioOn {
+#themeLight,
+#themeToggleLight {
 	display: inline;
 }
 
-#audioOff {
+#themeDark,
+#themeToggleDark {
 	display: none;
 }
 
@@ -117,10 +126,12 @@ p {
 	cursor: pointer;
 }
 
+#audioOn,
 #audioToggleOn {
 	display: inline;
 }
 
+#audioOff,
 #audioToggleOff {
 	display: none;
 }

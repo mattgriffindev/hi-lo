@@ -120,7 +120,21 @@ $("#audioToggle").click(function() {
 	}
 });
 
-/*-----------------------------send-email-*/
+/*-----------------------------------------------theme-*/
+
+// Toggle theme light/dark and theme icon
+$("#themeToggle").click(function(){
+    $(":root").toggleClass("darkTheme");
+		if ($("#themeLight").is(":visible")) {
+		$("#themeLight, #themeToggleLight").hide();
+		$("#themeDark, #themeToggleDark").show();
+	} else {
+		$("#themeDark, #themeToggleDark").hide();
+		$("#themeLight, #themeToggleLight").show();
+	}
+});
+
+/*------------------------------------------send-email-*/
 
 function sendMail(contactForm) {
     emailjs.send("service_l0dqag3", "template_30ofgfw", {
