@@ -2,29 +2,29 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="mattgriffindev">
-    <meta name="descrption" content="A game of higher or lower">
-    <meta name="keywords" content="Game, Higher, Lower, HTML, CSS, JavaScript">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="mattgriffindev">
+	<meta name="descrption" content="A game of higher or lower">
+	<meta name="keywords" content="Game, Higher, Lower, HTML, CSS, JavaScript">
 
-    <title>Hi-Lo | Card Game</title>
+	<title>Hi-Lo | Card Game</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://kit.fontawesome.com/8418939052.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
-        type="text/css" />
-    <link rel="icon" type="image/svg" href="assets/image/cards.svg">
-    <link rel="apple-touch-icon" href="assets/image/cards.svg">
-    <link href="assets/style/style.css" rel="stylesheet" type="text/css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://kit.fontawesome.com/8418939052.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
+		type="text/css" />
+	<link rel="icon" type="image/svg" href="assets/image/cards.svg">
+	<link rel="apple-touch-icon" href="assets/image/cards.svg">
+	<link href="assets/style/style.css" rel="stylesheet" type="text/css">
 
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-		<script type="text/javascript">
-   			(function(){
-      		emailjs.init("jg53fM6y9nHAaBhsy");
-   			})();
-		</script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function () {
+			emailjs.init("jg53fM6y9nHAaBhsy");
+		})();
+	</script>
 </head>
 
 <body>
@@ -33,234 +33,234 @@
 
 	<!--how-to-play-modal-->
 	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h5 class="modal-title" id="staticBackdropLabel">HOW TO PLAY</h5>
-	      </div>
-	      <div class="modal-body">
-												<h2 class="menu-item">How to Play</h2>
-                <p>The aim of the game could not be simpler!</p>
-                <p>All you need to do is guess whether the next card to be dealt will be higher or lower than the
-                    previous card.</p>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary modalHowToPlayClose" data-bs-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-	  </div>
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="staticBackdropLabel">HOW TO PLAY</h5>
+				</div>
+				<div class="modal-body">
+					<h2 class="menu-item">How to Play</h2>
+					<p>The aim of the game could not be simpler!</p>
+					<p>All you need to do is guess whether the next card to be dealt will be higher or lower than the
+						previous card.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary modalHowToPlayClose" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!--/how-to-play-modal-->
 
-		<!--contact-modal-->
-	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h5 class="modal-title" id="staticBackdropLabel">CONTACT US</h5>
-	      </div>
-	      <div class="modal-body">
-											 <div id="contact-form">
-               
-								<form id="contactForm" onsubmit="return sendMail(this);">
-                		<input type="text" name="name" class="form-control mb-2" id="fullname" placeholder="Name" required/>
-                    <input type="text" name="emailaddress" class="form-control mb-2" id="emailaddress" placeholder="Email" required/>
-                    <textarea rows="3" name="messagebox" class="form-control mb-2" id="messagebox" placeholder="Your message" required></textarea>
-                    <button type="submit" class="button sendbutton mt-2">Send</button>
-                </form>							
-        
-            </div>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary modalContactClose" data-bs-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-	  </div>
+	<!--contact-modal-->
+	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"	aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="staticBackdropLabel">CONTACT US</h5>
+				</div>
+				<div class="modal-body">
+					<div id="contact-form">
+
+						<form id="contactForm" onsubmit="return sendMail(this);">
+							<input type="text" name="name" class="form-control mb-2" id="fullname" placeholder="Name" required />
+							<input type="text" name="emailaddress" class="form-control mb-2" id="emailaddress" placeholder="Email"
+								required />
+							<textarea rows="3" name="messagebox" class="form-control mb-2" id="messagebox" placeholder="Your message"
+								required></textarea>
+							<button type="submit" class="button sendbutton mt-2">Send</button>
+						</form>
+
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary modalContactClose" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!--/contact-modal-->
-	
+
 	<!--settings-modal-->
-	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h5 class="modal-title" id="staticBackdropLabel">SETTINGS</h5>
-	      </div>
-	      <div class="modal-body">
+	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"	aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="staticBackdropLabel">SETTINGS</h5>
+				</div>
+				<div class="modal-body">
 					<button id="audioToggle" class="itemLink settings-item">Toggle Sound</button>
-									<span id="audioToggleOn" class="settings-item">ON</span><span id="audioToggleOff" class="settings-item">OFF</span>
-	
-								 <button id="themeToggle" class="itemLink settings-item">Toggle Theme</button>
-									<span id="themeToggleLight" class="settings-item">LIGHT</span><span id="themeToggleDark" class="settings-item">DARK</span>
-								
-									<button type="button" class="btn btn-primary modalThemeOpen">
-	  Launch modal
-	</button>
-								
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary modalSettingsClose" data-bs-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-	  </div>
+					<span id="audioToggleOn" class="settings-item">ON</span><span id="audioToggleOff"
+						class="settings-item">OFF</span>
+
+					<button id="themeToggle" class="itemLink settings-item">Toggle Theme</button>
+					<span id="themeToggleLight" class="settings-item">LIGHT</span><span id="themeToggleDark"
+						class="settings-item">DARK</span>
+
+					<button type="button" class="btn btn-primary modalThemeOpen">
+						Launch modal
+					</button>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary modalSettingsClose" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!--/settings-modal-->
-	
+
 	<!--settings-theme-modal-->
-	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-	      </div>
-	      <div class="modal-body">
-	        ...
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary modalThemeClose" data-bs-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-	  </div>
+	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"	aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary modalThemeClose" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!--/settings-theme-modal-->
 
 	<!--/modal-->
 
-	
-    <!--header-->
-    <div id="header" class="container-fluid border border-danger">
-        <div class="row">
-            <div class="col col-top-left">
-                <div id="brand">Hi-Lo</div>
-            </div>
-            <div class="col col-top-right d-flex justiny-contents-flex-end">
-							<div><i id="settings-icon" class="fas fa-cog me-3"></i></div>
-              <div><i id="themeLight" class="far fa-lightbulb me-3"></i><i id="themeDark" class="fas fa-lightbulb me-3"></i></div>
-							<div><i id="audioOn" class="fas fa-volume-up me-3"></i><i id="audioOff" class="fas fa-volume-mute me-3"></i></div>
-            </div>
-        </div>
-    </div>
-    <!--/header-->
+	<!--header-->
+	<div id="header" class="container-fluid border border-danger">
+		<div class="row">
+			<div class="col col-top-left">
+				<div id="brand">Hi-Lo</div>
+			</div>
+			<div class="col col-top-right d-flex justiny-contents-flex-end">
+				<div><i id="settings-icon" class="fas fa-cog me-3"></i></div>
+				<div><i id="themeLight" class="far fa-lightbulb me-3"></i><i id="themeDark" class="fas fa-lightbulb me-3"></i>
+				</div>
+				<div><i id="audioOn" class="fas fa-volume-up me-3"></i><i id="audioOff" class="fas fa-volume-mute me-3"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/header-->
 
-    <!--canvas-->
-    <div id="canvas" class="container-fluid d-flex justify-content-center align-items-center">
+	<!--canvas-->
+	<div id="canvas" class="container-fluid d-flex justify-content-center align-items-center">
 
-        <!--intro-container-->
-        <div id="intro-container">
-            <div class="introCard introCardOne">H</div>
-            <div class="introCard introCardTwo">I</div>
-            <div class="introCard introCardThree">-</div>
-            <div class="introCard introCardFour">L</div>
-            <div class="introCard introCardFive">O</div>
-        </div>
-        <!--intro-container-->
+		<!--intro-container-->
+		<div id="intro-container">
+			<div class="introCard introCardOne">H</div>
+			<div class="introCard introCardTwo">I</div>
+			<div class="introCard introCardThree">-</div>
+			<div class="introCard introCardFour">L</div>
+			<div class="introCard introCardFive">O</div>
+		</div>
+		<!--intro-container-->
 
-        <!--menu-container-->
-        <div id="menu-container">
-						<!--menu-->
-            <div id="menu">
-                <h1 class="menu-title">Menu</h1>
-                <button class="itemLink menu-item" onclick="startGame()">Play</button>
-								<br>
-                <button id="modalHowToPlayOpen" class="itemLink menu-item"><i class="fas fa-gamepad"></i> How to play
-                </button>
-								<br>
-                <button id="modalContactOpen" class="itemLink menu-item"><i class="fas fa-envelope"></i> Contact us
-                </button>
-								<br>
-                <button id="modalSettingsOpen" class="itemLink menu-item"><i class="fas fa-cog"></i> Settings</button>
-            </div>
-						<!--/menu-->
-        </div>
-        <!--/menu-container-->
+		<!--menu-container-->
+		<div id="menu-container">
+			<!--menu-->
+			<div id="menu">
+				<h1 class="menu-title">Menu</h1>
+				<button class="itemLink menu-item" onclick="startGame()">Play</button>
+				<br>
+				<button id="modalHowToPlayOpen" class="itemLink menu-item"><i class="fas fa-gamepad"></i> How to play
+				</button>
+				<br>
+				<button id="modalContactOpen" class="itemLink menu-item"><i class="fas fa-envelope"></i> Contact us
+				</button>
+				<br>
+				<button id="modalSettingsOpen" class="itemLink menu-item"><i class="fas fa-cog"></i> Settings</button>
+			</div>
+			<!--/menu-->
+		</div>
+		<!--/menu-container-->
 
- 
+		<!--game-container-->
+		<div id="game-container" class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<div class="card"></div>
+					<div class="numberIndicator numInd-blank">GO</div>
+				</div>
+				<div class="col">
+					<div class="card"></div>
+					<div class="numberIndicator numInd-blank">1</div>
+				</div>
+				<div class="col">
+					<div class="card"></div>
+					<div class="numberIndicator numInd-blank">2</div>
+				</div>
+				<div class="col">
+					<div class="card"></div>
+					<div class="numberIndicator numInd-blank">3</div>
+				</div>
+				<div class="col">
+					<div class="card"></div>
+					<div class="numberIndicator numInd-blank">4</div>
+				</div>
+				<div class="col">
+					<div class="card"></div>
+					<div class="numberIndicator numInd-blank">5</div>
+				</div>
+			</div>
+			<div class="row buttonPlacement py-1">
+				<div class="col col-md-2">
+					<button id="higher-button" class="button gamebutton">Higher <i class="fas fa-arrow-up"></i></button>
+				</div>
+				<div class="col col-md-2">
+					<button id="lower-button" class="button gamebutton">Lower <i class="fas fa-arrow-down"></i></button>
+				</div>
+			</div>
+		</div>
+		<!--/game-container-->
 
+		<!--result-->
+		<div id="result"></div>
+		<!--/result-->
 
-        <!--game-container-->
-        <div id="game-container" class="container-fluid">
-            <div class="row">
-                <div class="col">
-                    <div class="card"></div>
-                    <div class="numberIndicator numInd-blank">GO</div>
-                </div>
-                <div class="col">
-                    <div class="card"></div>
-                    <div class="numberIndicator numInd-blank">1</div>
-                </div>
-                <div class="col">
-                    <div class="card"></div>
-                    <div class="numberIndicator numInd-blank">2</div>
-                </div>
-                <div class="col">
-                    <div class="card"></div>
-                    <div class="numberIndicator numInd-blank">3</div>
-                </div>
-                <div class="col">
-                    <div class="card"></div>
-                    <div class="numberIndicator numInd-blank">4</div>
-                </div>
-                <div class="col">
-                    <div class="card"></div>
-                    <div class="numberIndicator numInd-blank">5</div>
-                </div>
-            </div>
-            <div class="row buttonPlacement py-1">
-                <div class="col col-md-2">
-                    <button id="higher-button" class="button gamebutton">Higher <i
-                            class="fas fa-arrow-up"></i></button>
-                </div>
-                <div class="col col-md-2">
-                    <button id="lower-button" class="button gamebutton">Lower <i
-                            class="fas fa-arrow-down"></i></button>
-                </div>
-            </div>
-        </div>
-        <!--/game-container-->
+		<!--audio-->
+		<audio id="win">
+			<source src="assets/audio/win.wav" type="audio/wav">
+		</audio>
+		<audio id="lose">
+			<source src="assets/audio/lose.wav" type="audio/wav">
+		</audio>
+		<!--/audio-->
 
-        <!--result-->
-        <div id="result"></div>
-        <!--/result-->
+	</div>
+	<!--/canvas-->
 
-        <!--audio-->
-        <audio id="win">
-            <source src="assets/audio/win.wav" type="audio/wav">
-        </audio>
-        <audio id="lose">
-            <source src="assets/audio/lose.wav" type="audio/wav">
-        </audio>
-        <!--/audio-->
+	<!--footer-->
+	<div id="footer" class="container-fluid border border-danger">
+		<div class="row">
+			<div>&copy; 2022. Hi-Lo.<span class="d-inline d-sm-none"><br></span> Made with <i
+					class="fas fa-heart hvr-pulse"></i>
+				by <a href="https://github.com/mattgriffindev" target="_blank" class="itemLink signature">mattgriffindev</a>
+			</div>
+		</div>
+	</div>
+	<!--/footer-->
 
-    </div>
-    <!--/canvas-->
-
-    <!--footer-->
-    <div id="footer" class="container-fluid border border-danger">
-        <div class="row">
-            <div>&copy; 2022. Hi-Lo.<span class="d-inline d-sm-none"><br></span> Made with <i
-                    class="fas fa-heart hvr-pulse"></i>
-                by <a href="https://github.com/mattgriffindev" target="_blank"
-                    class="itemLink signature">mattgriffindev</a></div>
-        </div>
-    </div>
-    <!--/footer-->
-
-    <!--scripts-->
-    <script id="loseText" type="text/html">
+	<!--scripts-->
+	<script id="loseText" type="text/html">
         <h4>Sorry, you lose!</h4>
         <p class="itemLink" onclick="restartGame()">Play again</p>
     </script>
-    <script id="winText" type="text/html">
+	<script id="winText" type="text/html">
         <h4>You're a winner!</h4>
         <a class="itemLink" href="https://www.twitter.com/share?text=I got 5 in a row on Hi-Lo! Take on the challenge:&url=https://www.google.com Made by @mattgriffindev" target="_blank" rel="noopener">Tweet your victory</a>
     </script>
-    <script id="drawText" type="text/html">
+	<script id="drawText" type="text/html">
         <h4>You don't get anything for a pair!</h4>
         <p class="itemLink" onclick="restartGame()">Play again</p>
     </script>
 
-    <script src="assets/script/script.js"></script>
-    <!--scripts-->
+	<script src="assets/script/script.js"></script>
+	<!--scripts-->
 </body>
 
 </html>
