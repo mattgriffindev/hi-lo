@@ -136,6 +136,8 @@ $("#themeToggle").click(function(){
 
 /*------------------------------------------send-email-*/
 
+// Adapted from code provided by Code Institute
+/** Send mail via email.js */
 function sendMail(contactForm) {
     emailjs.send("service_l0dqag3", "template_30ofgfw", {
         "from_name": contactForm.name.value,
