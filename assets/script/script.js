@@ -246,7 +246,7 @@ function lower() {
 
 /*-----------------------------------------------modal-*/
 
-$("#modalHowToPlayOpen").click(function() {
+$("#modalHowToPlayOpen, #howToPlay-icon").click(function() {
 	$(".modal:eq(0)").show();
 });
 
@@ -254,7 +254,7 @@ $(".modalHowToPlayClose").click(function() {
 	$(".modal:eq(0)").hide();
 });
 
-$("#modalContactOpen").click(function() {
+$("#modalContactOpen, #contact-icon").click(function() {
 	$(".modal:eq(1)").show();
 });
 
