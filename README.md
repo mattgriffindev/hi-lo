@@ -20,7 +20,7 @@ NOTE: RESPONSIVE IMAGE HERE
 
 TBC
 
-### Design
+### 1.1. Design
 
 **Site Structure**
 
@@ -84,6 +84,8 @@ The website is designed to be responsive on all device sizes.
 
 ## 4. Testing
 
+### 4.1. Validator Testing
+
 **W3C Markup Validator**
 
 The [W3C Markup Validator](https://validator.w3.org/ "W3C Markup Validator") was used to to validate the site's HTML.
@@ -92,9 +94,11 @@ A copy of the report can be accessed [here]( "W3C Markup Validator report").
 
 **W3C CSS Validator**
 
-The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/ "W3C CSS Validator") was used to validate the site's CSS. T
+The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/ "W3C CSS Validator") was used to validate the site's CSS.
 
 A copy of the report can be accessed [here]( "W3C CSS Validator report").
+
+The [JSHint Validator](https://jshint.com/ "JSHint Validator") was used to validate the site's JavaScript.
 
 **Lighthouse Testing**
 
@@ -156,8 +160,6 @@ By forking the GitHub repository you make a copy of the original repository on y
 5.	Change the current working directory to the location where you want the cloned directory to be made.
 6.	Type "git clone", and then paste the URL you copied in Step 3.
 7.	Press Enter. Your local clone will be created.
-
-## 6. Credits
 
 ## 6. Credits
 
