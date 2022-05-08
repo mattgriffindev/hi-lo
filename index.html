@@ -29,6 +29,104 @@
 
 <body>
 
+	<!--modal-->
+
+	<!--how-to-play-modal-->
+	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="staticBackdropLabel">HOW TO PLAY</h5>
+	      </div>
+	      <div class="modal-body">
+												<h2 class="menu-item">How to Play</h2>
+                <p>The aim of the game could not be simpler!</p>
+                <p>All you need to do is guess whether the next card to be dealt will be higher or lower than the
+                    previous card.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary modalHowToPlayClose" data-bs-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!--/how-to-play-modal-->
+
+		<!--contact-modal-->
+	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="staticBackdropLabel">CONTACT US</h5>
+	      </div>
+	      <div class="modal-body">
+											 <div id="contact-form">
+               
+								<form id="contactForm" onsubmit="return sendMail(this);">
+                		<input type="text" name="name" class="form-control mb-2" id="fullname" placeholder="Name" required/>
+                    <input type="text" name="emailaddress" class="form-control mb-2" id="emailaddress" placeholder="Email" required/>
+                    <textarea rows="3" name="messagebox" class="form-control mb-2" id="messagebox" placeholder="Your message" required></textarea>
+                    <button type="submit" class="button sendbutton mt-2">Send</button>
+                </form>							
+        
+            </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary modalContactClose" data-bs-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!--/contact-modal-->
+	
+	<!--settings-modal-->
+	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="staticBackdropLabel">SETTINGS</h5>
+	      </div>
+	      <div class="modal-body">
+					<button id="audioToggle" class="itemLink settings-item">Toggle Sound</button>
+									<span id="audioToggleOn" class="settings-item">ON</span><span id="audioToggleOff" class="settings-item">OFF</span>
+	
+								 <button id="themeToggle" class="itemLink settings-item">Toggle Theme</button>
+									<span id="themeToggleLight" class="settings-item">LIGHT</span><span id="themeToggleDark" class="settings-item">DARK</span>
+								
+									<button type="button" class="btn btn-primary modalThemeOpen">
+	  Launch modal
+	</button>
+								
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary modalSettingsClose" data-bs-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!--/settings-modal-->
+	
+	<!--settings-theme-modal-->
+	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+	      </div>
+	      <div class="modal-body">
+	        ...
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary modalThemeClose" data-bs-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!--/settings-theme-modal-->
+
+	<!--/modal-->
+
+	
     <!--header-->
     <div id="header" class="container-fluid border border-danger">
         <div class="row">
@@ -36,7 +134,8 @@
                 <div id="brand">Hi-Lo</div>
             </div>
             <div class="col col-top-right d-flex justiny-contents-flex-end">
-                <div><i id="themeLight" class="far fa-lightbulb me-3"></i><i id="themeDark" class="fas fa-lightbulb me-3"></i></div>
+							<div><i id="settings-icon" class="fas fa-cog me-3"></i></div>
+              <div><i id="themeLight" class="far fa-lightbulb me-3"></i><i id="themeDark" class="fas fa-lightbulb me-3"></i></div>
 							<div><i id="audioOn" class="fas fa-volume-up me-3"></i><i id="audioOff" class="fas fa-volume-mute me-3"></i></div>
             </div>
         </div>
@@ -56,54 +155,29 @@
         </div>
         <!--intro-container-->
 
-        <!--menu-->
+        <!--menu-container-->
         <div id="menu-container">
+						<!--menu-->
             <div id="menu">
                 <h1 class="menu-title">Menu</h1>
                 <button class="itemLink menu-item" onclick="startGame()">Play</button>
 								<br>
-                <button class="itemLink menu-item" onclick="showHowToPlay()"><i class="fas fa-gamepad"></i> How to play
+                <button id="modalHowToPlayOpen" class="itemLink menu-item"><i class="fas fa-gamepad"></i> How to play
                 </button>
 								<br>
-                <button class="itemLink menu-item" onclick="showContactForm()"><i class="fas fa-envelope"></i> Contact us
+                <button id="modalContactOpen" class="itemLink menu-item"><i class="fas fa-envelope"></i> Contact us
                 </button>
 								<br>
-                <button class="itemLink menu-item" onclick="showSettings()"><i class="fas fa-cog"></i> Settings</button>
+                <button id="modalSettingsOpen" class="itemLink menu-item"><i class="fas fa-cog"></i> Settings</button>
             </div>
-            <div id="how-to-play">
-                <h2 class="menu-item">How to Play</h2>
-                <p>The aim of the game could not be simpler!</p>
-                <p>All you need to do is guess whether the next card to be dealt will be higher or lower than the
-                    previous card.</p>
-                <button class="itemLink show-menu-btn"><i class="fas fa-home"></i> Menu</button>
-            </div>
-            <div id="contact-form">
-                <h2>Contact</h2>
-								<form id="contactForm" onsubmit="return sendMail(this);">
-                		<input type="text" name="name" class="form-control mb-2" id="fullname" placeholder="Name" required/>
-                    <input type="text" name="emailaddress" class="form-control mb-2" id="emailaddress" placeholder="Email" required/>
-                    <textarea rows="3" name="messagebox" class="form-control mb-2" id="messagebox" placeholder="Your message" required></textarea>
-                    <button type="submit" class="button sendbutton mt-2">Send</button>
-                </form>							
-                <button class="itemLink show-menu-btn"><i class="fas fa-home"></i> Menu</button>
-            </div>
-            <div id="settings">
-                <h2>Settings</h2>
-                <button id="audioToggle" class="itemLink settings-item">Toggle Sound</button>
-								<span id="audioToggleOn" class="settings-item">ON</span><span id="audioToggleOff" class="settings-item">OFF</span>
-
-							 <button id="themeToggle" class="itemLink settings-item">Toggle Theme</button>
-								<span id="themeToggleLight" class="settings-item">LIGHT</span><span id="themeToggleDark" class="settings-item">DARK</span>
-
-							
-                <button class="itemLink show-menu-btn"><i class="fas fa-home"></i> Menu</button>
-            </div>
+						<!--/menu-->
         </div>
-        <!--/menu-->
+        <!--/menu-container-->
 
-    
+ 
 
-        <!--game-->
+
+        <!--game-container-->
         <div id="game-container" class="container-fluid">
             <div class="row">
                 <div class="col">
@@ -142,7 +216,7 @@
                 </div>
             </div>
         </div>
-        <!--/game-->
+        <!--/game-container-->
 
         <!--result-->
         <div id="result"></div>

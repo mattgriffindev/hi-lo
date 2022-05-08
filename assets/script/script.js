@@ -22,27 +22,9 @@ function addCount() {
 
 /*----------------------------------------------------------menu-*/
 
-/** Show instructions to play game */
-function showHowToPlay() {
-	$("#menu").hide();
-	$("#how-to-play").show();
-}
-
-/** Show contact form */
-function showContactForm() {
-	$("#menu").hide();
-	$("#contact-form").show();
-}
-
-/** Show settings menu */
-function showSettings() {
-	$("#menu").hide();
-	$("#settings").show();
-}
-
 // Show main menu 
 $(".show-menu-btn").click(function() {
-	$("#how-to-play, #contact-form, #settings").hide();
+	// $("#how-to-play, #contact-form, #settings").hide();
 	$("#menu").show();
 });
 
@@ -136,8 +118,6 @@ $("#themeToggle").click(function(){
 
 /*------------------------------------------send-email-*/
 
-// Adapted from code provided by Code Institute
-/** Send mail via email.js */
 function sendMail(contactForm) {
     emailjs.send("service_l0dqag3", "template_30ofgfw", {
         "from_name": contactForm.name.value,
@@ -263,4 +243,41 @@ function lower() {
 		lose();
 	}
 }
+
+/*-----------------------------------------------modal-*/
+
+$("#modalHowToPlayOpen").click(function() {
+	$(".modal:eq(0)").show();
+});
+
+$(".modalHowToPlayClose").click(function() {
+	$(".modal:eq(0)").hide();
+});
+
+$("#modalContactOpen").click(function() {
+	$(".modal:eq(1)").show();
+});
+
+$(".modalContactClose").click(function() {
+	$(".modal:eq(1)").hide();
+});
+
+$("#modalSettingsOpen, #settings-icon").click(function() {
+  $(".modal:eq(2)").show();
+});
+
+$(".modalThemeOpen").click(function() {
+	$(".modal:eq(2)").hide();
+  $(".modal:eq(3)").show();
+});
+
+$(".modalThemeClose").click(function() {
+	$(".modal:eq(3)").hide();
+  $(".modal:eq(2)").show();
+});
+
+$(".modalSettingsClose").click(function() {
+  $(".modal:eq(2)").hide();
+});
+
 

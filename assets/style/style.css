@@ -70,10 +70,7 @@ p {
 
 #game-container,
 #menu-container,
-#menu,
-#how-to-play,
-#contact-form,
-#settings {
+#menu {
 	display: none;
 }
 
@@ -298,3 +295,4 @@ p {
 	100% {transform: scale(1.75);
 			 visibility: visible;}
 }
+
