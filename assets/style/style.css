@@ -296,3 +296,13 @@ p {
 			 visibility: visible;}
 }
 
+/*-----------------------------------------------modal-*/
+
+.modal-dialog-centered {
+	justify-content: center;
+}
+
+.modal-content {
+	height: 22rem;
+	width: 22rem;
+}
