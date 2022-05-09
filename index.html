@@ -10,7 +10,8 @@
 
 	<title>Hi-Lo | Card Game</title>
 
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<script src="//code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://kit.fontawesome.com/8418939052.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
@@ -18,7 +19,6 @@
 	<link rel="icon" type="image/svg" href="assets/image/cards.svg">
 	<link rel="apple-touch-icon" href="assets/image/cards.svg">
 	<link href="assets/style/style.css" rel="stylesheet" type="text/css">
-
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 	<script type="text/javascript">
 		(function () {
@@ -32,7 +32,8 @@
 	<!--modal-->
 
 	<!--how-to-play-modal-->
-	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+		aria-labelledby="staticBackdropLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -53,7 +54,8 @@
 	<!--/how-to-play-modal-->
 
 	<!--contact-modal-->
-	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"	aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+		aria-labelledby="staticBackdropLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -82,7 +84,8 @@
 	<!--/contact-modal-->
 
 	<!--settings-modal-->
-	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"	aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+		aria-labelledby="staticBackdropLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -111,7 +114,8 @@
 	<!--/settings-modal-->
 
 	<!--settings-theme-modal-->
-	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"	aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+		aria-labelledby="staticBackdropLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -137,12 +141,20 @@
 				<div id="brand">Hi-Lo</div>
 			</div>
 			<div class="col col-top-right d-flex justiny-contents-flex-end">
-				<div><i id="howToPlay-icon" class="fas fa-gamepad me-3"></i></div>
-				<div><i id="contact-icon" class="fas fa-envelope me-3"></i></div>
-				<div><i id="settings-icon" class="fas fa-cog me-3"></i></div>
 				<div><i id="themeLight" class="far fa-lightbulb me-3"></i><i id="themeDark" class="fas fa-lightbulb me-3"></i>
 				</div>
 				<div><i id="audioOn" class="fas fa-volume-up me-3"></i><i id="audioOff" class="fas fa-volume-mute me-3"></i>
+				</div>
+				<div class="dropdown">
+					<button class="menu-toggle dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						<i class="fas fa-ellipsis-h"></i>
+					</button>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+						<li id="howToPlay-icon" class="itemLink"><i class="fas fa-gamepad me-3"></i>How to play</li>
+						<li id="contact-icon" class="itemLink"><i class="fas fa-envelope me-3"></i>Contact us</li>
+						<li id="settings-icon" class="itemLink"><i class="fas fa-cog me-3"></i>Settings</li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -262,6 +274,9 @@
     </script>
 
 	<script src="assets/script/script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
 	<!--scripts-->
 </body>
 
