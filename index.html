@@ -30,23 +30,20 @@
 <body>
 
 	<!--modal-->
-
 	<!--how-to-play-modal-->
-	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-		aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="staticBackdropLabel">HOW TO PLAY</h5>
+					<h2 class="modal-title">How to Play</h2>
 				</div>
 				<div class="modal-body">
-					<h2 class="menu-item">How to Play</h2>
 					<p>The aim of the game could not be simpler!</p>
 					<p>All you need to do is guess whether the next card to be dealt will be higher or lower than the
 						previous card.</p>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary modalHowToPlayClose" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="modal-btn itemLink modalHowToPlayClose" data-bs-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
@@ -54,29 +51,25 @@
 	<!--/how-to-play-modal-->
 
 	<!--contact-modal-->
-	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-		aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="staticBackdropLabel">CONTACT US</h5>
+					<h2 class="modal-title">Contact Us</h2>
 				</div>
 				<div class="modal-body">
 					<div id="contact-form">
-
 						<form id="contactForm" onsubmit="return sendMail(this);">
 							<input type="text" name="name" class="form-control mb-2" id="fullname" placeholder="Name" required />
 							<input type="text" name="emailaddress" class="form-control mb-2" id="emailaddress" placeholder="Email"
 								required />
-							<textarea rows="3" name="messagebox" class="form-control mb-2" id="messagebox" placeholder="Your message"
-								required></textarea>
+							<textarea rows="2" name="messagebox" class="form-control mb-2" id="messagebox" placeholder="Your message" style="resize:none" required></textarea>
 							<button type="submit" class="button sendbutton mt-2">Send</button>
 						</form>
-
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary modalContactClose" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="modal-btn itemLink modalContactClose" data-bs-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
@@ -84,29 +77,25 @@
 	<!--/contact-modal-->
 
 	<!--settings-modal-->
-	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-		aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal" tabindex="-1"	aria-labelledby="staticBackdropLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="staticBackdropLabel">SETTINGS</h5>
+					<h2 class="modal-title">Settings</h2>
 				</div>
 				<div class="modal-body">
 					<button id="audioToggle" class="itemLink settings-item">Toggle Sound</button>
 					<span id="audioToggleOn" class="settings-item">ON</span><span id="audioToggleOff"
 						class="settings-item">OFF</span>
-
 					<button id="themeToggle" class="itemLink settings-item">Toggle Theme</button>
 					<span id="themeToggleLight" class="settings-item">LIGHT</span><span id="themeToggleDark"
 						class="settings-item">DARK</span>
-
-					<button type="button" class="btn btn-primary modalThemeOpen">
-						Launch modal
+					<button class="modal-btn itemLink settings-item modalThemeOpen">
+						Change Card Design
 					</button>
-
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary modalSettingsClose" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="modal-btn itemLink modalSettingsClose" data-bs-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
@@ -114,24 +103,22 @@
 	<!--/settings-modal-->
 
 	<!--settings-theme-modal-->
-	<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-		aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal" tabindex="-1"	aria-labelledby="staticBackdropLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+					<h2 class="modal-title">Card Design</h2>
 				</div>
 				<div class="modal-body">
 					...
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary modalThemeClose" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="modal-btn itemLink modalThemeClose" data-bs-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!--/settings-theme-modal-->
-
 	<!--/modal-->
 
 	<!--header-->
@@ -151,7 +138,7 @@
 						<i class="fas fa-ellipsis-h"></i>
 					</button>
 					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-						<li id="howToPlay-icon" class="itemLink"><i class="fas fa-gamepad me-3"></i>How to play</li>
+						<li id="howToPlay-icon" class="itemLink"><i class="fas fa-gamepad me-2"></i>How to play</li>
 						<li id="contact-icon" class="itemLink"><i class="fas fa-envelope me-3"></i>Contact us</li>
 						<li id="settings-icon" class="itemLink"><i class="fas fa-cog me-3"></i>Settings</li>
 					</ul>
