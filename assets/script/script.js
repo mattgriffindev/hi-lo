@@ -30,13 +30,24 @@ $(".show-menu-btn").click(function() {
 
 /*---------------------------------------------------------array-*/
 
-let cardValues = [2, 8];
-
 /** Get random card values from array */
 function getValue() {
+	let cardValues = [2, 8, 10];
 	let value = cardValues[Math.floor(Math.random() * cardValues.length)];
-	return parseInt(value);
-}
+
+	return value;
+};
+
+
+
+// Returns picture cards as numerical values
+        // if (value === "jack" || value === "queen" || value === "king") {
+        //     value = 10;
+        //     return value;
+        // } else if (value === "ace") {
+        //     value = 11;
+        //     return value;
+        // } 
 
 /*-----------------------------------------------start-*/
 
@@ -218,9 +229,9 @@ function higher() {
 	revealCard();
 	let thisCard = $(".card").eq(count).html();
 	let lastCard = $(".card").eq(count-1).html();
-	if (count == 5 && thisCard >= lastCard) {
+	if (count == 5 && Number(thisCard) >= Number(lastCard)) {
 		winGame();
-	} else if (thisCard >= lastCard) {
+	} else if (Number(thisCard) >= Number(lastCard)) {
 	 	win(); 
 	// }	else if (thisCard === lastCard) {
 	// 	draw();
@@ -233,9 +244,9 @@ function lower() {
 	revealCard();
 	let thisCard = $(".card").eq(count).html();
 	let lastCard = $(".card").eq(count-1).html();
-	if (count == 5 && thisCard <= lastCard) {
+	if (count == 5 && Number(thisCard) <= Number(lastCard)) {
 		winGame();
-	} else if (thisCard <= lastCard) {
+	} else if (Number(thisCard) <= Number(lastCard)) {
 		win();
 	// }	else if (thisCard === lastCard) {
 	// 	draw();
