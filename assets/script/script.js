@@ -24,7 +24,6 @@ function addCount() {
 
 // Show main menu 
 $(".show-menu-btn").click(function() {
-	// $("#how-to-play, #contact-form, #settings").hide();
 	$("#menu").show();
 });
 
@@ -32,7 +31,7 @@ $(".show-menu-btn").click(function() {
 
 /** Get random card values from array */
 function getValue() {
-	let cardValues = [2, 8, 10];
+	let cardValues = [2, 10];
 	let value = cardValues[Math.floor(Math.random() * cardValues.length)];
 
 	return value;
@@ -55,25 +54,27 @@ function getValue() {
 function startGame() {
 	$("#menu-container, #intro-container").hide();
 	$("#game-container").show();
-	$(".numberIndicator:eq(0)").removeClass("numInd-blank").addClass("numInd-green");	
+	$(".numberIndicator:eq(0)").addClass("numInd-green");	
 	$(".card:eq(0)").addClass("spinCard").html(getValue());
 }
 
 function restartGame() {
-	let numberIndicator = document.getElementsByClassName("numberIndicator");
-	let selectCard = document.getElementsByClassName("card");
-	let result = document.getElementById("result");
-	let higherBtn = document.getElementById("higher-button");
-	let lowerBtn = document.getElementById("lower-button");
-	result.style.animation = "initial";
-	for (var i = 0; i < selectCard.length; i++) {
-        selectCard[i].style.animation = "initial";
-				numberIndicator[i].style.cssText = "initial";
-    }
-	higherBtn.disabled = false;
-	lowerBtn.disabled = false;
-	startGame();
-	count = 0;
+	
+
+	let numberIndicator = $(".numberIndicator");
+	let selectCard = $(".card");
+
+	
+	$("#result").hide();
+
+	for (let i = 0; i < 6; i++) {
+		selectCard[i].style.animation = "initial";
+		numberIndicator[i].style.cssText = "color:var(--number-indicator);"
+	}
+	 
+	$("#higherBtn").disabled = false;
+	$("#lowerBtn").disabled = false;  
+
 }
 
 /*-----------------------------------------------audio-*/
@@ -152,12 +153,12 @@ function sendMail(contactForm) {
 
 /** Change number indicator to green */
 function numberIndicatorGreen() {
-	$(".numberIndicator").eq(count-1).removeClass("numInd-blank").addClass("numInd-green");
+	$(".numberIndicator").eq(count-1).addClass("numInd-green");
 }
 
 /** Change number indicator to red */
 function numberIndicatorRed() {
-	$(".numberIndicator").eq(count-1).removeClass("numInd-blank").addClass("numInd-red");
+	$(".numberIndicator").eq(count-1).addClass("numInd-red");
 }
 
 /*-------------------------------------------win-/-lose-*/
@@ -181,10 +182,6 @@ function lose() {
 	let result = document.getElementById("result");
 	let showResult = "showResult 2s ease-in 1s forwards";
 	let loseText = document.getElementById("loseText").innerHTML;
-	let higherBtn = document.getElementById("higher-button");
-	let lowerBtn = document.getElementById("lower-button");
-	higherBtn.disabled = true;
-	lowerBtn.disabled = true;
 	result.innerHTML = loseText;
 	result.style.animation = showResult;
 	setTimeout(loseAudio, 1000);

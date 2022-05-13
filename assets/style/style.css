@@ -255,25 +255,19 @@ p {
 	width: 4rem;
 	margin: auto;
 	padding-top: 0.25rem;
+	color: var(--number-indicator);
 	text-align: center;
 	font-size: 2rem;
 	border: 2px solid;
 	border-radius: 50%;
 }
 
-.numInd-blank {
-	color: var(--number-indicator);
-	border-color: var(--number-indicator);
-}
-
 .numInd-green {
 	color: green;
-	border-color: green;
 }
 
 .numInd-red {
 	color: red;
-	border-color: red;
 }
 
 /*----------------------------------------------footer-*/
