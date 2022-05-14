@@ -5,7 +5,7 @@
 }
 
 :root {
-	--main-color: #d4ebf2;
+	--main-color: #fff;
 	--secondary-color: #fc5185;
 	--tertiary-color: #add8e6;
 	--card-primary-color: #fc5185;
@@ -20,7 +20,7 @@
 
 /*TEST - COLORS TO BE CONFIRMED*/
 .darkTheme {
-	--main-color: coral;
+	--main-color: #111;
 	--secondary-color: orangered;
 	--tertiary-color: lawngreen;
 }
@@ -55,7 +55,11 @@ p {
 	position: fixed;
   left: 0;
   top: 0;
+	height: 10%;
   width: 100%;
+	display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
 	color: var(--secondary-color);
 	font-family: var(--font);
 	font-size: 2rem;
@@ -149,7 +153,7 @@ p {
 	color: var(--secondary-color);
 	font-family: var(--font);
 	border: 1px ridge var(--secondary-color);
-	border-radius: 15px;
+	border-radius: 25px;
 	background-color: var(--tertiary-color);
 }
 
@@ -279,10 +283,14 @@ p {
 	position: fixed;
   left: 0;
   bottom: 0;
+	height: 10%;
   width: 100%;
-	padding: 1rem 0;
+	display: flex;
+	align-items: center;
+  justify-content: center;
 	color: var(--secondary-color);
 	text-align: center;
+	font-size: 1rem;
 }
 
 #footer a {
