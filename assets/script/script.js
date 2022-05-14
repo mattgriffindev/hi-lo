@@ -251,40 +251,35 @@ function lower() {
 	}
 }
 
-/*-----------------------------------------------modal-*/
+/*--------------------------------------------sub-menu-*/
 
-$("#modalHowToPlayOpen, #howToPlay-icon").click(function() {
-	$(".modal:eq(0)").show();
+$("#showHowToPlay, #howToPlay-icon").click(function() {
+	$("#menu-container, .subMenu:eq(1), .subMenu:eq(2), .subMenu:eq(3)").hide();
+	$(".subMenu:eq(0)").show();
 });
 
-$(".modalHowToPlayClose").click(function() {
-	$(".modal:eq(0)").hide();
+$("#showContact, #contact-icon").click(function() {
+	$("#menu-container, .subMenu:eq(0), .subMenu:eq(2), .subMenu:eq(3)").hide();
+	$(".subMenu:eq(1)").show();
 });
 
-$("#modalContactOpen, #contact-icon").click(function() {
-	$(".modal:eq(1)").show();
+$("#showSettings, #settings-icon").click(function() {
+	$("#menu-container, .subMenu:eq(0), .subMenu:eq(1), .subMenu:eq(3)").hide();
+  $(".subMenu:eq(2)").show();
 });
 
-$(".modalContactClose").click(function() {
-	$(".modal:eq(1)").hide();
+$(".showChangeDesign").click(function() {
+	$(".subMenu:eq(2)").hide();
+  $(".subMenu:eq(3)").show();
 });
 
-$("#modalSettingsOpen, #settings-icon").click(function() {
-  $(".modal:eq(2)").show();
-});
+$(".subMenuBtnClose").click(function() {
+	$(".subMenu").each(function() {
+		$(".subMenu").hide();
+		$("#menu-container").show();
+	})
+})
 
-$(".modalThemeOpen").click(function() {
-	$(".modal:eq(2)").hide();
-  $(".modal:eq(3)").show();
-});
+	
 
-$(".modalThemeClose").click(function() {
-	$(".modal:eq(3)").hide();
-  $(".modal:eq(2)").show();
-});
-
-$(".modalSettingsClose").click(function() {
-  $(".modal:eq(2)").hide();
-});
-
-
+	
