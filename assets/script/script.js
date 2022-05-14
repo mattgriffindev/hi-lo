@@ -54,27 +54,26 @@ function getValue() {
 function startGame() {
 	$("#menu-container, #intro-container").hide();
 	$("#game-container").show();
-	$(".numberIndicator:eq(0)").addClass("numInd-green");	
+	$(".numberIndicator:eq(0)").removeClass("numInd-default").addClass("numInd-green");	
 	$(".card:eq(0)").addClass("spinCard").html(getValue());
 }
 
+/** Restart game after losing/drawing */
 function restartGame() {
-	
-
-	let numberIndicator = $(".numberIndicator");
-	let selectCard = $(".card");
-
-	
 	$("#result").hide();
-
-	for (let i = 0; i < 6; i++) {
-		selectCard[i].style.animation = "initial";
-		numberIndicator[i].style.cssText = "color:var(--number-indicator);"
-	}
-	 
 	$("#higherBtn").disabled = false;
 	$("#lowerBtn").disabled = false;  
-
+	$(".card").each(function() {
+		$(".card").removeClass("spinCard");
+	})
+	$(".numberIndicator").each(function() {
+		$(".numberIndicator").removeClass("numInd-green numInd-red").addClass("numInd-default");
+	})
+	setTimeout(function(){
+		$(".numberIndicator:eq(0)").removeClass("numInd-default").addClass("numInd-green"); 
+		$(".card:eq(0)").addClass("spinCard").html(getValue());
+	}, 500);
+	count = 1;
 }
 
 /*-----------------------------------------------audio-*/
@@ -153,12 +152,12 @@ function sendMail(contactForm) {
 
 /** Change number indicator to green */
 function numberIndicatorGreen() {
-	$(".numberIndicator").eq(count-1).addClass("numInd-green");
+	$(".numberIndicator").eq(count-1).removeClass("numInd-default").addClass("numInd-green");
 }
 
 /** Change number indicator to red */
 function numberIndicatorRed() {
-	$(".numberIndicator").eq(count-1).addClass("numInd-red");
+	$(".numberIndicator").eq(count-1).removeClass("numInd-default").addClass("numInd-red");
 }
 
 /*-------------------------------------------win-/-lose-*/
