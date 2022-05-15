@@ -257,17 +257,17 @@ function lower() {
 /*--------------------------------------------sub-menu-*/
 
 $("#showHowToPlay, #howToPlay-icon").click(function() {
-	$("#menu-container, .subMenu:eq(1), .subMenu:eq(2), .subMenu:eq(3)").hide();
+	$(".subMenu:eq(1), .subMenu:eq(2), .subMenu:eq(3)").hide();
 	$(".subMenu:eq(0)").show();
 });
 
 $("#showContact, #contact-icon").click(function() {
-	$("#menu-container, .subMenu:eq(0), .subMenu:eq(2), .subMenu:eq(3)").hide();
+	$(".subMenu:eq(0), .subMenu:eq(2), .subMenu:eq(3)").hide();
 	$(".subMenu:eq(1)").show();
 });
 
 $("#showSettings, #settings-icon").click(function() {
-	$("#menu-container, .subMenu:eq(0), .subMenu:eq(1), .subMenu:eq(3)").hide();
+	$(".subMenu:eq(0), .subMenu:eq(1), .subMenu:eq(3)").hide();
   $(".subMenu:eq(2)").show();
 });
 
@@ -279,6 +279,5 @@ $(".showChangeDesign").click(function() {
 $(".subMenuBtnClose").click(function() {
 	$(".subMenu").each(function() {
 		$(".subMenu").hide();
-		$("#menu-container").show();
 	})
 })
