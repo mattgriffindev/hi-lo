@@ -257,7 +257,7 @@ p {
 	height: 8rem;
 	width: 18rem;
 	padding-top: 2rem;
-	position: absolute;
+	position: fixed;
 	font-family: var(--font);
 	color: var(--secondary-color);
 	text-shadow: 2px 2px 4px #fff;
@@ -265,8 +265,8 @@ p {
 	background: var(--tertiary-color);
 	text-align: center;
 	border: 2px ridge var(--secondary-color);
-	visibility: hidden;
-	z-index: 999;
+	display: none;
+	z-index: 1000;
 }
 
 /*------------------------------------number-indicator-*/
@@ -335,15 +335,14 @@ p {
  @keyframes spinCard {
 	20% {transform: rotateY(180deg);}
 	90% {background-color: var(--card-primary-color);}
-	100% {background-color: var(--card-secondary-color);
-	}
+	100% {background-color: var(--card-secondary-color);}
 }
 
+.showResult {
+	animation: showResult 1s linear forwards;
+}
 @keyframes showResult {
-	50% {transform: scale(2);
-			visibility: visible;}
-	100% {transform: scale(1.75);
-			 visibility: visible;}
+	100% {transform: scale(2);}
 }
 
 /*---------------------------------------media-queries-*/

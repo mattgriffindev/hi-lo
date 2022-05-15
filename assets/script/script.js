@@ -60,9 +60,9 @@ function startGame() {
 
 /** Restart game after losing/drawing */
 function restartGame() {
-	$("#result").hide();
-	$("#higherBtn").disabled = false;
-	$("#lowerBtn").disabled = false;  
+	$("#higher-button").prop("disabled", false);
+	$("#lower-button").prop("disabled", false);
+	$("#result").hide().removeClass("showResult")
 	$(".card").each(function() {
 		$(".card").removeClass("spinCard");
 	})
@@ -171,37 +171,34 @@ function win() {
 }
 
 function winGame() {
-	let result = document.getElementById("result");
-	let showResult = "showResult 2s ease-in 1s forwards";
-	let winText = document.getElementById("winText").innerHTML;
+	let winText = $("#winText").html();
+	setTimeout(function() {
+		$("#result").show().addClass("showResult").html(winText)	
+	}, 1000);
 	setTimeout(winAudio, 1000);
 	setTimeout(numberIndicatorGreen, 1000);
-	result.innerHTML = winText;	
-	result.style.animation = showResult;
 }
 
-function lose() {
-	let result = document.getElementById("result");
-	let showResult = "showResult 2s ease-in 1s forwards";
-	let loseText = document.getElementById("loseText").innerHTML;
-	result.innerHTML = loseText;
-	result.style.animation = showResult;
+function loseGame() {
+	let loseText = $("#loseText").html();
+	setTimeout(function() {
+		$("#result").show().addClass("showResult").html(loseText)	
+	}, 1000);
 	setTimeout(loseAudio, 1000);
 	setTimeout(numberIndicatorRed, 1000);
+	$("#higher-button").prop("disabled", true);
+	$("#lower-button").prop("disabled", true);
 }
 
 function draw() {
-	let result = document.getElementById("result");
-	let showResult = "showResult 2s ease-in 1s forwards";
-	let drawText = document.getElementById("drawText").innerHTML;
-	let higherBtn = document.getElementById("higher-button");
-	let lowerBtn = document.getElementById("lower-button");
-	higherBtn.disabled = true;
-	lowerBtn.disabled = true;
-	result.innerHTML = drawText;
-	result.style.animation = showResult;
+	let drawText = $("#drawText").html();
+	setTimeout(function() {
+		$("#result").show().addClass("showResult").html(drawText)	
+	}, 1000);
 	setTimeout(loseAudio, 1000);
 	setTimeout(numberIndicatorRed, 1000);
+	$("#higher-button").prop("disabled", true);
+	$("#lower-button").prop("disabled", true);
 }
 
 /*--------------------------------------higher-/-lower-*/
@@ -235,7 +232,7 @@ function higher() {
 	// }	else if (thisCard === lastCard) {
 	// 	draw();
 	} else {
-		lose();
+		loseGame();
 	}
 }
 
@@ -250,7 +247,7 @@ function lower() {
 	// }	else if (thisCard === lastCard) {
 	// 	draw();
 	} else {
-		lose();
+		loseGame();
 	}
 }
 
