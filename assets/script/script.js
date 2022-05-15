@@ -78,26 +78,29 @@ function restartGame() {
 
 /*-----------------------------------------------audio-*/
 
-/** Play sound when player loses */
+let audioFileWin = new Audio("assets/audio/win.wav");
+let audioFileLose = new Audio("assets/audio/lose.wav");
+
+/** Play sound when player wins */
 function winAudio() {
-	document.getElementById("win").play();
+	audioFileWin.play();
 }
 
 /** Play sound when player loses */
 function loseAudio() {
-	document.getElementById("lose").play();
+	audioFileLose.play();
 }
 
 /** Mute all sounds */
 function soundOff() {
-	document.getElementById("win").muted = true;
-	document.getElementById("lose").muted = true;
+	audioFileWin.muted = true;
+	audioFileLose.muted = true;
 }
 
 /** Unmute all sounds */
 function soundOn() {
-	document.getElementById("win").muted = false;
-	document.getElementById("lose").muted = false;
+	audioFileWin.muted = false;
+	audioFileLose.muted = false;
 }
 
 // Toggle sound on/off and sound icon
@@ -279,7 +282,3 @@ $(".subMenuBtnClose").click(function() {
 		$("#menu-container").show();
 	})
 })
-
-	
-
-	
