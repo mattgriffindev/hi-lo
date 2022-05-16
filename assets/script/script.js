@@ -29,24 +29,39 @@ $(".show-menu-btn").click(function() {
 
 /*---------------------------------------------------------array-*/
 
+ var deck = {
+      "A": 1,
+      "2": 2,
+	 		"3": 3,
+	 		"4": 4,
+      "5": 5,
+	 		"6": 6,
+	 		"7": 7,
+      "8": 8,
+	 		"9": 9,
+	 		"10": 10,
+	 		"J": 10,
+	 		"Q": 10,
+      "K": 10
+  }
+
+function getCardNumber() {
+	let card = Object.keys(deck);
+	let cardNumber = card[Math.floor(Math.random() * card.length)];
+	return cardNumber;
+}
+
+
+
+// let cardValue = deck[cardNumber];
+// console.log(cardValue);
+
+
 /** Get random card values from array */
-function getValue() {
-	let cardValues = [2, 10];
-	let value = cardValues[Math.floor(Math.random() * cardValues.length)];
-
-	return value;
-};
 
 
 
-// Returns picture cards as numerical values
-        // if (value === "jack" || value === "queen" || value === "king") {
-        //     value = 10;
-        //     return value;
-        // } else if (value === "ace") {
-        //     value = 11;
-        //     return value;
-        // } 
+
 
 /*-----------------------------------------------start-*/
 
@@ -55,7 +70,7 @@ function startGame() {
 	$("#menu-container, #intro-container").hide();
 	$("#game-container").show();
 	$(".numberIndicator:eq(0)").removeClass("numInd-default").addClass("numInd-green");	
-	$(".card:eq(0)").addClass("spinCard").html(getValue());
+	$(".card:eq(0)").addClass("spinCard").html(getCardNumber());
 }
 
 /** Restart game after losing/drawing */
@@ -71,7 +86,7 @@ function restartGame() {
 	})
 	setTimeout(function(){
 		$(".numberIndicator:eq(0)").removeClass("numInd-default").addClass("numInd-green"); 
-		$(".card:eq(0)").addClass("spinCard").html(getValue());
+		$(".card:eq(0)").addClass("spinCard").html(getCardNumber());
 	}, 500);
 	count = 1;
 }
@@ -205,7 +220,7 @@ function draw() {
 
 /** Reveal next card */
 function revealCard() {
-	$(".card").eq(count).addClass("spinCard").html(getValue());
+	$(".card").eq(count).addClass("spinCard").html(getCardNumber());
 }
 
 // Add click handler to #higher-button and run higher() and addCount()
@@ -223,11 +238,11 @@ $("#lower-button").click(function() {
 /** Check if card is higher or lower on higher button click */
 function higher() {
 	revealCard();
-	let thisCard = $(".card").eq(count).html();
-	let lastCard = $(".card").eq(count-1).html();
-	if (count == 5 && Number(thisCard) >= Number(lastCard)) {
+	let thisCard = deck[$(".card").eq(count).html()];
+	let lastCard = deck[$(".card").eq(count-1).html()];
+	if (count == 5 && parseInt(thisCard) >= parseInt(lastCard)) {
 		winGame();
-	} else if (Number(thisCard) >= Number(lastCard)) {
+	} else if (parseInt(thisCard) >= parseInt(lastCard)) {
 	 	win(); 
 	// }	else if (thisCard === lastCard) {
 	// 	draw();
@@ -238,11 +253,11 @@ function higher() {
 
 function lower() {
 	revealCard();
-	let thisCard = $(".card").eq(count).html();
-	let lastCard = $(".card").eq(count-1).html();
-	if (count == 5 && Number(thisCard) <= Number(lastCard)) {
+	let thisCard = deck[$(".card").eq(count).html()];
+	let lastCard = deck[$(".card").eq(count-1).html()];
+	if (count == 5 && parseInt(thisCard) <= parseInt(lastCard)) {
 		winGame();
-	} else if (Number(thisCard) <= Number(lastCard)) {
+	} else if (parseInt(thisCard) <= parseInt(lastCard)) {
 		win();
 	// }	else if (thisCard === lastCard) {
 	// 	draw();
