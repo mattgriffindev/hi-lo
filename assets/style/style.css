@@ -6,10 +6,10 @@
 
 :root {
 	--main-color: #fff;
-	--secondary-color: #fc5185;
+	--secondary-color: #111;
 	--tertiary-color: #add8e6;
-	--card-primary-color: #fc5185;
-	--card-secondary-color: #f0f0f0;
+	--card-primary-color: teal;
+	--card-secondary-color: #fafafa;
 	--card-tertiary-color: darkgoldenrod;
 	--number-indicator: #99d0e0;
 	--item-link-color: #200484;
@@ -21,8 +21,13 @@
 /*TEST - COLORS TO BE CONFIRMED*/
 .darkTheme {
 	--main-color: #111;
-	--secondary-color: orangered;
-	--tertiary-color: lawngreen;
+	--secondary-color: #fff;
+	--tertiary-color: lightgreen;
+	--card-secondary-color: #191919;
+}
+
+.cardDesign-red {
+	--card-primary-color: red;
 }
 
 html {
@@ -214,12 +219,6 @@ p {
 #dropdown-menu .show {
 	transform: translate3d(-180px, 52px, 0px);
 }
-
-/* #howToPlay-icon,
-#contact-icon,
-#settings-icon {
-	
-} */
 
 /*----------------------------------------------------card-*/
 

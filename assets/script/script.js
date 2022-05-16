@@ -45,23 +45,12 @@ $(".show-menu-btn").click(function() {
       "K": 10
   }
 
+/** Get random card from deck */
 function getCardNumber() {
 	let card = Object.keys(deck);
 	let cardNumber = card[Math.floor(Math.random() * card.length)];
 	return cardNumber;
 }
-
-
-
-// let cardValue = deck[cardNumber];
-// console.log(cardValue);
-
-
-/** Get random card values from array */
-
-
-
-
 
 /*-----------------------------------------------start-*/
 
@@ -143,6 +132,10 @@ $("#themeToggle").click(function(){
 		$("#themeDark, #themeToggleDark").hide();
 		$("#themeLight, #themeToggleLight").show();
 	}
+});
+
+$("#cardDesign-red").click(function(){
+	$(":root").addClass("cardDesign-red");
 });
 
 /*------------------------------------------send-email-*/
