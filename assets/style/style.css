@@ -158,9 +158,9 @@ p {
 	font-family: var(--font);
 	color: var(--secondary-color);
 	text-align: center;
-	box-shadow: 2px 2px 4px #fff;
 	background-color: var(--main-color);
-	z-index: 1060;
+	border: 1px solid var(--secondary-color);
+	z-index: 1070;
 	display: none;
 }
 
@@ -169,7 +169,7 @@ p {
 .button {
 	color: var(--secondary-color);
 	font-family: var(--font);
-	border: 1px ridge var(--secondary-color);
+	border: none;
 	border-radius: 25px;
 	background-color: var(--tertiary-color);
 }
@@ -235,7 +235,8 @@ p {
 }
 
 .card {
-	margin: 2rem auto;
+	margin: 1rem auto;
+	z-index: -1;
 }
 
 .introCard {
@@ -269,7 +270,7 @@ p {
 .numberIndicator {
 	height: 4rem;
 	width: 4rem;
-	margin: auto;
+	margin: 0.5rem auto;
 	padding-top: 0.25rem;
 	text-align: center;
 	font-size: 2rem;
