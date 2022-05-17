@@ -53,11 +53,6 @@ p {
 	height: 100vh;
 }
 
-/*REMOVE WHEN COMPLETE*/
-.col {
-	border: 1px solid hotpink;
-}
-
 /*--------------------------------------------------header-*/
 
 #header {
@@ -92,10 +87,8 @@ p {
 	width: 22rem;
 	padding: 1rem;
 	font-family: var(--font);
-	border: 1px solid hotpink; /*REMOVE WHEN COMPLETE*/
 	color: var(--secondary-color);
 	text-align: center;
-	box-shadow: 2px 2px 4px #fff;
 }
 
 #intro-container {
@@ -104,7 +97,6 @@ p {
 	display: flex;
   align-items: center;
 	justify-content: center;
-	border: 1px solid hotpink; /*REMOVE WHEN COMPLETE*/
 }
 
 .menu-title {
@@ -164,7 +156,6 @@ p {
 	position: fixed;
 	padding: 0.75rem;
 	font-family: var(--font);
-	border: 1px solid hotpink; /*REMOVE WHEN COMPLETE*/
 	color: var(--secondary-color);
 	text-align: center;
 	box-shadow: 2px 2px 4px #fff;
