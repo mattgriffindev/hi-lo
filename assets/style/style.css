@@ -8,9 +8,10 @@
 	--main-color: #fff;
 	--secondary-color: #111;
 	--tertiary-color: #add8e6;
-	--card-primary-color: teal;
-	--card-secondary-color: #fafafa;
-	--card-tertiary-color: darkgoldenrod;
+	--card-font-color: teal;
+	--card-back-color: teal;
+	--card-face-color: #fafafa;
+	--card-border-color: darkgoldenrod;
 	--number-indicator: #99d0e0;
 	--item-link-color: #200484;
 	--font: 'Irish Grover', cursive;
@@ -23,11 +24,22 @@
 	--main-color: #111;
 	--secondary-color: #fff;
 	--tertiary-color: lightgreen;
-	--card-secondary-color: #191919;
+	--card-face-color: #191919;
 }
 
-.cardDesign-red {
-	--card-primary-color: purple;
+.cardDesign-red {	
+	--card-font-color: red;
+	--card-back-color: red; 
+}
+
+.cardDesign-green {
+	--card-font-color: green;
+	--card-back-color: green; 
+}
+
+.cardDesign-blue {
+	--card-font-color: blue;
+	--card-back-color: blue; 
 }
 
 html {
@@ -236,13 +248,13 @@ p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: var(--card-primary-color);
+	color: var(--card-font-color);
 	font-family: var(--font);
 	font-size: 3rem;
 	text-align: center;
-	border: 2px solid var(--card-tertiary-color);
+	border: 2px solid var(--card-border-color);
 	border-radius: 15px;
-	background: var(--card-primary-color);
+	background-color: var(--card-back-color);
 }
 
 .card {
@@ -259,6 +271,18 @@ p {
 .introCardThree { transform: matrix(1, 0, 0, 1, 0, -40); }
 .introCardFour { transform: matrix(1, 0.25, -0.25, 1, 0, -25); }
 .introCardFive { transform: matrix(1, 0.5, -0.5, 1, 0, 10); }
+
+.cardDesign {
+	height: 6rem;
+	width: 4rem;
+	margin: auto 0.5rem;
+	border: 1px solid var(--card-border-color);
+	border-radius: 15px;
+}
+
+.cardDesign--red { background: red; }
+.cardDesign--green { background: green; }
+.cardDesign--blue { background: blue; }
 
 /*----------------------------------------------result-*/
 
@@ -348,8 +372,8 @@ p {
 }
  @keyframes spinCard {
 	20% {transform: rotateY(180deg);}
-	90% {background: var(--card-primary-color);}
-	100% {background: var(--card-secondary-color);}
+	90% {background: var(--card-back-color);}
+	100% {background: var(--card-face-color);}
 }
 
 .showResult {

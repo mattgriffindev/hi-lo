@@ -135,7 +135,15 @@ $("#themeToggle").click(function(){
 });
 
 $("#cardDesign-red").click(function(){
-	$(":root").addClass("cardDesign-red");
+	$(":root").removeClass("cardDesign-green cardDesign-blue").addClass("cardDesign-red");
+});
+
+$("#cardDesign-green").click(function(){
+	$(":root").removeClass("cardDesign-red cardDesign-blue").addClass("cardDesign-green");
+});
+
+$("#cardDesign-blue").click(function(){
+	$(":root").removeClass("cardDesign-red cardDesign-green").addClass("cardDesign-blue");
 });
 
 /*------------------------------------------send-email-*/
