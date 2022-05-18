@@ -27,7 +27,7 @@
 }
 
 .cardDesign-red {
-	--card-primary-color: palevioletred;
+	--card-primary-color: purple;
 }
 
 html {
@@ -66,6 +66,10 @@ p {
   justify-content: center;
 	color: var(--secondary-color);
 	font-family: var(--font);
+	font-size: 2rem;
+}
+
+#brand {
 	font-size: 2rem;
 }
 
@@ -164,6 +168,11 @@ p {
 	display: none;
 }
 
+.subMenuTitle {
+	margin-bottom: 1rem;
+	font-size: 2rem;
+}
+
 /*--------------------------------------------------button-*/
 
 .button {
@@ -186,11 +195,13 @@ p {
 	font-size: 1.5rem;
 }
 
-.sendbutton {
-	height: 2rem;
-  width: 4rem;
+.subMenuBtn {
+	height: auto;
+  width: auto;
+	margin-top: 0.5rem;
 	font-size: 1.5rem;
-	border: none;
+	border: 1px solid var(--secondary-color);
+	border-radius: 25px;
 	background-color: transparent;
 }
 
@@ -220,8 +231,8 @@ p {
 
 .card,
 .introCard {
-	height: 8rem;
-	width: 6rem;
+	height: 10rem;
+	width: 7rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -231,7 +242,7 @@ p {
 	text-align: center;
 	border: 2px solid var(--card-tertiary-color);
 	border-radius: 15px;
-	background-color: var(--card-primary-color);
+	background: var(--card-primary-color);
 }
 
 .card {
@@ -249,6 +260,8 @@ p {
 .introCardFour { transform: matrix(1, 0.25, -0.25, 1, 0, -25); }
 .introCardFive { transform: matrix(1, 0.5, -0.5, 1, 0, 10); }
 
+/*----------------------------------------------result-*/
+
 #result {
 	height: 8rem;
 	width: 18rem;
@@ -263,6 +276,11 @@ p {
 	border: 2px ridge var(--secondary-color);
 	display: none;
 	z-index: 1000;
+}
+
+#result p {
+	font-size: 1.25rem;
+	font-family: var(--font);
 }
 
 /*------------------------------------number-indicator-*/
@@ -330,8 +348,8 @@ p {
 }
  @keyframes spinCard {
 	20% {transform: rotateY(180deg);}
-	90% {background-color: var(--card-primary-color);}
-	100% {background-color: var(--card-secondary-color);}
+	90% {background: var(--card-primary-color);}
+	100% {background: var(--card-secondary-color);}
 }
 
 .showResult {

@@ -237,7 +237,7 @@ function higher() {
 		winGame();
 	} else if (parseInt(thisCard) >= parseInt(lastCard)) {
 	 	win(); 
-	}	else if (thisCard === lastCard) {
+	}	else if (parseInt(thisCard) == parseInt(lastCard)) {
 		draw();
 	} else {
 		loseGame();
@@ -252,7 +252,7 @@ function lower() {
 		winGame();
 	} else if (parseInt(thisCard) <= parseInt(lastCard)) {
 		win();
-	}	else if (thisCard === lastCard) {
+	}	else if (parseInt(thisCard) == parseInt(lastCard)) {
 		draw();
 	} else {
 		loseGame();
@@ -286,7 +286,3 @@ $(".subMenuBtnClose").click(function() {
 		$(".subMenu").hide();
 	})
 })
-
-	
-
-	

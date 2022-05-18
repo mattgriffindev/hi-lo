@@ -90,21 +90,21 @@
 
 		<!--how-to-play-->
 		<div class="subMenu" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-			<h2 class="subMenuTtle">How to Play</h2>
+			<h2 class="subMenuTitle">How to Play</h2>
 			<div class="subMenuBody">
 				<p>The aim of the game could not be simpler!</p>
 				<p>All you need to do is guess whether the next card to be dealt will be higher or lower than the
 					previous card.</p>
 			</div>
 			<div class="subMenuFooter">
-				<button type="button" class="subMenuBtnClose itemLink">Close</button>
+				<button type="button" class="subMenuBtnClose subMenuBtn itemLink">Close</button>
 			</div>
 		</div>
 		<!--/how-to-play-->
 
 		<!--contact-->
 		<div class="subMenu" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-			<h2 class="subMenuTtle">Contact Us</h2>
+			<h2 class="subMenuTitle">Contact Us</h2>
 			<div class="subMenuBody">
 				<div id="contact-form">
 					<form id="contactForm" onsubmit="return sendMail(this);">
@@ -113,19 +113,19 @@
 							required />
 						<textarea rows="2" name="messagebox" class="form-control mb-2" id="messagebox" placeholder="Your message"
 							style="resize:none" required></textarea>
-						<button type="submit" class="button sendbutton mt-2">Send</button>
+						<button type="submit" class="subMenuBtn itemLink">Send</button>
 					</form>
 				</div>
 			</div>
 			<div class="subMenuFooter">
-				<button type="button" class="subMenuBtnClose itemLink">Close</button>
+				<button type="button" class="subMenuBtnClose subMenuBtn itemLink">Close</button>
 			</div>
 		</div>
 		<!--/contact-->
 
 		<!--settings-->
 		<div class="subMenu" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-			<h2 class="subMenuTtle">Settings</h2>
+			<h2 class="subMenuTitle">Settings</h2>
 			<div class="subMenuBody">
 				<button id="audioToggle" class="itemLink settings-item">Toggle Sound</button>
 				<span id="audioToggleOn" class="settings-item">ON</span><span id="audioToggleOff"
@@ -138,20 +138,20 @@
 				</button>
 			</div>
 			<div class="subMenuFooter">
-				<button type="button" class="subMenuBtnClose itemLink">Close</button>
+				<button type="button" class="subMenuBtnClose subMenuBtn itemLink">Close</button>
 			</div>
 		</div>
 		<!--/settings-->
 
 		<!--card-design-->
 		<div class="subMenu" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-			<h2 class="subMenuTtle">Card Design</h2>
+			<h2 class="subMenuTitle">Card Design</h2>
 			<div class="subMenuBody">
 				<p>...</p>
 				<button id="cardDesign-red" class="itemLink settings-item">RED</button>
 			</div>
 			<div class="subMenuFooter">
-				<button type="button" class="subMenuBtnClose itemLink">Close</button>
+				<button type="button" class="subMenuBtnClose subMenuBtn itemLink">Close</button>
 			</div>
 		</div>
 		<!--/card-design-->
@@ -220,7 +220,7 @@
     </script>
 	<script id="winText" type="text/html">
         <h4>You're a winner!</h4>
-        <a class="itemLink" href="https://www.twitter.com/share?text=I got 5 in a row on Hi-Lo! Take on the challenge:&url=https://www.google.com Made by @mattgriffindev" target="_blank" rel="noopener">Tweet your victory</a>
+        <p><a class="itemLink" href="https://www.twitter.com/share?text=I got 5 in a row on Hi-Lo! Take on the challenge:&url=https://www.google.com Made by @mattgriffindev" target="_blank" rel="noopener">Tweet your victory</a></p>
     </script>
 	<script id="drawText" type="text/html">
         <h4>You don't get anything for a pair!</h4>
