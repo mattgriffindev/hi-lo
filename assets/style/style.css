@@ -52,7 +52,7 @@ body {
 
 p {
 	font-family: var(--paragraph-font);
-	font-size: 1rem;
+	font-size: 1.25rem;
 }
 
 .row {
@@ -99,8 +99,8 @@ p {
 }
 
 #menu-container {
-	height: 22rem;
-	width: 22rem;
+	height: 25rem;
+	width: 25rem;
 	padding: 1rem;
 	font-family: var(--font);
 	color: var(--secondary-color);
@@ -116,7 +116,7 @@ p {
 }
 
 .menu-item {
-	padding-top: 0.5rem;
+	padding-top: 0.75rem;
   font-size: 3em;
 	border: none;
 	background-color: transparent;
@@ -156,8 +156,8 @@ p {
 /*--------------------------------------------sub-menu-*/
 
 .subMenu {
-	height: 22rem;
-	width: 22rem;
+	height: 25rem;
+	width: 25rem;
 	position: fixed;
 	padding: 0.75rem;
 	font-family: var(--font);
@@ -171,7 +171,11 @@ p {
 
 .subMenuTitle {
 	margin-bottom: 1rem;
-	font-size: 2rem;
+	font-size: 3rem;
+}
+
+.form-control {
+	font-size: 1.25rem;
 }
 
 /*--------------------------------------------------button-*/
