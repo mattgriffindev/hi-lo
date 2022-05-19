@@ -288,7 +288,7 @@ ul {
 #result {
 	height: 8rem;
 	width: 18rem;
-	padding-top: 2rem;
+	padding-top: 1.25rem;
 	position: fixed;
 	font-family: var(--font);
 	color: var(--secondary-color);
@@ -302,6 +302,7 @@ ul {
 }
 
 #result p {
+	margin-bottom: 0.25rem;
 	font-size: 1rem;
 	font-family: var(--font);
 }
