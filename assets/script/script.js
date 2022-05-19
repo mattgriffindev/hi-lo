@@ -186,7 +186,7 @@ function win() {
 function winGame() {
 	let winText = $("#winText").html();
 	setTimeout(function() {
-		$("#result").show().addClass("showResult").html(winText)	
+		$("#result").addClass("showResult").html(winText).show()
 	}, 1000);
 	setTimeout(winAudio, 1000);
 	setTimeout(numberIndicatorGreen, 1000);
@@ -196,7 +196,7 @@ function winGame() {
 function loseGame() {
 	let loseText = $("#loseText").html();
 	setTimeout(function() {
-		$("#result").show().addClass("showResult").html(loseText)	
+		$("#result").addClass("showResult").html(loseText).show()	
 	}, 1000);
 	setTimeout(loseAudio, 1000);
 	setTimeout(numberIndicatorRed, 1000);
@@ -207,7 +207,7 @@ function loseGame() {
 function draw() {
 	let drawText = $("#drawText").html();
 	setTimeout(function() {
-		$("#result").show().addClass("showResult").html(drawText)	
+		$("#result").addClass("showResult").html(drawText).show()	
 	}, 1000);
 	setTimeout(loseAudio, 1000);
 	setTimeout(numberIndicatorRed, 1000);
