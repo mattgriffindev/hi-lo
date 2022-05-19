@@ -27,19 +27,19 @@
 	--card-face-color: #191919;
 }
 
-.cardDesign-red {	
-	--card-font-color: red;
-	--card-back-color: red; 
+.cardDesign-one {	
+	--card-font-color: rgba(17,17,17,1);
+	--card-back-color: linear-gradient(315deg, rgba(165,42,42,1) 33%, rgba(17,17,17,1) 33%, rgba(17,17,17,1) 66%, rgba(165,42,42,1) 66%);
 }
 
-.cardDesign-green {
-	--card-font-color: green;
-	--card-back-color: green; 
+.cardDesign-two {
+	--card-font-color: rgba(238,174,202,1);
+	--card-back-color: radial-gradient(circle, rgba(238,174,202,1) 40%, rgba(148,187,233,1) 40%);
 }
 
-.cardDesign-blue {
-	--card-font-color: blue;
-	--card-back-color: blue; 
+.cardDesign-three {
+	--card-font-color: rgba(17,17,17,1);
+	--card-back-color: linear-gradient(90deg, rgba(165,42,42,1) 33%, rgba(17,17,17,1) 33%, rgba(17,17,17,1) 66%, rgba(165,42,42,1) 66%); 
 }
 
 html {
@@ -254,7 +254,7 @@ p {
 	text-align: center;
 	border: 2px solid var(--card-border-color);
 	border-radius: 15px;
-	background-color: var(--card-back-color);
+	background: var(--card-back-color);
 }
 
 .card {
@@ -280,9 +280,9 @@ p {
 	border-radius: 15px;
 }
 
-.cardDesign--red { background: red; }
-.cardDesign--green { background: green; }
-.cardDesign--blue { background: blue; }
+.cardDesign--one { background: linear-gradient(315deg, rgba(165,42,42,1) 33%, rgba(17,17,17,1) 33%, rgba(17,17,17,1) 66%, rgba(165,42,42,1) 66%); }
+.cardDesign--two { background: radial-gradient(circle, rgba(238,174,202,1) 40%, rgba(148,187,233,1) 40%); }
+.cardDesign--three { background: linear-gradient(90deg, rgba(165,42,42,1) 33%, rgba(17,17,17,1) 33%, rgba(17,17,17,1) 66%, rgba(165,42,42,1) 66%); }
 
 /*----------------------------------------------result-*/
 

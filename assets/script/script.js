@@ -134,16 +134,16 @@ $("#themeToggle").click(function(){
 	}
 });
 
-$("#cardDesign-red").click(function(){
-	$(":root").removeClass("cardDesign-green cardDesign-blue").addClass("cardDesign-red");
+$("#cardDesign-one").click(function(){
+	$(":root").removeClass("cardDesign-two cardDesign-three").addClass("cardDesign-one");
 });
 
-$("#cardDesign-green").click(function(){
-	$(":root").removeClass("cardDesign-red cardDesign-blue").addClass("cardDesign-green");
+$("#cardDesign-two").click(function(){
+	$(":root").removeClass("cardDesign-one cardDesign-three").addClass("cardDesign-two");
 });
 
-$("#cardDesign-blue").click(function(){
-	$(":root").removeClass("cardDesign-red cardDesign-green").addClass("cardDesign-blue");
+$("#cardDesign-three").click(function(){
+	$(":root").removeClass("cardDesign-one cardDesign-two").addClass("cardDesign-three");
 });
 
 /*------------------------------------------send-email-*/
