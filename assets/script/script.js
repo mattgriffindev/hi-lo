@@ -24,17 +24,17 @@ function addCount() {
 
  var deck = {
       "A": 1,
-      "2": 2,
-	 		"3": 3,
-	 		"4": 4,
-      "5": 5,
-	 		"6": 6,
-	 		"7": 7,
-      "8": 8,
-	 		"9": 9,
-	 		"10": 10,
-	 		"J": 10,
-	 		"Q": 10,
+    //   "2": 2,
+	 		// "3": 3,
+	 		// "4": 4,
+    //   "5": 5,
+	 		// "6": 6,
+	 		// "7": 7,
+    //   "8": 8,
+	 		// "9": 9,
+	 		// "10": 10,
+	 		// "J": 10,
+	 		// "Q": 10,
       "K": 10
   }
 
@@ -45,7 +45,7 @@ function getCardNumber() {
 	return cardNumber;
 }
 
-/*-----------------------------------------------start-*/
+/*---------------------------------------------------------start-*/
 
 /** Start game by revealing first card */
 function startGame() {
@@ -73,7 +73,7 @@ function restartGame() {
 	count = 1;
 }
 
-/*-----------------------------------------------audio-*/
+/*---------------------------------------------------------audio-*/
 
 let audioFileWin = new Audio("assets/audio/win.wav");
 let audioFileLose = new Audio("assets/audio/lose.wav");
@@ -113,7 +113,7 @@ $("#audioToggle").click(function() {
 	}
 });
 
-/*-----------------------------------------------theme-*/
+/*---------------------------------------------------------theme-*/
 
 // Toggle theme light/dark and theme icon
 $("#themeToggle").click(function(){
@@ -143,7 +143,7 @@ $("#cardDesign-three").click(function(){
 	$(":root").removeClass("cardDesign-one cardDesign-two").addClass("cardDesign-three");
 });
 
-/*------------------------------------------send-email-*/
+/*----------------------------------------------------send-email-*/
 
 function sendMail(contactForm) {
     emailjs.send("service_l0dqag3", "template_30ofgfw", {
@@ -164,7 +164,7 @@ function sendMail(contactForm) {
     return false; 
 }
 
-/*------------------------------------number-indicator-*/
+/*----------------------------------------------number-indicator-*/
 
 /** Change number indicator to green */
 function numberIndicatorGreen() {
@@ -176,7 +176,7 @@ function numberIndicatorRed() {
 	$(".numberIndicator").eq(count-1).removeClass("numInd-default").addClass("numInd-red");
 }
 
-/*-------------------------------------------win-/-lose-*/
+/*-----------------------------------------------------win-/-lose-*/
 
 function win() {
 	setTimeout(winAudio, 1000);
@@ -190,6 +190,7 @@ function winGame() {
 	}, 1000);
 	setTimeout(winAudio, 1000);
 	setTimeout(numberIndicatorGreen, 1000);
+	setTimeout(particle, 1000);
 }
 
 function loseGame() {
@@ -214,7 +215,7 @@ function draw() {
 	$("#lower-button").prop("disabled", true);
 }
 
-/*--------------------------------------higher-/-lower-*/
+/*------------------------------------------------higher-/-lower-*/
 
 /** Reveal next card */
 function revealCard() {
@@ -264,7 +265,7 @@ function lower() {
 	}
 }
 
-/*--------------------------------------------sub-menu-*/
+/*------------------------------------------------------sub-menu-*/
 
 $("#showHowToPlay, #howToPlay-icon").click(function() {
 	$(".subMenu:eq(1), .subMenu:eq(2), .subMenu:eq(3)").hide();
@@ -291,3 +292,56 @@ $(".subMenuBtnClose").click(function() {
 		$(".subMenu").hide();
 	})
 })
+
+/*------------------------------------------------------particle-*/
+
+// code adapted from css-tricks (https://css-tricks.com/playing-with-particles-using-the-web-animations-api)
+
+/** Run particle */
+function particle() {
+	let particleContainer = document.querySelector("#canvas").getBoundingClientRect();
+	let x = particleContainer.left + particleContainer.width / 2;
+	let y = particleContainer.top + particleContainer.height / 1.3;
+	for (let i = 0; i < 600; i++) {
+		createParticle(x, y);
+	}
+}
+
+/** Create particle */
+function createParticle(x, y) {
+  const particle = document.createElement("particle");
+  document.body.appendChild(particle);
+  // Calculate a random sizex
+  const size = Math.floor(Math.random() * 10 + 5);
+  particle.style.width = `${size}px`;
+  particle.style.height = `${size}px`;
+	// Generate a random color in a blue/purple palette
+  particle.style.background = `hsl(${Math.random() * 250 + 100}, 70%, 60%)`;
+  // Generate a random x & y destination
+  const destinationX = x + (Math.random() - 0.5) * 3 * 100;
+  const destinationY = y + (Math.random() - 1) * 4 * 100;
+  // Store the animation in a variable as we will need it later
+  const animation = particle.animate([
+    {
+      // Set the origin position of the particle
+      // Offset the particle with half its size to center it around the mouse
+      transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
+      opacity: 1
+    },
+    {
+      // Define the final coordinates as the second keyframe
+      transform: `translate(${destinationX}px, ${destinationY}px)`,
+      opacity: 0
+    }
+  ], {
+    // Set a duration
+    duration: 7500,
+    easing: 'cubic-bezier(0, .9, .57, 1)',
+    // Delay every particle with a random value of 200ms
+    delay: Math.random() * 100
+  });
+  // When the animation is complete, remove the element from the DOM
+  animation.onfinish = () => {
+    particle.remove();
+  };
+}

@@ -65,13 +65,13 @@ ul {
 	--bs-gutter-x: 0
 }
 
-/*--------------------------------------------------canvas-*/
+/*------------------------------------------------------canvas-*/
 
 #canvas {
 	height: 100vh;
 }
 
-/*--------------------------------------------------header-*/
+/*------------------------------------------------------header-*/
 
 #header {
 	position: fixed;
@@ -96,7 +96,7 @@ ul {
 	justify-content: right;
 }
 
-/*----------------------------------------------------menu-*/
+/*--------------------------------------------------------menu-*/
 
 #game-container,
 #menu-container {
@@ -158,7 +158,7 @@ ul {
 	background-color: transparent;
 }
 
-/*--------------------------------------------sub-menu-*/
+/*----------------------------------------------------sub-menu-*/
 
 .subMenu {
 	height: 25rem;
@@ -183,7 +183,7 @@ ul {
 	font-size: 1.25rem;
 }
 
-/*--------------------------------------------------button-*/
+/*------------------------------------------------------button-*/
 
 .button {
 	color: var(--secondary-color);
@@ -238,7 +238,7 @@ ul {
 	transform: translate3d(-180px, 52px, 0px);
 }
 
-/*----------------------------------------------------card-*/
+/*--------------------------------------------------------card-*/
 
 .card,
 .introCard {
@@ -283,7 +283,7 @@ ul {
 .cardDesign--two { background: radial-gradient(circle, rgba(200,40,84,1) 40%, rgba(84,175,30,1) 40%); }
 .cardDesign--three { background: linear-gradient(90deg, rgba(165,42,42,1) 25%, rgba(17,17,17,1) 25%, rgba(17,17,17,1) 75%, rgba(165,42,42,1) 75%); }
 
-/*----------------------------------------------result-*/
+/*------------------------------------------------------result-*/
 
 #result {
 	height: 8rem;
@@ -306,7 +306,7 @@ ul {
 	font-family: var(--font);
 }
 
-/*------------------------------------number-indicator-*/
+/*--------------------------------------------number-indicator-*/
 
 .numberIndicator {
 	height: 4rem;
@@ -331,7 +331,7 @@ ul {
 	color: red;
 }
 
-/*----------------------------------------------footer-*/
+/*------------------------------------------------------footer-*/
 
 #footer {
 	position: fixed;
@@ -364,7 +364,7 @@ ul {
 	color: red;
 }
 
-/*-------------------------------------------animation-*/
+/*---------------------------------------------------animation-*/
 
 .spinCard {
 	animation: spinCard 1s linear forwards;
@@ -382,7 +382,19 @@ ul {
 	100% {transform: scale(2);}
 }
 
-/*---------------------------------------media-queries-*/
+/*---------------------------------------------------particle--*/
+
+particle {
+	border-radius: 50%;
+  left: 0;	
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+	opacity: 0;
+	z-index: 1060;
+}
+
+/*-----------------------------------------------media-queries-*/
 
 @media screen and (max-width: 1023px) {
 	html { font-size: 14px; }
