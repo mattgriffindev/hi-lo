@@ -71,15 +71,22 @@
 
 		<!--menu-container-->
 		<div id="menu-container" class="border border-danger">
-			<button class="itemLink menu-item" onclick="startGame()">Play</button>
-			<br>
-			<button id="showHowToPlay" class="itemLink menu-item"><i class="fas fa-gamepad"></i> How to play
-			</button>
-			<br>
-			<button id="showContact" class="itemLink menu-item"><i class="fas fa-envelope"></i> Contact us
-			</button>
-			<br>
-			<button id="showSettings" class="itemLink menu-item"><i class="fas fa-cog"></i> Settings</button>
+			<ul>
+				<li>
+					<button class="itemLink menu-item" onclick="startGame()">Play</button>
+				</li>
+				<li>
+					<button id="showHowToPlay" class="itemLink menu-item"><i class="fas fa-gamepad"></i> How to play
+					</button>
+				</li>
+				<li>
+					<button id="showContact" class="itemLink menu-item"><i class="fas fa-envelope"></i> Contact us
+					</button>
+				</li>
+				<li>
+					<button id="showSettings" class="itemLink menu-item"><i class="fas fa-cog"></i> Settings</button>
+				</li>
+			</ul>
 		</div>
 		<!--/menu-container-->
 
@@ -87,7 +94,8 @@
 		<div class="subMenu" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 			<h2 class="subMenuTitle">How to Play</h2>
 			<div class="subMenuBody">
-				<p>Use the up and down arrow buttons to guess whether the next card to be revealed will be higher or lower than the	previous card.</p>
+				<p>Use the up and down arrow buttons to guess whether the next card to be revealed will be higher or lower than
+					the previous card.</p>
 				<p>Get 5 in a row to win the game. Note, Ace (A) is low (1) and you don't get anything for a pair!</p>
 			</div>
 			<div class="subMenuFooter">
@@ -121,15 +129,23 @@
 		<div class="subMenu" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 			<h2 class="subMenuTitle">Settings</h2>
 			<div class="subMenuBody">
-				<button id="audioToggle" class="itemLink settings-item">Toggle Sound</button>
-				<span id="audioToggleOn" class="settings-item">ON</span><span id="audioToggleOff"
-					class="settings-item">OFF</span>
-				<button id="themeToggle" class="itemLink settings-item">Toggle Theme</button>
-				<span id="themeToggleLight" class="settings-item">LIGHT</span><span id="themeToggleDark"
-					class="settings-item">DARK</span>
-				<button class="itemLink settings-item showChangeDesign">
-					Change Card Design
-				</button>
+				<ul>
+					<li>
+						<button id="audioToggle" class="itemLink settings-item">Toggle Sound</button>
+						<span id="audioToggleOn" class="settings-item">ON</span><span id="audioToggleOff"
+							class="settings-item">OFF</span>
+					</li>
+					<li>
+						<button id="themeToggle" class="itemLink settings-item">Toggle Theme</button>
+						<span id="themeToggleLight" class="settings-item">LIGHT</span><span id="themeToggleDark"
+							class="settings-item">DARK</span>
+					</li>
+					<li>
+						<button class="itemLink settings-item showChangeDesign">
+							Change Card Design
+						</button>
+					</li>
+				</ul>
 			</div>
 			<div class="subMenuFooter">
 				<button type="button" class="subMenuBtnClose subMenuBtn itemLink">Close</button>
