@@ -5,8 +5,8 @@
 }
 
 :root {
-	--main-color: #fff;
-	--secondary-color: #111;
+	--main-color: #eee;
+	--secondary-color: #333;
 	--tertiary-color: #add8e6;
 	--card-font-color: teal;
 	--card-back-color: teal;
@@ -21,25 +21,25 @@
 
 /*TEST - COLORS TO BE CONFIRMED*/
 .darkTheme {
-	--main-color: #111;
-	--secondary-color: #fff;
+	--main-color: #333;
+	--secondary-color: #eee;
 	--tertiary-color: lightgreen;
 	--card-face-color: #191919;
 }
 
 .cardDesign-one {	
 	--card-font-color: rgba(17,17,17,1);
-	--card-back-color: linear-gradient(315deg, rgba(165,42,42,1) 33%, rgba(17,17,17,1) 33%, rgba(17,17,17,1) 66%, rgba(165,42,42,1) 66%);
+	--card-back-color: linear-gradient(315deg, rgba(165,42,42,1) 25%, rgba(17,17,17,1) 25%, rgba(17,17,17,1) 75%, rgba(165,42,42,1) 75%);
 }
 
 .cardDesign-two {
-	--card-font-color: rgba(238,174,202,1);
-	--card-back-color: radial-gradient(circle, rgba(238,174,202,1) 40%, rgba(148,187,233,1) 40%);
+	--card-font-color: rgba(200,40,84,1);
+	--card-back-color: radial-gradient(circle, rgba(200,40,84,1) 40%, rgba(84,175,30,1) 40%);
 }
 
 .cardDesign-three {
 	--card-font-color: rgba(17,17,17,1);
-	--card-back-color: linear-gradient(90deg, rgba(165,42,42,1) 33%, rgba(17,17,17,1) 33%, rgba(17,17,17,1) 66%, rgba(165,42,42,1) 66%); 
+	--card-back-color: linear-gradient(90deg, rgba(165,42,42,1) 25%, rgba(17,17,17,1) 25%, rgba(17,17,17,1) 75%, rgba(165,42,42,1) 75%); 
 }
 
 html {
@@ -56,7 +56,8 @@ p {
 }
 
 .row {
---bs-gutter-x: 0
+	align-items: center;
+	--bs-gutter-x: 0
 }
 
 /*--------------------------------------------------canvas-*/
@@ -82,7 +83,7 @@ p {
 }
 
 #brand {
-	font-size: 2rem;
+	font-size: 3rem;
 }
 
 .col-top-right {
@@ -93,8 +94,7 @@ p {
 /*----------------------------------------------------menu-*/
 
 #game-container,
-#menu-container,
-#menu {
+#menu-container {
 	display: none;
 }
 
@@ -122,13 +122,6 @@ p {
 .menu-item {
 	padding-top: 0.75rem;
 	font-size: 2rem;
-	border: none;
-	background-color: transparent;
-}
-
-.show-menu-btn {
-	margin-top: 1rem;
-	font-size: 1.5rem;
 	border: none;
 	background-color: transparent;
 }
@@ -191,8 +184,6 @@ p {
 	color: var(--secondary-color);
 	font-family: var(--font);
 	border: none;
-	border-radius: 25px;
-	background-color: var(--tertiary-color);
 }
 
 .buttonPlacement {
@@ -202,9 +193,12 @@ p {
 }
 
 .gamebutton {
-	height: 3rem;
-	width: 8rem;
-	font-size: 1.5rem;
+	height: 4rem;
+  width: 6rem;
+  font-size: 1.75rem;
+	border: 2px solid var(--secondary-color);
+	border-radius: 50px;
+	background-color: var(--tertiary-color);
 }
 
 .subMenuBtn {
@@ -280,9 +274,9 @@ p {
 	border-radius: 15px;
 }
 
-.cardDesign--one { background: linear-gradient(315deg, rgba(165,42,42,1) 30%, rgba(17,17,17,1) 30%, rgba(17,17,17,1) 70%, rgba(165,42,42,1) 70%); }
-.cardDesign--two { background: radial-gradient(circle, rgba(238,174,202,1) 40%, rgba(148,187,233,1) 40%); }
-.cardDesign--three { background: linear-gradient(90deg, rgba(165,42,42,1) 30%, rgba(17,17,17,1) 30%, rgba(17,17,17,1) 70%, rgba(165,42,42,1) 70%); }
+.cardDesign--one { background: linear-gradient(315deg, rgba(165,42,42,1) 25%, rgba(17,17,17,1) 25%, rgba(17,17,17,1) 75%, rgba(165,42,42,1) 75%); }
+.cardDesign--two { background: radial-gradient(circle, rgba(200,40,84,1) 40%, rgba(84,175,30,1) 40%); }
+.cardDesign--three { background: linear-gradient(90deg, rgba(165,42,42,1) 25%, rgba(17,17,17,1) 25%, rgba(17,17,17,1) 75%, rgba(165,42,42,1) 75%); }
 
 /*----------------------------------------------result-*/
 

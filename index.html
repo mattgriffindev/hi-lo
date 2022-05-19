@@ -36,7 +36,7 @@
 				<div id="brand">Hi-Lo</div>
 			</div>
 			<div class="col col-top-right d-flex justiny-contents-flex-end">
-				<div><i id="themeLight" class="far fa-lightbulb me-3"></i><i id="themeDark" class="fas fa-lightbulb me-3"></i>
+				<div><i id="themeLight" class="far fa-sun me-3"></i><i id="themeDark" class="fas fa-moon me-3"></i>
 				</div>
 				<div><i id="audioOn" class="fas fa-volume-up me-3"></i><i id="audioOff" class="fas fa-volume-mute me-3"></i>
 				</div>
@@ -71,20 +71,16 @@
 
 		<!--menu-container-->
 		<div id="menu-container">
-			<!--menu-->
-			<div id="menu">
-				<h1 class="menu-title">Menu</h1>
-				<button class="itemLink menu-item" onclick="startGame()">Play</button>
-				<br>
-				<button id="showHowToPlay" class="itemLink menu-item"><i class="fas fa-gamepad"></i> How to play
-				</button>
-				<br>
-				<button id="showContact" class="itemLink menu-item"><i class="fas fa-envelope"></i> Contact us
-				</button>
-				<br>
-				<button id="showSettings" class="itemLink menu-item"><i class="fas fa-cog"></i> Settings</button>
-			</div>
-			<!--/menu-->
+			<h1 class="menu-title">Menu</h1>
+			<button class="itemLink menu-item" onclick="startGame()">Play</button>
+			<br>
+			<button id="showHowToPlay" class="itemLink menu-item"><i class="fas fa-gamepad"></i> How to play
+			</button>
+			<br>
+			<button id="showContact" class="itemLink menu-item"><i class="fas fa-envelope"></i> Contact us
+			</button>
+			<br>
+			<button id="showSettings" class="itemLink menu-item"><i class="fas fa-cog"></i> Settings</button>
 		</div>
 		<!--/menu-container-->
 
@@ -189,10 +185,13 @@
 			</div>
 			<div class="row buttonPlacement mt-2">
 				<div class="col col-md-2">
-					<button id="higher-button" class="button gamebutton">Higher <i class="fas fa-arrow-up"></i></button>
+					<button id="higher-button" class="button gamebutton">
+						<i class="fas fa-arrow-up"></i></button>
 				</div>
 				<div class="col col-md-2">
-					<button id="lower-button" class="button gamebutton">Lower <i class="fas fa-arrow-down"></i></button>
+					<button id="lower-button" class="button gamebutton">
+						<i class="fas fa-arrow-down"></i>
+					</button>
 				</div>
 			</div>
 		</div>

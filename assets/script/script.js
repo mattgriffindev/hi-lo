@@ -8,7 +8,7 @@ $(document).ready(function() {
 	setTimeout(function(){ $(".introCard:eq(3)").addClass("spinCard"); }, 1500);
 	setTimeout(function(){ $(".introCard:eq(4)").addClass("spinCard"); }, 2000);
 	setTimeout(function(){ $("#intro-container").hide(); }, 6000);
-	setTimeout(function(){ $("#menu-container, #menu").show(); }, 6000);
+	setTimeout(function(){ $("#menu-container").show(); }, 6000);
 });
 
 /*---------------------------------------------------------count-*/
@@ -19,13 +19,6 @@ function addCount() {
 	count+=1;
 	return count;
 	}
-
-/*----------------------------------------------------------menu-*/
-
-// Show main menu 
-$(".show-menu-btn").click(function() {
-	$("#menu").show();
-});
 
 /*---------------------------------------------------------array-*/
 
