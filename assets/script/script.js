@@ -134,6 +134,10 @@ $("#themeToggle").click(function(){
 	}
 });
 
+$("#cardDesign-default").click(function(){
+	$(":root").removeClass("cardDesign-one cardDesign-two cardDesign-three");
+});
+
 $("#cardDesign-one").click(function(){
 	$(":root").removeClass("cardDesign-two cardDesign-three").addClass("cardDesign-one");
 });

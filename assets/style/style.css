@@ -275,14 +275,14 @@ p {
 .cardDesign {
 	height: 6rem;
 	width: 4rem;
-	margin: auto 0.5rem;
+	margin: auto 0.25rem;
 	border: 1px solid var(--card-border-color);
 	border-radius: 15px;
 }
 
-.cardDesign--one { background: linear-gradient(315deg, rgba(165,42,42,1) 33%, rgba(17,17,17,1) 33%, rgba(17,17,17,1) 66%, rgba(165,42,42,1) 66%); }
+.cardDesign--one { background: linear-gradient(315deg, rgba(165,42,42,1) 30%, rgba(17,17,17,1) 30%, rgba(17,17,17,1) 70%, rgba(165,42,42,1) 70%); }
 .cardDesign--two { background: radial-gradient(circle, rgba(238,174,202,1) 40%, rgba(148,187,233,1) 40%); }
-.cardDesign--three { background: linear-gradient(90deg, rgba(165,42,42,1) 33%, rgba(17,17,17,1) 33%, rgba(17,17,17,1) 66%, rgba(165,42,42,1) 66%); }
+.cardDesign--three { background: linear-gradient(90deg, rgba(165,42,42,1) 30%, rgba(17,17,17,1) 30%, rgba(17,17,17,1) 70%, rgba(165,42,42,1) 70%); }
 
 /*----------------------------------------------result-*/
 
