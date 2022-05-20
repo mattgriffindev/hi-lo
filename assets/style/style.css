@@ -401,17 +401,32 @@ particle {
 /*-----------------------------------------------media-queries-*/
 
 @media screen and (max-width: 1023px) {
-	html { font-size: 14px; }
+	#brand {color: pink;}
 }
 
 @media screen and (max-width: 767px) {
-	html { font-size: 12px; }
+	#brand {color: orange;}
+	#menu-container {transform: scale(0.9);}
+	.subMenu {transform: scale(0.9);}
+	
 }
 
 @media screen and (max-width: 450px) {
-	html { font-size: 10px; }
+	#brand {color: green;}
 }
 
 @media screen and (max-width: 295px) {
-	html { font-size: 8px; }
+	#brand {color: red;}
+	html {font-size: 11px;}
+	#intro-container {transform: scale(0.6);}
+	#menu-container {transform: scale(0.8);}
+	#game-container {transform: scale(0.9);}
+	#result {
+    height: 10rem;
+    width: 13rem;
+    padding: 1.4rem;
+    position: fixed;
+	}
+	.subMenu {transform: scale(0.8);}
+	.settings-item {font-size: 2rem;}
 }
