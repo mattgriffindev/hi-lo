@@ -35,7 +35,7 @@ function addCount() {
 	 		// "10": 10,
 	 		// "J": 10,
 	 		// "Q": 10,
-      "K": 10
+    //   "K": 10
   }
 
 /** Get random card from deck */
@@ -190,7 +190,9 @@ function winGame() {
 	}, 1000);
 	setTimeout(winAudio, 1000);
 	setTimeout(numberIndicatorGreen, 1000);
-	setTimeout(particle, 1000);
+	setTimeout(particleOne, 1950);
+	setTimeout(particleTwo, 2200);
+	setTimeout(particleThree, 2450);
 }
 
 function loseGame() {
@@ -298,10 +300,28 @@ $(".subMenuBtnClose").click(function() {
 // code adapted from css-tricks (https://css-tricks.com/playing-with-particles-using-the-web-animations-api)
 
 /** Run particle */
-function particle() {
-	let particleContainer = document.querySelector("#canvas").getBoundingClientRect();
-	let x = particleContainer.left + particleContainer.width / 2;
-	let y = particleContainer.top + particleContainer.height / 1.25;
+function particleOne() {
+	let particleContainer = document.querySelector("#result").getBoundingClientRect();
+	let x = particleContainer.left + particleContainer.width * 0.5;
+	let y = particleContainer.top + particleContainer.height * 0.5;
+	for (let i = 0; i < 600; i++) {
+		createParticle(x, y);
+	}
+}
+
+function particleTwo() {
+	let particleContainer = document.querySelector("#result").getBoundingClientRect();
+	let x = particleContainer.left + particleContainer.width * 0.25;
+	let y = particleContainer.top + particleContainer.height * 0.5;
+	for (let i = 0; i < 600; i++) {
+		createParticle(x, y);
+	}
+}
+
+function particleThree() {
+	let particleContainer = document.querySelector("#result").getBoundingClientRect();
+	let x = particleContainer.left + particleContainer.width * 0.75;
+	let y = particleContainer.top + particleContainer.height * 0.5;
 	for (let i = 0; i < 600; i++) {
 		createParticle(x, y);
 	}
@@ -311,15 +331,11 @@ function particle() {
 function createParticle(x, y) {
   const particle = document.createElement("particle");
   document.body.appendChild(particle);
-  // Calculate a random sizex
-  const size = Math.floor(Math.random() * 10 + 2);
-  particle.style.width = `${size}px`;
-  particle.style.height = `${size}px`;
-	// Generate a random color in a blue/purple palette
-  particle.style.background = `hsl(${Math.random() * 250 + 100}, 50%, 50%)`;
+	// Generate a random color
+  particle.style.background = `hsl(${Math.random() * 250 + 250}, 100%, 50%)`;
   // Generate a random x & y destination
-  const destinationX = x + (Math.random() - 0.5) * 2 * 250;
-  const destinationY = y + (Math.random() - 1) * 2 * 250;
+  const destinationX = x + (Math.random() - 0.5) * 2 * 100;
+  const destinationY = y + (Math.random() - 0.5) * 2 * 100;
   // Store the animation in a variable as we will need it later
   const animation = particle.animate([
     {
@@ -335,10 +351,10 @@ function createParticle(x, y) {
     }
   ], {
     // Set a duration
-    duration: 9000,
+    duration: 5000,
     easing: 'cubic-bezier(0, .9, .57, 1)',
-    // Delay every particle with a random value of 200ms
-    delay: Math.random() * 200
+    // Delay every particle with a random value 
+    delay: Math.random() * 150
   });
   // When the animation is complete, remove the element from the DOM
   animation.onfinish = () => {
