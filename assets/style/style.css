@@ -288,12 +288,12 @@ ul {
 #result {
 	height: 8rem;
 	width: 18rem;
-	padding: 1.25rem;
+	padding-top: 1.25rem;
 	position: fixed;
 	font-family: var(--font);
 	color: var(--secondary-color);
 	text-shadow: 2px 2px 4px #fff;
-	border-radius: 50%;
+	border-radius: 15px;
 	background: var(--tertiary-color);
 	text-align: center;
 	border: 2px ridge var(--secondary-color);
@@ -400,33 +400,62 @@ particle {
 
 /*-----------------------------------------------media-queries-*/
 
-@media screen and (max-width: 1023px) {
-	#brand {color: pink;}
-}
-
-@media screen and (max-width: 767px) {
-	#brand {color: orange;}
-	#menu-container {transform: scale(0.9);}
-	.subMenu {transform: scale(0.9);}
-	
-}
-
-@media screen and (max-width: 450px) {
-	#brand {color: green;}
-}
-
-@media screen and (max-width: 295px) {
-	#brand {color: red;}
-	html {font-size: 11px;}
-	#intro-container {transform: scale(0.6);}
-	#menu-container {transform: scale(0.8);}
-	#game-container {transform: scale(0.9);}
-	#result {
-    height: 10rem;
-    width: 13rem;
-    padding: 1.4rem;
-    position: fixed;
+@media screen and (max-width: 1024px) {
+	html {
+		font-size: 16px;
 	}
-	.subMenu {transform: scale(0.8);}
-	.settings-item {font-size: 2rem;}
+	#intro-container {
+		transform: scale(1.2);
+	}
+}
+
+/* @media screen and (max-width: 768px) {
+} */
+
+@media screen and (max-width: 425px) {
+	html {
+		font-size: 14px;
+	}
+	#intro-container {
+		transform: scale(0.7);
+	}
+	#game-container {
+		transform: scale(0.8);
+		padding-top: 2rem;
+	}
+	#result {
+		width: 14rem;
+	}
+}
+
+@media screen and  (max-width: 375px) {
+	html {
+		font-size: 13px;
+	}
+	#intro-container {
+		transform: scale(0.6);
+	}
+	#game-container {
+		transform: scale(0.8);
+		padding-top: 3rem;
+	}
+	#result {
+		width: 12rem;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	html {
+		font-size: 12px;
+	}
+	#intro-container {
+		transform: scale(0.6);
+	}
+	#game-container {
+		transform: scale(0.9);
+		padding-top: 2.5rem;
+	}
+	#result {
+		width: 12rem;
+	}
 }
