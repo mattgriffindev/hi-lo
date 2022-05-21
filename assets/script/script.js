@@ -36,7 +36,7 @@ function addCount() {
 	 		// "J": 10,
 	 		// "Q": 10,
     //   "K": 10
-  }
+  };
 
 /** Get random card from deck */
 function getCardNumber() {
@@ -59,13 +59,13 @@ function startGame() {
 function restartGame() {
 	$("#higher-button").prop("disabled", false);
 	$("#lower-button").prop("disabled", false);
-	$("#result").hide().removeClass("showResult")
+	$("#result").hide().removeClass("showResult");
 	$(".card").each(function() {
 		$(".card").removeClass("spinCard");
-	})
+	});
 	$(".numberIndicator").each(function() {
 		$(".numberIndicator").removeClass("numInd-green numInd-red").addClass("numInd-default");
-	})
+	});
 	setTimeout(function(){
 		$(".numberIndicator:eq(0)").removeClass("numInd-default").addClass("numInd-green"); 
 		$(".card:eq(0)").addClass("spinCard").html(getCardNumber());
@@ -186,7 +186,7 @@ function win() {
 function winGame() {
 	let winText = $("#winText").html();
 	setTimeout(function() {
-		$("#result").addClass("showResult").html(winText).show()
+		$("#result").addClass("showResult").html(winText).show();
 	}, 1000);
 	setTimeout(winAudio, 1000);
 	setTimeout(numberIndicatorGreen, 1000);
@@ -198,7 +198,7 @@ function winGame() {
 function loseGame() {
 	let loseText = $("#loseText").html();
 	setTimeout(function() {
-		$("#result").addClass("showResult").html(loseText).show()	
+		$("#result").addClass("showResult").html(loseText).show();
 	}, 1000);
 	setTimeout(loseAudio, 1000);
 	setTimeout(numberIndicatorRed, 1000);
@@ -209,7 +209,7 @@ function loseGame() {
 function draw() {
 	let drawText = $("#drawText").html();
 	setTimeout(function() {
-		$("#result").addClass("showResult").html(drawText).show()	
+		$("#result").addClass("showResult").html(drawText).show();
 	}, 1000);
 	setTimeout(loseAudio, 1000);
 	setTimeout(numberIndicatorRed, 1000);
@@ -292,8 +292,8 @@ $(".showChangeDesign").click(function() {
 $(".subMenuBtnClose").click(function() {
 	$(".subMenu").each(function() {
 		$(".subMenu").hide();
-	})
-})
+	});
+});
 
 /*------------------------------------------------------particle-*/
 
