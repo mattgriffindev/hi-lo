@@ -90,15 +90,25 @@ The website is designed to be responsive on all device sizes.
 
 The [W3C Markup Validator](https://validator.w3.org/ "W3C Markup Validator") was used to to validate the site's HTML.
 
-A copy of the report can be accessed [here]( "W3C Markup Validator report").
+A copy of the original report can be accessed [here](assets/tests/html-check-v1.pdf "W3C Markup Validator report").
+
+A copy of the final report can be accessed [here](assets/tests/html-check-v2.pdf "W3C Markup Validator report").
 
 **W3C CSS Validator**
 
 The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/ "W3C CSS Validator") was used to validate the site's CSS.
 
-A copy of the report can be accessed [here]( "W3C CSS Validator report").
+The initial check reported no errors.
+
+A copy of the report can be accessed [here](assets/tests/css-check-v1.pdf "W3C CSS Validator report").
+
+**JSHint Validator**
 
 The [JSHint Validator](https://jshint.com/ "JSHint Validator") was used to validate the site's JavaScript.
+
+A copy of the original report can be accessed [here](assets/tests/js-check-v1.pdf "JSHint Validator report").
+
+A copy of the original report can be accessed [here](assets/tests/js-check-v2.pdf "JSHint Validator report").
 
 **Lighthouse Testing**
 
