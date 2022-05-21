@@ -49,7 +49,7 @@ function getCardNumber() {
 
 /** Start game by revealing first card */
 function startGame() {
-	$("#menu-container, #intro-container").hide();
+	$("#menu-container, #intro-container, #footer").hide();
 	$("#game-container").show();
 	$(".numberIndicator:eq(0)").removeClass("numInd-default").addClass("numInd-green");	
 	$(".card:eq(0)").addClass("spinCard").html(getCardNumber());
@@ -275,12 +275,12 @@ $("#showHowToPlay, #howToPlay-icon").click(function() {
 });
 
 $("#showContact, #contact-icon").click(function() {
-	$("#menu-container .subMenu:eq(0), .subMenu:eq(2), .subMenu:eq(3)").hide();
+	$(".subMenu:eq(0), .subMenu:eq(2), .subMenu:eq(3)").hide();
 	$(".subMenu:eq(1)").show();
 });
 
 $("#showSettings, #settings-icon").click(function() {
-	$("#menu-container .subMenu:eq(0), .subMenu:eq(1), .subMenu:eq(3)").hide();
+	$(".subMenu:eq(0), .subMenu:eq(1), .subMenu:eq(3)").hide();
   $(".subMenu:eq(2)").show();
 });
 
@@ -292,7 +292,6 @@ $(".showChangeDesign").click(function() {
 $(".subMenuBtnClose").click(function() {
 	$(".subMenu").each(function() {
 		$(".subMenu").hide();
-		$("#menu-container").show();
 	})
 })
 
