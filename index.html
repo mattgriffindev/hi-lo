@@ -42,7 +42,7 @@
 				</div>
 				<div class="dropdown">
 					<button class="menu-toggle dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-						aria-expanded="false">
+						aria-expanded="false" aria-label="Dropdown menu">
 						<i class="fas fa-ellipsis-h"></i>
 					</button>
 					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -73,18 +73,18 @@
 		<div id="menu-container" class="border border-danger">
 			<ul>
 				<li>
-					<button class="itemLink menu-item" onclick="startGame()">Play</button>
+					<button class="itemLink menu-item" aria-label="Play game" onclick="startGame()">Play</button>
 				</li>
 				<li>
-					<button id="showHowToPlay" class="itemLink menu-item"><i class="fas fa-gamepad"></i> How to play
+					<button id="showHowToPlay" class="itemLink menu-item" aria-label="How to play"><i class="fas fa-gamepad"></i> How to play
 					</button>
 				</li>
 				<li>
-					<button id="showContact" class="itemLink menu-item"><i class="fas fa-envelope"></i> Contact us
+					<button id="showContact" class="itemLink menu-item" aria-label="Contact us"><i class="fas fa-envelope"></i> Contact us
 					</button>
 				</li>
 				<li>
-					<button id="showSettings" class="itemLink menu-item"><i class="fas fa-cog"></i> Settings</button>
+					<button id="showSettings" class="itemLink menu-item" aria-label="Settings"><i class="fas fa-cog"></i> Settings</button>
 				</li>
 			</ul>
 		</div>
@@ -99,7 +99,7 @@
 				<p>Get 5 in a row to win the game. Note, Ace (A) is low (1) and you don't get anything for a pair!</p>
 			</div>
 			<div class="subMenuFooter">
-				<button type="button" class="subMenuBtnClose subMenuBtn itemLink">Close</button>
+				<button type="button" class="subMenuBtnClose subMenuBtn itemLink" aria-label="Close">Close</button>
 			</div>
 		</div>
 		<!--/how-to-play-->
@@ -115,12 +115,12 @@
 							required />
 						<textarea rows="2" name="messagebox" class="form-control mb-2" id="messagebox" placeholder="Your message"
 							style="resize:none" required></textarea>
-						<button type="submit" class="subMenuBtn itemLink">Send</button>
+						<button type="submit" class="subMenuBtn itemLink" aria-label="Send">Send</button>
 					</form>
 				</div>
 			</div>
 			<div class="subMenuFooter">
-				<button type="button" class="subMenuBtnClose subMenuBtn itemLink">Close</button>
+				<button type="button" class="subMenuBtnClose subMenuBtn itemLink" aria-label="Close">Close</button>
 			</div>
 		</div>
 		<!--/contact-->
@@ -131,24 +131,24 @@
 			<div class="subMenuBody">
 				<ul>
 					<li>
-						<button id="audioToggle" class="itemLink settings-item">Toggle Sound</button>
+						<button id="audioToggle" class="itemLink settings-item" aria-label="Toggle sound">Toggle Sound</button>
 						<span id="audioToggleOn" class="settings-item">ON</span><span id="audioToggleOff"
 							class="settings-item">OFF</span>
 					</li>
 					<li>
-						<button id="themeToggle" class="itemLink settings-item">Toggle Theme</button>
+						<button id="themeToggle" class="itemLink settings-item" aria-label="Toggle theme">Toggle Theme</button>
 						<span id="themeToggleLight" class="settings-item">LIGHT</span><span id="themeToggleDark"
 							class="settings-item">DARK</span>
 					</li>
 					<li>
-						<button class="itemLink settings-item showChangeDesign">
+						<button class="itemLink settings-item showChangeDesign" aria-label="Change card design">
 							Change Card Design
 						</button>
 					</li>
 				</ul>
 			</div>
 			<div class="subMenuFooter">
-				<button type="button" class="subMenuBtnClose subMenuBtn itemLink">Close</button>
+				<button type="button" class="subMenuBtnClose subMenuBtn itemLink" aria-label="Close">Close</button>
 			</div>
 		</div>
 		<!--/settings-->
@@ -157,14 +157,14 @@
 		<div class="subMenu" aria-hidden="true">
 			<h2 class="subMenuTitle">Card Design</h2>
 			<div class="subMenuBody">
-				<button id="cardDesign-one" class="cardDesign cardDesign--one itemLink settings-item"></button>
-				<button id="cardDesign-two" class="cardDesign cardDesign--two itemLink settings-item"></button>
-				<button id="cardDesign-three" class="cardDesign cardDesign--three itemLink settings-item"></button>
+				<div id="cardDesign-one" class="cardDesign cardDesign--one itemLink settings-item"></div>
+				<div id="cardDesign-two" class="cardDesign cardDesign--two itemLink settings-item"></div>
+				<div id="cardDesign-three" class="cardDesign cardDesign--three itemLink settings-item"></div>
 				<br>
-				<button id="cardDesign-default" class="subMenuBtn itemLink">Reset</button>
+				<button id="cardDesign-default" class="subMenuBtn itemLink" aria-label="Reset">Reset</button>
 			</div>
 			<div class="subMenuFooter">
-				<button type="button" class="subMenuBtnClose subMenuBtn itemLink">Close</button>
+				<button type="button" class="subMenuBtnClose subMenuBtn itemLink" aria-label="Close">Close</button>
 			</div>
 		</div>
 		<!--/card-design-->
@@ -199,11 +199,11 @@
 			</div>
 			<div class="row buttonPlacement mt-2">
 				<div class="col col-md-2">
-					<button id="higher-button" class="button gamebutton">
+					<button id="higher-button" class="button gamebutton" aria-label="Higher">
 						<i class="fas fa-arrow-up"></i></button>
 				</div>
 				<div class="col col-md-2">
-					<button id="lower-button" class="button gamebutton">
+					<button id="lower-button" class="button gamebutton" aria-label="Lower">
 						<i class="fas fa-arrow-down"></i>
 					</button>
 				</div>
