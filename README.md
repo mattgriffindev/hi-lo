@@ -8,19 +8,36 @@ NOTE: RESPONSIVE IMAGE HERE
 
 ## Contents
 
-1. [User Experience](#1-user-experience-ux)
-2. [Features](#2-features)
-3. [Technologies Used](#3-technologies-used)
-4. [Testing](#4-testing)
-5. [Deployment](#5-deployment)
-6. [Credits](#6-credits)
+1. [Project Objectives](#1-project-objectives)
+2. [User Experience](#2-user-experience-ux)
+3. [Features](#3-features)
+4. [Technologies Used](#4-technologies-used)
+5. [Testing](#5-testing)
+6. [Deployment](#6-deployment)
+7. [Credits](#7-credits)
 
 
-## 1. User Experience (UX)
+## 1. Project Objectives
 
-TBC
+**Developer Objectives**
 
-### 1.1. Design
+ - To create fun but challenging gaming experience
+ - To enable the user the play on a range of screen sizes
+ - To give the user different card designs to choose from
+ - To give the user the means of contacting the developer directly
+ - To give the user the option to toggle audio on and off
+ - To give the user the option to toggle light and dark themes
+
+**User Objectives**
+
+ - To be able to find out how to play
+ - To have simmple controls
+ - To be able to replay without reloading the site
+ - To be able to play on a range of devices
+ - To be able to provide feedback to the developer
+ - To be able to set my preferences for audio and theme
+
+## 2. User Experience (UX)
 
 **Site Structure**
 
@@ -46,7 +63,7 @@ TBC
 
 The site includes 2 interactive links to external sites.
  - A link to Twitter from the results window when a user wins the game
-  - A link to the developer's GitHub profile from the footer
+ - A link to the developer's GitHub profile from the footer
 
 All links open in a new tab/window.
 
@@ -56,17 +73,17 @@ Wireframes for desktop, tablet and mobile view were created using [Balsamiq](htt
 
 The original wireframes can be accessed [here](assets/wireframes/wireframes.pdf "Wireframes").
 
-## 2. Features
+## 3. Features
 
 **Introduction**
 
  - 5 fanned out cards, initially face down, that spin to consecutively to spell the name of the game 'HI-LO'
-  - Fully responsive on all screen sizes
+ - Fully responsive on all screen sizes
 
 **Menu**
 
  - 4 menu options: 1) Play; 2) How to play; 3) Contact us; and 4) Settings
-  - Fully responsive on all screen sizes
+ - Fully responsive on all screen sizes
 
 **Header**
 
@@ -108,7 +125,7 @@ The original wireframes can be accessed [here](assets/wireframes/wireframes.pdf 
  - Different audio response depending on whether user guesses correctly or incorrectly
  - Mutable during game play
 
-## 3. Technologies Used
+## 4. Technologies Used
 
 **Languages Used**
 
@@ -136,9 +153,7 @@ The original wireframes can be accessed [here](assets/wireframes/wireframes.pdf 
 
 - [Balsamiq](https://balsamiq.com/ "Balsamiq") was used to create the wireframes during the design process.
 
-## 4. Testing
-
-### 4.1. Validator Testing
+## 5. Testing
 
 **W3C Markup Validator**
 
@@ -206,15 +221,65 @@ A copy of the report can be accessed [here]( "ally Color Contrast Accessibility 
 
 **Responsiveness Testing**
 
-The website's responsiveness was tested manually, using the Google Chrome DevTools, and the [Responsive Design Cheker](https://responsivedesignchecker.com/ "Responsive Design Checker") website.
+The site's responsiveness was tested manually, using the Google Chrome DevTools, and the [Responsive Design Cheker](https://responsivedesignchecker.com/ "Responsive Design Checker") website.
 
-The website was responsive on all screen sizes from 320x480px to 1920x1200px.
+The site was responsive on all screen sizes from 320x480px to 1920x1200px.
 
 **Known Bugs**
 
 No bugs have been identified.
 
-## 5. Deployment
+### Testing User Objectives
+
+ **To able to find out how to play**
+
+| Feature | Expected result | Actual result |
+| ----------- | ----------- | ----------- |
+| How to play menu item | When user clicks on 'How to play', the 'How to play' window opens | As expected |
+| Dropdown menu | When user clicks on the menu button, the dropdown menu opens | As expected |
+| How to play dropdown menu item | When user clicks on 'How to play' in the dropdown menu, the 'How to play' window opens | As expected |
+
+**To have simple controls**
+
+| Feature | Expected result | Actual result |
+| ----------- | ----------- | ----------- |
+| Higher button | When user clicks on higher button, the next card reveals & if higher than the previous card, game continues, else game ends | As expected | 
+| Lower button | When user clicks on lower button, the next card reveals & if lower than the previous card, game continues, else game ends | As expected |
+
+**To be able to replay without reloading the site**
+
+| Feature | Expected result | Actual result |
+| ----------- | ----------- | ----------- |
+| Play again button | When user clicks on 'Play again' buttong, game restarts | As expected |
+
+**To be able to play on a range of devices**
+
+| Feature | Expected result | Actual result |
+| ----------- | ----------- | ----------- |
+| Responsive site | When user loads site on any device, all functionality is present | As expected |
+
+**To be able to provide feedback to the developer**
+
+| Feature | Expected result | Actual result |
+| ----------- | ----------- | ----------- |
+| Contact us menu item | When user clicks on 'Contact us', the 'Contact us' window opens | As expected |
+| Dropdown menu | When user clicks on the menu button, the dropdown menu opens | As expected |
+| Contact us dropdown menu item | When user clicks on 'Contact us' in the dropdown menu, the 'Contact us' window opens | As expected |
+| Send button | When user clicks on send button, form data is sent to developer | As expected |
+
+**To be able to set my preferences for audio and theme**
+
+| Feature | Expected result | Actual result |
+| ----------- | ----------- | ----------- |
+| Settings menu item | When user clicks on 'Settings', the 'Settings' window opens | As expected |
+| Dropdown menu | When user clicks on the menu button, the dropdown menu opens | As expected |
+| Settings dropdown menu item | When user clicks on 'Settings' in the dropdown menu, the 'Settings' window opens | As expected |
+| Toggle sound button | When user clicks on 'Toggle sound' button, audio is muted/unmuted | As expected |
+| Toggle sound icon | When user clicks on 'Toggle sound' button, header icon responds | As expected |
+| Toggle theme button | When user clicks on 'Toggle theme' button, theme is light/dark | As expected |
+| Toggle theme icon | When user clicks on 'Toggle theme' button, header icon responds | As expected |
+
+## 6. Deployment
 
 **GitHub Pages**
 
@@ -245,7 +310,7 @@ By forking the GitHub repository you make a copy of the original repository on y
 6.	Type "git clone", and then paste the URL you copied in Step 3.
 7.	Press Enter. Your local clone will be created.
 
-## 6. Credits
+## 7. Credits
 
 **Information Sources/Resources**
 
