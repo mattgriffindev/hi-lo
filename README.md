@@ -229,9 +229,9 @@ The site was responsive on all screen sizes from 320x480px to 1920x1200px.
 
 No bugs have been identified.
 
-### Testing User Objectives
+**Testing User Objectives**
 
- **To able to find out how to play**
+ ***To able to find out how to play***
 
 | Feature | Expected result | Actual result |
 | ----------- | ----------- | ----------- |
@@ -239,26 +239,26 @@ No bugs have been identified.
 | Dropdown menu | When user clicks on the menu button, the dropdown menu opens | As expected |
 | How to play dropdown menu item | When user clicks on 'How to play' in the dropdown menu, the 'How to play' window opens | As expected |
 
-**To have simple controls**
+***To have simple controls***
 
 | Feature | Expected result | Actual result |
 | ----------- | ----------- | ----------- |
 | Higher button | When user clicks on higher button, the next card reveals & if higher than the previous card, game continues, else game ends | As expected | 
 | Lower button | When user clicks on lower button, the next card reveals & if lower than the previous card, game continues, else game ends | As expected |
 
-**To be able to replay without reloading the site**
+***To be able to replay without reloading the site***
 
 | Feature | Expected result | Actual result |
 | ----------- | ----------- | ----------- |
 | Play again button | When user clicks on 'Play again' buttong, game restarts | As expected |
 
-**To be able to play on a range of devices**
+***To be able to play on a range of devices***
 
 | Feature | Expected result | Actual result |
 | ----------- | ----------- | ----------- |
 | Responsive site | When user loads site on any device, all functionality is present | As expected |
 
-**To be able to provide feedback to the developer**
+***To be able to provide feedback to the developer***
 
 | Feature | Expected result | Actual result |
 | ----------- | ----------- | ----------- |
@@ -267,7 +267,7 @@ No bugs have been identified.
 | Contact us dropdown menu item | When user clicks on 'Contact us' in the dropdown menu, the 'Contact us' window opens | As expected |
 | Send button | When user clicks on send button, form data is sent to developer | As expected |
 
-**To be able to set my preferences for audio and theme**
+***To be able to set my preferences for audio and theme***
 
 | Feature | Expected result | Actual result |
 | ----------- | ----------- | ----------- |
