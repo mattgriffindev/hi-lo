@@ -1,7 +1,11 @@
 /*-------------------------------------------------------on-load-*/
 
 // Load intro() on page load
-$(document).ready(function() {
+$(document).ready(intro());
+
+/*---------------------------------------------------------intro-*/
+
+function intro() {
 	$(".introCard:eq(0)").addClass("spinCard");
 	setTimeout(function(){ $(".introCard:eq(1)").addClass("spinCard"); }, 500);
 	setTimeout(function(){ $(".introCard:eq(2)").addClass("spinCard"); }, 1000);
@@ -9,7 +13,7 @@ $(document).ready(function() {
 	setTimeout(function(){ $(".introCard:eq(4)").addClass("spinCard"); }, 2000);
 	setTimeout(function(){ $("#intro-container").hide(); }, 6000);
 	setTimeout(function(){ $("#menu-container").show(); }, 6000);
-});
+}
 
 /*---------------------------------------------------------count-*/
 
