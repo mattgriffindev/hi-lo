@@ -28,18 +28,18 @@ function addCount() {
 
  var deck = {
       "A": 1,
-    //   "2": 2,
-	 		// "3": 3,
-	 		// "4": 4,
-    //   "5": 5,
-	 		// "6": 6,
-	 		// "7": 7,
-    //   "8": 8,
-	 		// "9": 9,
-	 		// "10": 10,
-	 		// "J": 10,
-	 		// "Q": 10,
-    //   "K": 10
+      "2": 2,
+	 		"3": 3,
+	 		"4": 4,
+      "5": 5,
+	 		"6": 6,
+	 		"7": 7,
+      "8": 8,
+	 		"9": 9,
+	 		"10": 10,
+	 		"J": 10,
+	 		"Q": 10,
+      "K": 10
   };
 
 /** Get random card from deck */
@@ -197,6 +197,8 @@ function winGame() {
 	setTimeout(particleOne, 1950);
 	setTimeout(particleTwo, 2050);
 	setTimeout(particleThree, 2150);
+	$("#higher-button").prop("disabled", true);
+	$("#lower-button").prop("disabled", true);
 }
 
 function loseGame() {
@@ -247,9 +249,9 @@ function higher() {
 	let lastCard = deck[$(".card").eq(count-1).html()];
 	if (count == 5 && parseInt(thisCard) >= parseInt(lastCard)) {
 		winGame();
-	} else if (parseInt(thisCard) >= parseInt(lastCard)) {
+	} else if (parseInt(thisCard) > parseInt(lastCard)) {
 	 	win(); 
-	}	else if (parseInt(thisCard) == parseInt(lastCard)) {
+	}	else if (thisCard === lastCard) {
 		draw();
 	} else {
 		loseGame();
@@ -262,9 +264,9 @@ function lower() {
 	let lastCard = deck[$(".card").eq(count-1).html()];
 	if (count == 5 && parseInt(thisCard) <= parseInt(lastCard)) {
 		winGame();
-	} else if (parseInt(thisCard) <= parseInt(lastCard)) {
+	} else if (parseInt(thisCard) < parseInt(lastCard)) {
 		win();
-	}	else if (parseInt(thisCard) == parseInt(lastCard)) {
+	}	else if (thisCard === lastCard) {
 		draw();
 	} else {
 		loseGame();
