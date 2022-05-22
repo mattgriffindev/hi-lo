@@ -44,7 +44,11 @@ TBC
 
 **Interactive Links**
 
-TBC
+The site includes 2 interactive links to external sites.
+ - A link to Twitter from the results window when a user wins the game
+  - A link to the developer's GitHub profile from the footer
+
+All links open in a new tab/window.
 
 **Wireframes**
 
