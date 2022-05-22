@@ -176,15 +176,18 @@ A copy of the final report can be accessed [here](assets/tests/js-check-v2.pdf "
 
 The site was tested using Lighthouse on the Chrome and Microsoft Edge browsers to determine the site’s performance, accessibility, best practices, and SEO.
 
+- Chrome desktop:
+    - Performance
+
 The reports can be viewed below:
 
-- [Chrome Desktop]( "Chrome Desktop report")
+- [Chrome Desktop](assets/tests/chrome-lighthouse-desktop.pdf "Chrome Desktop report")
 
-- [Chrome Mobile]( "Chrome Mobile report")
+- [Chrome Mobile](assets/tests/chrome-lighthouse-mobile.pdf "Chrome Mobile report")
 
-- [Edge Desktop]( "Edge Desktop report")
+- [Edge Desktop](assets/tests/edge-lighthouse-desktop.pdf "Edge Desktop report")
 
-- [Edge Mobile]( "Edge Mobile report")
+- [Edge Mobile](assets/tests/edge-lighthouse-mobile.pdf "Edge Mobile report")
 
 **a11y Color Contrast Accessibility Validator**
 
@@ -237,15 +240,17 @@ By forking the GitHub repository you make a copy of the original repository on y
 
 **Information Sources/Resources**
 
-The following sources were used to provide additional information relating to HTML and CSS:
+The following sources were used to provide additional information relating to HTML, CSS, and JavaScript:
 
 - [W3C Schools](https://www.w3schools.com/ "W3C Schools") 
 
-- [Stack Overflow](https://stackoverflow.com// "Stack Overflow") 
+- [Stack Overflow](https://stackoverflow.com/ "Stack Overflow") 
+
+- [CSS Tricks](https://css-tricks.com/ "CSS Tricks") 
 
 **Content**
 
-All content was written by the developer.
+All content was written by the developer except where indicated in the code.
 
 **Acknowledgements**
 
