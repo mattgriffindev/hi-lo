@@ -58,7 +58,55 @@ The original wireframes can be accessed [here](assets/wireframes/wireframes.pdf 
 
 ## 2. Features
 
-The website is designed to be responsive on all device sizes.
+**Introduction**
+
+ - 5 fanned out cards, initially face down, that spin to consecutively to spell the name of the game 'HI-LO'
+  - Fully responsive on all screen sizes
+
+**Menu**
+
+ - 4 menu options: 1) Play; 2) How to play; 3) Contact us; and 4) Settings
+  - Fully responsive on all screen sizes
+
+**Header**
+
+ - Hi-Lo logo
+ - Icon to indicate if theme is light or dark
+ - Icon to indicate if audio is muted
+ - Drop-down menu
+ - Visible during game play
+ - Fully responsive on all screen sizes
+
+**Drop-down menu**
+
+ - 4 menu options: 1) Play; 2) How to play; 3) Contact us; and 4) Settings
+ - Accessible during game play
+ - Fully responsive on all screen sizes
+
+**Game**
+
+ - 6 cards, initially face down
+ - 6 indicators that light green if user guesses correctly, and red if user guesses incorrectly
+ - Higher and lower button for user to input their guess
+ - Fully responsive on all screen sizes
+
+**Result**
+
+ - Result window appears when user wins/loses the game
+ - If user wins, three particle bursts display
+ - If user wins, there is an option to share on Twitter
+ - If user loses, there is an option to replay
+ - Fully responsive on all screen sizes
+
+**Footer**
+
+ - Copyright information and link to developer's GitHub profile
+ - Not visible during game play
+
+**Audio**
+
+ - Different audio response depending on whether user guesses correctly or incorrectly
+ - Mutable during game play
 
 ## 3. Technologies Used
 
