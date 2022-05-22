@@ -231,7 +231,7 @@ No bugs have been identified.
 
 **Testing User Objectives**
 
- ***To able to find out how to play***
+ ***To be able to find out how to play***
 
 | Feature | Expected result | Actual result |
 | ----------- | ----------- | ----------- |
