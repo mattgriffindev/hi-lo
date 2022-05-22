@@ -50,6 +50,8 @@ TBC
 
 Wireframes for desktop, tablet and mobile view were created using [Balsamiq](https://balsamiq.com/wireframes/ "Balsamiq").
 
+The original wireframes can be accessed [here](assets/wireframes/wireframes.pdf "Wireframes").
+
 ## 2. Features
 
 The website is designed to be responsive on all device sizes.
@@ -90,6 +92,11 @@ The website is designed to be responsive on all device sizes.
 
 The [W3C Markup Validator](https://validator.w3.org/ "W3C Markup Validator") was used to to validate the site's HTML.
 
+The initial check reported 3 warnings and 4 errors:
+ - 4 errors were resolved by deleting the 'aria-labelledby' attrtibute
+  - 2 warnings were resolved by deleting the 'type' attribute from JavaScript resources
+   - 1 warning was resolved by adding the 'lang' attribute to the HTML tag
+
 A copy of the original report can be accessed [here](assets/tests/html-check-v1.pdf "W3C Markup Validator report").
 
 A copy of the final report can be accessed [here](assets/tests/html-check-v2.pdf "W3C Markup Validator report").
@@ -106,9 +113,12 @@ A copy of the report can be accessed [here](assets/tests/css-check-v1.pdf "W3C C
 
 The [JSHint Validator](https://jshint.com/ "JSHint Validator") was used to validate the site's JavaScript.
 
+The initial check reported 9 warnings.
+ - 9 warnings were resolved by adding missing semicolons
+
 A copy of the original report can be accessed [here](assets/tests/js-check-v1.pdf "JSHint Validator report").
 
-A copy of the original report can be accessed [here](assets/tests/js-check-v2.pdf "JSHint Validator report").
+A copy of the final report can be accessed [here](assets/tests/js-check-v2.pdf "JSHint Validator report").
 
 **Lighthouse Testing**
 
