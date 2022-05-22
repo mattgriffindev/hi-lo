@@ -177,7 +177,16 @@ A copy of the final report can be accessed [here](assets/tests/js-check-v2.pdf "
 The site was tested using Lighthouse on the Chrome and Microsoft Edge browsers to determine the site’s performance, accessibility, best practices, and SEO.
 
 - Chrome desktop:
-    - Performance
+    - Performance 98%
+    - Accessibility 100%
+    - Best Practices 92%
+    - SEO 100%
+
+- Edge desktop:
+    - Performance 95%
+    - Accessibility 100%
+    - Best Practices 92%
+    - SEO 100%
 
 The reports can be viewed below:
 
