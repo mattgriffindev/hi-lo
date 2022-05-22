@@ -5,13 +5,10 @@
 }
 
 :root {
-	--main-color: #eee;
-	--secondary-color: #333;
-	--tertiary-color: #add8e6;
-	--card-font-color: teal;
-	--card-back-color: teal;
-	--card-face-color: #fafafa;
-	--card-border-color: darkgoldenrod;
+	--brand-color: #b4eeb4;
+--dark-color: #394057;
+--mid-color: #4A858B;
+--light-color: #FFFFFF;
 	--number-indicator: #99d0e0;
 	--item-link-color: #200484;
 	--font: 'Irish Grover', cursive;
@@ -21,25 +18,25 @@
 
 /*TEST - COLORS TO BE CONFIRMED*/
 .darkTheme {
-	--main-color: #333;
-	--secondary-color: #eee;
-	--tertiary-color: lightgreen;
-	--card-face-color: #191919;
+	--brand-color: #333;
+	--dark-color: #eee;
+	--mid-color: lightgreen;
+	--light-color: #191919;
 }
 
 .cardDesign-one {	
-	--card-font-color: rgba(17,17,17,1);
-	--card-back-color: linear-gradient(315deg, rgba(165,42,42,1) 25%, rgba(17,17,17,1) 25%, rgba(17,17,17,1) 75%, rgba(165,42,42,1) 75%);
+	--light-color: rgba(17,17,17,1);
+	--light-color: linear-gradient(315deg, rgba(165,42,42,1) 25%, rgba(17,17,17,1) 25%, rgba(17,17,17,1) 75%, rgba(165,42,42,1) 75%);
 }
 
 .cardDesign-two {
-	--card-font-color: rgba(200,40,84,1);
-	--card-back-color: radial-gradient(circle, rgba(200,40,84,1) 40%, rgba(84,175,30,1) 40%);
+	--light-color: rgba(200,40,84,1);
+	--light-color: radial-gradient(circle, rgba(200,40,84,1) 40%, rgba(84,175,30,1) 40%);
 }
 
 .cardDesign-three {
-	--card-font-color: rgba(17,17,17,1);
-	--card-back-color: linear-gradient(90deg, rgba(165,42,42,1) 25%, rgba(17,17,17,1) 25%, rgba(17,17,17,1) 75%, rgba(165,42,42,1) 75%); 
+	--light-color: rgba(17,17,17,1);
+	--light-color: linear-gradient(90deg, rgba(165,42,42,1) 25%, rgba(17,17,17,1) 25%, rgba(17,17,17,1) 75%, rgba(165,42,42,1) 75%); 
 }
 
 html {
@@ -47,7 +44,7 @@ html {
 }
 
 body {
-	background-color: var(--main-color);
+	background-color: var(--brand-color);
 }
 
 p {
@@ -82,7 +79,7 @@ ul {
 	display: flex;
   flex-direction: column-reverse;
   justify-content: center;
-	color: var(--secondary-color);
+	color: var(--dark-color);
 	font-family: var(--font);
 	font-size: 2rem;
 }
@@ -108,7 +105,7 @@ ul {
 	width: 25rem;
 	padding: 1rem;
 	font-family: var(--font);
-	color: var(--secondary-color);
+	color: var(--dark-color);
 	text-align: center;
 }
 
@@ -128,7 +125,7 @@ ul {
 }
 
 .itemLink {
-	color: var(--secondary-color);
+	color: var(--dark-color);
 	text-decoration: none;
 }
 
@@ -166,10 +163,10 @@ ul {
 	position: fixed;
 	padding: 0.75rem;
 	font-family: var(--font);
-	color: var(--secondary-color);
+	color: var(--dark-color);
 	text-align: center;
-	background-color: var(--main-color);
-	border: 1px solid var(--secondary-color);
+	background-color: var(--brand-color);
+	border: 1px solid var(--dark-color);
 	z-index: 1070;
 	display: none;
 }
@@ -186,7 +183,7 @@ ul {
 /*------------------------------------------------------button-*/
 
 .button {
-	color: var(--secondary-color);
+	color: var(--dark-color);
 	font-family: var(--font);
 	border: none;
 }
@@ -201,9 +198,9 @@ ul {
 	height: 4rem;
   width: 6rem;
   font-size: 1.75rem;
-	border: 2px solid var(--secondary-color);
+	border: 2px solid var(--dark-color);
 	border-radius: 50px;
-	background-color: var(--tertiary-color);
+	background-color: var(--mid-color);
 }
 
 .subMenuBtn {
@@ -211,13 +208,13 @@ ul {
   width: auto;
 	margin-top: 0.5rem;
 	font-size: 1.5rem;
-	border: 1px solid var(--secondary-color);
+	border: 1px solid var(--dark-color);
 	border-radius: 25px;
 	background-color: transparent;
 }
 
 .menu-toggle {
-	color: var(--secondary-color);
+	color: var(--dark-color);
 	border: none;
 	background-color: transparent;
 }
@@ -247,13 +244,13 @@ ul {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: var(--card-font-color);
+	color: var(--mid-color);
 	font-family: var(--font);
 	font-size: 3rem;
 	text-align: center;
-	border: 2px solid var(--card-border-color);
+	border: 2px solid var(--dark-color);
 	border-radius: 15px;
-	background: var(--card-back-color);
+	background: var(--mid-color);
 }
 
 .card {
@@ -271,11 +268,18 @@ ul {
 .introCardFour { transform: matrix(1, 0.25, -0.25, 1, 0, -25); }
 .introCardFive { transform: matrix(1, 0.5, -0.5, 1, 0, 10); }
 
+.cardDesign-container {
+	height: 8rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .cardDesign {
 	height: 8rem;
 	width: 6rem;
 	margin: auto 0.5rem;
-	border: 1px solid var(--card-border-color);
+	border: 1px solid var(--dark-color);
 	border-radius: 15px;
 }
 
@@ -291,12 +295,13 @@ ul {
 	padding-top: 1.25rem;
 	position: fixed;
 	font-family: var(--font);
-	color: var(--secondary-color);
-	text-shadow: 2px 2px 4px #fff;
+	color: var(--dark-color);
+	text-shadow: 2px 2px 4px var(--light-color);
 	border-radius: 15px;
-	background: var(--tertiary-color);
+	background: var(--main-color);
 	text-align: center;
-	border: 2px ridge var(--secondary-color);
+	border: 2px ridge var(--dark-color);
+	box-shadow: 2px 2px 4px var(--light-color);
 	display: none;
 	z-index: 1000;
 }
@@ -343,7 +348,7 @@ ul {
 	display: flex;
 	align-items: center;
   justify-content: center;
-	color: var(--secondary-color);
+	color: var(--dark-color);
 	text-align: center;
 	font-size: 1rem;
 }
@@ -372,8 +377,8 @@ ul {
 }
  @keyframes spinCard {
 	20% {transform: rotateY(180deg);}
-	90% {background: var(--card-back-color);}
-	100% {background: var(--card-face-color);}
+	90% {background: var(--mid-color);}
+	100% {background: var(--light-color);}
 }
 
 .showResult {
