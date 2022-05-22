@@ -18,8 +18,8 @@
 
 /*TEST - COLORS TO BE CONFIRMED*/
 .darkTheme {
-	--brand-color: #333;
-	--dark-color: #eee;
+	--brand-color: #394057;
+	--dark-color: #b4eeb4;
 	--mid-color: lightgreen;
 	--light-color: #191919;
 }
@@ -228,6 +228,8 @@ ul {
 	padding: 0.5rem 1.5rem;
 	color: inherit;
 	font-size: 1.5rem;
+	border: 1px solid var(--dark-color);
+	background: var(--brand-color);
 	z-index: 1060;
 }
 
