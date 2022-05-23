@@ -10,7 +10,6 @@
 --mid-color: #4A858B;
 	--card-font-color: #4A858B;
 --light-color: #FFFFFF;
-	--number-indicator: #99d0e0;
 	--item-link-color: #200484;
 	--font: 'Irish Grover', cursive;
 	--paragraph-font: 'Roboto', sans-serif;
@@ -197,12 +196,10 @@ ul {
 }
 
 .gamebutton {
-	height: 4rem;
-  width: 6rem;
-  font-size: 1.75rem;
-	border: 2px solid var(--dark-color);
-	border-radius: 50px;
-	background-color: var(--mid-color);
+
+  font-size: 2rem;
+	border: none;
+	background-color: transparent;
 }
 
 .subMenuBody-settings {
@@ -332,7 +329,7 @@ ul {
 }
 
 .numInd-default {
-	color: var(--number-indicator);
+	color: var(--brand-color);
 }
 
 .numInd-green {
