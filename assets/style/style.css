@@ -22,22 +22,22 @@
 	--brand-color: #394057;
 	--dark-color: #b4eeb4;
 	--mid-color: lightgreen;
-	--light-color: #191919;
+	--light-color: #FFFFFF;
 }
 
 .cardDesign-one {	
-	--card-font-color: rgba(17,17,17,1);
-	--mid-color: linear-gradient(315deg, rgba(165,42,42,1) 25%, rgba(17,17,17,1) 25%, rgba(17,17,17,1) 75%, rgba(165,42,42,1) 75%);
+	--card-font-color: rgba(165,42,42,1);
+	--mid-color: linear-gradient(315deg, rgba(255,163,219,1) 25%, rgba(165,42,42,1) 25%, rgba(165,42,42,1) 75%, rgba(255,163,219,1) 75%);
 }
 
 .cardDesign-two {
-	--card-font-color: rgba(17,17,78,1);
-	--mid-color: radial-gradient(circle, rgba(17,17,78,1) 40%, rgba(238,221,130,1) 40%);
+	--card-font-color: rgba(255,165,163,1);
+	--mid-color: radial-gradient(circle, rgba(255,165,163,1) 40%, rgba(163,228,255,1) 40%);
 }
 
 .cardDesign-three {
-	--card-font-color: rgba(17,17,17,1);
-	--mid-color: linear-gradient(90deg, rgba(165,42,42,1) 25%, rgba(17,17,17,1) 25%, rgba(17,17,17,1) 75%, rgba(165,42,42,1) 75%); 
+	--card-font-color: rgba(163,163,255,1);
+	--mid-color: linear-gradient(90deg, rgba(229,236,182,1) 25%, rgba(163,163,255,1) 25%, rgba(163,163,255,1) 75%, rgba(229,236,182,1) 75%); 
 }
 
 html {
@@ -291,9 +291,9 @@ ul {
 	border-radius: 15px;
 }
 
-.cardDesign--one { background: linear-gradient(315deg, rgba(165,42,42,1) 25%, rgba(17,17,17,1) 25%, rgba(17,17,17,1) 75%, rgba(165,42,42,1) 75%); }
-.cardDesign--two { background: radial-gradient(circle, rgba(17,17,78,1) 40%, rgba(238,221,130,1) 40%); }
-.cardDesign--three { background: linear-gradient(90deg, rgba(165,42,42,1) 25%, rgba(17,17,17,1) 25%, rgba(17,17,17,1) 75%, rgba(165,42,42,1) 75%); }
+.cardDesign--one { background: linear-gradient(315deg, rgba(255,163,219,1) 25%, rgba(165,42,42,1) 25%, rgba(165,42,42,1) 75%, rgba(255,163,219,1) 75%); }
+.cardDesign--two { background: radial-gradient(circle, rgba(255,165,163,1) 40%, rgba(163,228,255,1) 40%); }
+.cardDesign--three { background: linear-gradient(90deg, rgba(229,236,182,1) 25%, rgba(163,163,255,1) 25%, rgba(163,163,255,1) 75%, rgba(229,236,182,1) 75%); }
 
 /*------------------------------------------------------result-*/
 
@@ -304,12 +304,10 @@ ul {
 	position: fixed;
 	font-family: var(--font);
 	color: var(--dark-color);
-	text-shadow: 2px 2px 4px var(--light-color);
 	border-radius: 15px;
-	background: var(--main-color);
+	background: var(--brand-color);
 	text-align: center;
 	border: 2px ridge var(--dark-color);
-	box-shadow: 2px 2px 4px var(--light-color);
 	display: none;
 	z-index: 1000;
 }
