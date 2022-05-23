@@ -239,6 +239,8 @@ No issues were experienced.
 | Dropdown menu | When user clicks on the menu button, the dropdown menu opens | As expected |
 | How to play dropdown menu item | When user clicks on 'How to play' in the dropdown menu, the 'How to play' window opens | As expected |
 
+![How to play](assets/image/how-to-play.png "How to play")
+
 ***To have simple controls***
 
 | Feature | Expected result | Actual result |
@@ -246,11 +248,15 @@ No issues were experienced.
 | Higher button | When user clicks on higher button, the next card reveals & if higher than the previous card, game continues, else game ends | As expected | 
 | Lower button | When user clicks on lower button, the next card reveals & if lower than the previous card, game continues, else game ends | As expected |
 
+![Higher & Lower buttons](assets/image/higher-lower-buttons.png "Higher & Lower buttons")
+
 ***To be able to replay without reloading the site***
 
 | Feature | Expected result | Actual result |
 | ----------- | ----------- | ----------- |
 | Play again button | When user clicks on 'Play again' button, game restarts | As expected |
+
+![Play again button](assets/image/play-again-button.png "Play again button")
 
 ***To be able to play on a range of devices***
 
@@ -267,6 +273,8 @@ No issues were experienced.
 | Contact us dropdown menu item | When user clicks on 'Contact us' in the dropdown menu, the 'Contact us' window opens | As expected |
 | Send button | When user clicks on send button, form data is sent to developer | As expected |
 
+![Contact us form](assets/image/contact-us.png "Contact us form")
+
 ***To be able to set my preferences for audio and theme***
 
 | Feature | Expected result | Actual result |
@@ -278,6 +286,9 @@ No issues were experienced.
 | Toggle sound icon | When user clicks on 'Toggle sound' button, header icon responds | As expected |
 | Toggle theme button | When user clicks on 'Toggle theme' button, theme is light/dark | As expected |
 | Toggle theme icon | When user clicks on 'Toggle theme' button, header icon responds | As expected |
+
+![Settings (light theme)](assets/image/settings-light.png "Settings (light theme)")
+![Settings (dark theme)](assets/image/settings-dark.png "Settings (dark theme)")
 
 ## 6. Deployment
 
