@@ -5,7 +5,7 @@
 }
 
 :root {
-	--first-color: #90ee90;
+	--first-color: #B6ECB6;
 	--second-color: #394057;
 	--third-color: #4A858B;
 	--fourth-color: lightblue;
@@ -21,8 +21,8 @@
 .darkTheme {
 	--first-color: #394057;
 	--second-color: #b4eeb4;
-	--third-color: #90ee90;
-	--card-font-color: #90ee90;
+	--third-color: #B6ECB6;
+	--card-font-color: #B6ECB6;
 	--light-color: #FFFFFF;
 }
 
