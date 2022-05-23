@@ -217,7 +217,9 @@ The reports can be viewed below:
 
 The [ally Color Contrast Accessibility Validator](https://color.a11y.com/Contrast/ "ally Color Contrast Accessibility Validator") was used to test for color contrast problems.
 
-A copy of the report can be accessed [here]( "ally Color Contrast Accessibility Validator report").
+The check reported no problems. All color-pair contrast tests returned an AA/AAA score.
+
+A copy of the report can be accessed [here](assets/tests/color-pair-contrast-testing.pdf "ally Color Contrast Accessibility Validator report").
 
 **Responsiveness Testing**
 
