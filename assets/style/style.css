@@ -5,9 +5,10 @@
 }
 
 :root {
-	--brand-color: #b4eeb4;
---dark-color: #394057;
---mid-color: #4A858B;
+	--first-color: lightgreen;
+--second-color: #394057;
+--third-color: #4A858B;
+	--fourth-color: lightblue;
 	--card-font-color: #4A858B;
 --light-color: #FFFFFF;
 	--item-link-color: #200484;
@@ -18,25 +19,25 @@
 
 /*TEST - COLORS TO BE CONFIRMED*/
 .darkTheme {
-	--brand-color: #394057;
-	--dark-color: #b4eeb4;
-	--mid-color: lightgreen;
+	--first-color: #394057;
+	--second-color: #b4eeb4;
+	--third-color: lightgreen;
 	--light-color: #FFFFFF;
 }
 
 .cardDesign-one {	
 	--card-font-color: rgba(165,42,42,1);
-	--mid-color: linear-gradient(315deg, rgba(255,163,219,1) 25%, rgba(165,42,42,1) 25%, rgba(165,42,42,1) 75%, rgba(255,163,219,1) 75%);
+	--third-color: linear-gradient(315deg, rgba(255,163,219,1) 25%, rgba(165,42,42,1) 25%, rgba(165,42,42,1) 75%, rgba(255,163,219,1) 75%);
 }
 
 .cardDesign-two {
 	--card-font-color: rgba(255,165,163,1);
-	--mid-color: radial-gradient(circle, rgba(255,165,163,1) 40%, rgba(163,228,255,1) 40%);
+	--third-color: radial-gradient(circle, rgba(255,165,163,1) 40%, rgba(163,228,255,1) 40%);
 }
 
 .cardDesign-three {
 	--card-font-color: rgba(163,163,255,1);
-	--mid-color: linear-gradient(90deg, rgba(229,236,182,1) 25%, rgba(163,163,255,1) 25%, rgba(163,163,255,1) 75%, rgba(229,236,182,1) 75%); 
+	--third-color: linear-gradient(90deg, rgba(229,236,182,1) 25%, rgba(163,163,255,1) 25%, rgba(163,163,255,1) 75%, rgba(229,236,182,1) 75%); 
 }
 
 html {
@@ -44,7 +45,7 @@ html {
 }
 
 body {
-	background-color: var(--brand-color);
+	background-color: var(--first-color);
 }
 
 p {
@@ -79,7 +80,7 @@ ul {
 	display: flex;
   flex-direction: column-reverse;
   justify-content: center;
-	color: var(--dark-color);
+	color: var(--second-color);
 	font-family: var(--font);
 	font-size: 2rem;
 }
@@ -105,7 +106,7 @@ ul {
 	width: 25rem;
 	padding: 1rem;
 	font-family: var(--font);
-	color: var(--dark-color);
+	color: var(--second-color);
 	text-align: center;
 }
 
@@ -125,7 +126,7 @@ ul {
 }
 
 .itemLink {
-	color: var(--dark-color);
+	color: var(--second-color);
 	text-decoration: none;
 }
 
@@ -163,10 +164,10 @@ ul {
 	position: fixed;
 	padding: 0.75rem;
 	font-family: var(--font);
-	color: var(--dark-color);
+	color: var(--second-color);
 	text-align: center;
-	background-color: var(--brand-color);
-	border: 1px solid var(--dark-color);
+	background-color: var(--first-color);
+	border: 1px solid var(--second-color);
 	z-index: 1070;
 	display: none;
 }
@@ -184,7 +185,7 @@ ul {
 /*------------------------------------------------------button-*/
 
 .button {
-	color: var(--dark-color);
+	color: var(--second-color);
 	font-family: var(--font);
 	border: none;
 }
@@ -211,13 +212,13 @@ ul {
   width: auto;
 	margin-top: 0.5rem;
 	font-size: 1.5rem;
-	border: 1px solid var(--dark-color);
+	border: 1px solid var(--second-color);
 	border-radius: 25px;
 	background-color: transparent;
 }
 
 .menu-toggle {
-	color: var(--dark-color);
+	color: var(--second-color);
 	border: none;
 	background-color: transparent;
 }
@@ -231,8 +232,8 @@ ul {
 	padding: 0.5rem 1.5rem;
 	color: inherit;
 	font-size: 1.5rem;
-	border: 1px solid var(--dark-color);
-	background: var(--brand-color);
+	border: 1px solid var(--second-color);
+	background: var(--first-color);
 	z-index: 1060;
 }
 
@@ -253,9 +254,9 @@ ul {
 	font-family: var(--font);
 	font-size: 3rem;
 	text-align: center;
-	border: 2px solid var(--dark-color);
+	border: 2px solid var(--second-color);
 	border-radius: 15px;
-	background: var(--mid-color);
+	background: var(--third-color);
 }
 
 .card {
@@ -284,7 +285,7 @@ ul {
 	height: 8rem;
 	width: 6rem;
 	margin: auto 0.5rem;
-	border: 1px solid var(--dark-color);
+	border: 1px solid var(--second-color);
 	border-radius: 15px;
 }
 
@@ -300,11 +301,11 @@ ul {
 	padding-top: 1.25rem;
 	position: fixed;
 	font-family: var(--font);
-	color: var(--dark-color);
+	color: var(--second-color);
 	border-radius: 15px;
-	background: var(--brand-color);
+	background: var(--fourth-color);
 	text-align: center;
-	border: 2px ridge var(--dark-color);
+	border: 2px ridge var(--second-color);
 	display: none;
 	z-index: 1000;
 }
@@ -329,7 +330,7 @@ ul {
 }
 
 .numInd-default {
-	color: var(--brand-color);
+	color: var(--first-color);
 }
 
 .numInd-green {
@@ -351,7 +352,7 @@ ul {
 	display: flex;
 	align-items: center;
   justify-content: center;
-	color: var(--dark-color);
+	color: var(--second-color);
 	text-align: center;
 	font-size: 1rem;
 }
@@ -380,7 +381,7 @@ ul {
 }
  @keyframes spinCard {
 	20% {transform: rotateY(180deg);}
-	90% {background: var(--mid-color);}
+	90% {background: var(--third-color);}
 	100% {background: var(--light-color);}
 }
 
