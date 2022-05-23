@@ -4,7 +4,7 @@
 
 Hi-Lo is a browser game based on the card game, High Low. The aim of the game is to turn over six cards, correctly guessing whether the value of each card if higher or lower than the previous card. If the player guesses incorrectly, the game ends. The game is responsive and accessible on a range of web-enabled devices, making it easy to navigate for new and existing players.
 
-NOTE: RESPONSIVE IMAGE HERE
+![Hi-Lo](assets/image/responsive.png "Hi-Lo")
 
 ## Contents
 
@@ -250,7 +250,7 @@ No bugs have been identified.
 
 | Feature | Expected result | Actual result |
 | ----------- | ----------- | ----------- |
-| Play again button | When user clicks on 'Play again' buttong, game restarts | As expected |
+| Play again button | When user clicks on 'Play again' button, game restarts | As expected |
 
 ***To be able to play on a range of devices***
 
