@@ -8,6 +8,7 @@
 	--brand-color: #b4eeb4;
 --dark-color: #394057;
 --mid-color: #4A858B;
+	--card-font-color: #4A858B;
 --light-color: #FFFFFF;
 	--number-indicator: #99d0e0;
 	--item-link-color: #200484;
@@ -25,18 +26,18 @@
 }
 
 .cardDesign-one {	
-	--light-color: rgba(17,17,17,1);
-	--light-color: linear-gradient(315deg, rgba(165,42,42,1) 25%, rgba(17,17,17,1) 25%, rgba(17,17,17,1) 75%, rgba(165,42,42,1) 75%);
+	--card-font-color: rgba(17,17,17,1);
+	--mid-color: linear-gradient(315deg, rgba(165,42,42,1) 25%, rgba(17,17,17,1) 25%, rgba(17,17,17,1) 75%, rgba(165,42,42,1) 75%);
 }
 
 .cardDesign-two {
-	--light-color: rgba(200,40,84,1);
-	--light-color: radial-gradient(circle, rgba(200,40,84,1) 40%, rgba(84,175,30,1) 40%);
+	--card-font-color: rgba(17,17,78,1);
+	--mid-color: radial-gradient(circle, rgba(17,17,78,1) 40%, rgba(238,221,130,1) 40%);
 }
 
 .cardDesign-three {
-	--light-color: rgba(17,17,17,1);
-	--light-color: linear-gradient(90deg, rgba(165,42,42,1) 25%, rgba(17,17,17,1) 25%, rgba(17,17,17,1) 75%, rgba(165,42,42,1) 75%); 
+	--card-font-color: rgba(17,17,17,1);
+	--mid-color: linear-gradient(90deg, rgba(165,42,42,1) 25%, rgba(17,17,17,1) 25%, rgba(17,17,17,1) 75%, rgba(165,42,42,1) 75%); 
 }
 
 html {
@@ -178,6 +179,7 @@ ul {
 
 .form-control {
 	font-size: 1.25rem;
+	font-family: var(--paragraph-font);
 }
 
 /*------------------------------------------------------button-*/
@@ -201,6 +203,10 @@ ul {
 	border: 2px solid var(--dark-color);
 	border-radius: 50px;
 	background-color: var(--mid-color);
+}
+
+.subMenuBody-settings {
+	font-family: var(--paragraph-font);	
 }
 
 .subMenuBtn {
@@ -246,7 +252,7 @@ ul {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: var(--mid-color);
+	color: var(--card-font-color);
 	font-family: var(--font);
 	font-size: 3rem;
 	text-align: center;
@@ -286,7 +292,7 @@ ul {
 }
 
 .cardDesign--one { background: linear-gradient(315deg, rgba(165,42,42,1) 25%, rgba(17,17,17,1) 25%, rgba(17,17,17,1) 75%, rgba(165,42,42,1) 75%); }
-.cardDesign--two { background: radial-gradient(circle, rgba(200,40,84,1) 40%, rgba(84,175,30,1) 40%); }
+.cardDesign--two { background: radial-gradient(circle, rgba(17,17,78,1) 40%, rgba(238,221,130,1) 40%); }
 .cardDesign--three { background: linear-gradient(90deg, rgba(165,42,42,1) 25%, rgba(17,17,17,1) 25%, rgba(17,17,17,1) 75%, rgba(165,42,42,1) 75%); }
 
 /*------------------------------------------------------result-*/
