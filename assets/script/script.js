@@ -7,12 +7,24 @@ $(document).ready(intro());
 
 function intro() {
 	$(".introCard:eq(0)").addClass("spinCard");
-	setTimeout(function(){ $(".introCard:eq(1)").addClass("spinCard"); }, 500);
-	setTimeout(function(){ $(".introCard:eq(2)").addClass("spinCard"); }, 1000);
-	setTimeout(function(){ $(".introCard:eq(3)").addClass("spinCard"); }, 1500);
-	setTimeout(function(){ $(".introCard:eq(4)").addClass("spinCard"); }, 2000);
-	setTimeout(function(){ $("#intro-container").hide(); }, 6000);
-	setTimeout(function(){ $("#menu-container").show(); }, 6000);
+	setTimeout(function () {
+		$(".introCard:eq(1)").addClass("spinCard");
+	}, 500);
+	setTimeout(function () {
+		$(".introCard:eq(2)").addClass("spinCard");
+	}, 1000);
+	setTimeout(function () {
+		$(".introCard:eq(3)").addClass("spinCard");
+	}, 1500);
+	setTimeout(function () {
+		$(".introCard:eq(4)").addClass("spinCard");
+	}, 2000);
+	setTimeout(function () {
+		$("#intro-container").hide();
+	}, 6000);
+	setTimeout(function () {
+		$("#menu-container").show();
+	}, 6000);
 }
 
 /*---------------------------------------------------------count-*/
@@ -20,27 +32,27 @@ function intro() {
 let count = 1;
 
 function addCount() {
-	count+=1;
+	count += 1;
 	return count;
-	}
+}
 
 /*---------------------------------------------------------array-*/
 
- var deck = {
-      "A": 1,
-      "2": 2,
-	 		"3": 3,
-	 		"4": 4,
-      "5": 5,
-	 		"6": 6,
-	 		"7": 7,
-      "8": 8,
-	 		"9": 9,
-	 		"10": 10,
-	 		"J": 10,
-	 		"Q": 10,
-      "K": 10
-  };
+var deck = {
+	"A": 1,
+	"2": 2,
+	"3": 3,
+	"4": 4,
+	"5": 5,
+	"6": 6,
+	"7": 7,
+	"8": 8,
+	"9": 9,
+	"10": 10,
+	"J": 10,
+	"Q": 10,
+	"K": 10
+};
 
 /** Get random card from deck */
 function getCardNumber() {
@@ -55,7 +67,7 @@ function getCardNumber() {
 function startGame() {
 	$("#menu-container, #intro-container, #footer").hide();
 	$("#game-container").show();
-	$(".numberIndicator:eq(0)").removeClass("numInd-default").addClass("numInd-green");	
+	$(".numberIndicator:eq(0)").removeClass("numInd-default").addClass("numInd-green");
 	$(".card:eq(0)").addClass("spinCard").html(getCardNumber());
 }
 
@@ -64,14 +76,14 @@ function restartGame() {
 	$("#higher-button").prop("disabled", false);
 	$("#lower-button").prop("disabled", false);
 	$("#result").hide().removeClass("showResult");
-	$(".card").each(function() {
+	$(".card").each(function () {
 		$(".card").removeClass("spinCard");
 	});
-	$(".numberIndicator").each(function() {
+	$(".numberIndicator").each(function () {
 		$(".numberIndicator").removeClass("numInd-green numInd-red").addClass("numInd-default");
 	});
-	setTimeout(function(){
-		$(".numberIndicator:eq(0)").removeClass("numInd-default").addClass("numInd-green"); 
+	setTimeout(function () {
+		$(".numberIndicator:eq(0)").removeClass("numInd-default").addClass("numInd-green");
 		$(".card:eq(0)").addClass("spinCard").html(getCardNumber());
 	}, 500);
 	count = 1;
@@ -105,7 +117,7 @@ function soundOn() {
 }
 
 // Toggle sound on/off and sound icon
-$("#audioToggle").click(function() {
+$("#audioToggle").click(function () {
 	if ($("#audioOn").is(":visible")) {
 		$("#audioOn, #audioToggleOn").hide();
 		$("#audioOff, #audioToggleOff").show();
@@ -120,9 +132,9 @@ $("#audioToggle").click(function() {
 /*---------------------------------------------------------theme-*/
 
 // Toggle theme light/dark and theme icon
-$("#themeToggle").click(function(){
-    $(":root").toggleClass("darkTheme");
-		if ($("#themeLight").is(":visible")) {
+$("#themeToggle").click(function () {
+	$(":root").toggleClass("darkTheme");
+	if ($("#themeLight").is(":visible")) {
 		$("#themeLight, #themeToggleLight").hide();
 		$("#themeDark, #themeToggleDark").show();
 	} else {
@@ -131,53 +143,53 @@ $("#themeToggle").click(function(){
 	}
 });
 
-$("#cardDesign-default").click(function(){
+$("#cardDesign-default").click(function () {
 	$(":root").removeClass("cardDesign-one cardDesign-two cardDesign-three");
 });
 
-$("#cardDesign-one").click(function(){
+$("#cardDesign-one").click(function () {
 	$(":root").removeClass("cardDesign-two cardDesign-three").addClass("cardDesign-one");
 });
 
-$("#cardDesign-two").click(function(){
+$("#cardDesign-two").click(function () {
 	$(":root").removeClass("cardDesign-one cardDesign-three").addClass("cardDesign-two");
 });
 
-$("#cardDesign-three").click(function(){
+$("#cardDesign-three").click(function () {
 	$(":root").removeClass("cardDesign-one cardDesign-two").addClass("cardDesign-three");
 });
 
 /*----------------------------------------------------send-email-*/
 
 function sendMail(contactForm) {
-    emailjs.send("service_l0dqag3", "template_30ofgfw", {
-        "from_name": contactForm.name.value,
-        "from_email": contactForm.emailaddress.value,
-        "message": contactForm.messagebox.value
-    })
-    .then(
-        function(response) {
-            console.log("SUCCESS", response);
-						alert("Your message has been sent");
-						document.getElementById("contactForm").reset();
-        },
-        function(error) {
-            console.log("FAILED", error);
-        }
-    );
-    return false; 
+	emailjs.send("service_l0dqag3", "template_30ofgfw", {
+			"from_name": contactForm.name.value,
+			"from_email": contactForm.emailaddress.value,
+			"message": contactForm.messagebox.value
+		})
+		.then(
+			function (response) {
+				console.log("SUCCESS", response);
+				alert("Your message has been sent");
+				document.getElementById("contactForm").reset();
+			},
+			function (error) {
+				console.log("FAILED", error);
+			}
+		);
+	return false;
 }
 
 /*----------------------------------------------number-indicator-*/
 
 /** Change number indicator to green */
 function numberIndicatorGreen() {
-	$(".numberIndicator").eq(count-1).removeClass("numInd-default").addClass("numInd-green");
+	$(".numberIndicator").eq(count - 1).removeClass("numInd-default").addClass("numInd-green");
 }
 
 /** Change number indicator to red */
 function numberIndicatorRed() {
-	$(".numberIndicator").eq(count-1).removeClass("numInd-default").addClass("numInd-red");
+	$(".numberIndicator").eq(count - 1).removeClass("numInd-default").addClass("numInd-red");
 }
 
 /*-----------------------------------------------------win-/-lose-*/
@@ -189,7 +201,7 @@ function win() {
 
 function winGame() {
 	let winText = $("#winText").html();
-	setTimeout(function() {
+	setTimeout(function () {
 		$("#result").addClass("showResult").html(winText).show();
 	}, 1000);
 	setTimeout(winAudio, 1000);
@@ -203,7 +215,7 @@ function winGame() {
 
 function loseGame() {
 	let loseText = $("#loseText").html();
-	setTimeout(function() {
+	setTimeout(function () {
 		$("#result").addClass("showResult").html(loseText).show();
 	}, 1000);
 	setTimeout(loseAudio, 1000);
@@ -214,7 +226,7 @@ function loseGame() {
 
 function draw() {
 	let drawText = $("#drawText").html();
-	setTimeout(function() {
+	setTimeout(function () {
 		$("#result").addClass("showResult").html(drawText).show();
 	}, 1000);
 	setTimeout(loseAudio, 1000);
@@ -231,13 +243,13 @@ function revealCard() {
 }
 
 // Add click handler to #higher-button and run higher() and addCount()
-$("#higher-button").click(function() {
+$("#higher-button").click(function () {
 	higher();
 	addCount();
 });
 
 // Add click handler to #loweer-button and run lower() and addCount()
-$("#lower-button").click(function() {
+$("#lower-button").click(function () {
 	lower();
 	addCount();
 });
@@ -246,12 +258,12 @@ $("#lower-button").click(function() {
 function higher() {
 	revealCard();
 	let thisCard = deck[$(".card").eq(count).html()];
-	let lastCard = deck[$(".card").eq(count-1).html()];
+	let lastCard = deck[$(".card").eq(count - 1).html()];
 	if (count == 5 && parseInt(thisCard) >= parseInt(lastCard)) {
 		winGame();
 	} else if (parseInt(thisCard) > parseInt(lastCard)) {
-	 	win(); 
-	}	else if (thisCard == lastCard) {
+		win();
+	} else if (thisCard == lastCard) {
 		draw();
 	} else {
 		loseGame();
@@ -261,12 +273,12 @@ function higher() {
 function lower() {
 	revealCard();
 	let thisCard = deck[$(".card").eq(count).html()];
-	let lastCard = deck[$(".card").eq(count-1).html()];
+	let lastCard = deck[$(".card").eq(count - 1).html()];
 	if (count == 5 && parseInt(thisCard) <= parseInt(lastCard)) {
 		winGame();
 	} else if (parseInt(thisCard) < parseInt(lastCard)) {
 		win();
-	}	else if (thisCard == lastCard) {
+	} else if (thisCard == lastCard) {
 		draw();
 	} else {
 		loseGame();
@@ -275,28 +287,28 @@ function lower() {
 
 /*------------------------------------------------------sub-menu-*/
 
-$("#showHowToPlay, #howToPlay-icon").click(function() {
+$("#showHowToPlay, #howToPlay-icon").click(function () {
 	$("#menu-container .subMenu:eq(1), .subMenu:eq(2), .subMenu:eq(3)").hide();
 	$(".subMenu:eq(0)").show();
 });
 
-$("#showContact, #contact-icon").click(function() {
+$("#showContact, #contact-icon").click(function () {
 	$(".subMenu:eq(0), .subMenu:eq(2), .subMenu:eq(3)").hide();
 	$(".subMenu:eq(1)").show();
 });
 
-$("#showSettings, #settings-icon").click(function() {
+$("#showSettings, #settings-icon").click(function () {
 	$(".subMenu:eq(0), .subMenu:eq(1), .subMenu:eq(3)").hide();
-  $(".subMenu:eq(2)").show();
+	$(".subMenu:eq(2)").show();
 });
 
-$(".showChangeDesign").click(function() {
+$(".showChangeDesign").click(function () {
 	$(".subMenu:eq(2)").hide();
-  $(".subMenu:eq(3)").show();
+	$(".subMenu:eq(3)").show();
 });
 
-$(".subMenuBtnClose").click(function() {
-	$(".subMenu").each(function() {
+$(".subMenuBtnClose").click(function () {
+	$(".subMenu").each(function () {
 		$(".subMenu").hide();
 	});
 });
@@ -335,35 +347,34 @@ function particleThree() {
 
 /** Create particle */
 function createParticle(x, y) {
-  const particle = document.createElement("particle");
-  document.body.appendChild(particle);
+	const particle = document.createElement("particle");
+	document.body.appendChild(particle);
 	// Generate a random color
-  particle.style.background = `hsl(${Math.random() * 250 + 250}, 100%, 50%)`;
-  // Generate a random x & y destination
-  const destinationX = x + (Math.random() - 0.5) * 2 * 100;
-  const destinationY = y + (Math.random() - 0.5) * 2 * 100;
-  // Store the animation in a variable as we will need it later
-  const animation = particle.animate([
-    {
-      // Set the origin position of the particle
-      // Offset the particle with half its size to center it around the mouse
-      transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
-      opacity: 1
-    },
-    {
-      // Define the final coordinates as the second keyframe
-      transform: `translate(${destinationX}px, ${destinationY}px)`,
-      opacity: 0
-    }
-  ], {
-    // Set a duration
-    duration: 5000,
-    easing: 'cubic-bezier(0, .9, .57, 1)',
-    // Delay every particle with a random value 
-    delay: Math.random() * 150
-  });
-  // When the animation is complete, remove the element from the DOM
-  animation.onfinish = () => {
-    particle.remove();
-  };
+	particle.style.background = `hsl(${Math.random() * 250 + 250}, 100%, 50%)`;
+	// Generate a random x & y destination
+	const destinationX = x + (Math.random() - 0.5) * 2 * 100;
+	const destinationY = y + (Math.random() - 0.5) * 2 * 100;
+	// Store the animation in a variable as we will need it later
+	const animation = particle.animate([{
+			// Set the origin position of the particle
+			// Offset the particle with half its size to center it around the mouse
+			transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
+			opacity: 1
+		},
+		{
+			// Define the final coordinates as the second keyframe
+			transform: `translate(${destinationX}px, ${destinationY}px)`,
+			opacity: 0
+		}
+	], {
+		// Set a duration
+		duration: 5000,
+		easing: 'cubic-bezier(0, .9, .57, 1)',
+		// Delay every particle with a random value 
+		delay: Math.random() * 150
+	});
+	// When the animation is complete, remove the element from the DOM
+	animation.onfinish = () => {
+		particle.remove();
+	};
 }

@@ -5,12 +5,12 @@
 }
 
 :root {
-	--first-color: lightgreen;
---second-color: #394057;
---third-color: #4A858B;
+	--first-color: #90ee90;
+	--second-color: #394057;
+	--third-color: #4A858B;
 	--fourth-color: lightblue;
 	--card-font-color: #4A858B;
---light-color: #FFFFFF;
+	--light-color: #FFFFFF;
 	--item-link-color: #200484;
 	--font: 'Irish Grover', cursive;
 	--paragraph-font: 'Roboto', sans-serif;
@@ -21,23 +21,23 @@
 .darkTheme {
 	--first-color: #394057;
 	--second-color: #b4eeb4;
-	--third-color: lightgreen;
+	--third-color: #90ee90;
 	--light-color: #FFFFFF;
 }
 
-.cardDesign-one {	
-	--card-font-color: rgba(165,42,42,1);
-	--third-color: linear-gradient(315deg, rgba(255,163,219,1) 25%, rgba(165,42,42,1) 25%, rgba(165,42,42,1) 75%, rgba(255,163,219,1) 75%);
+.cardDesign-one {
+	--card-font-color: rgba(165, 42, 42, 1);
+	--third-color: linear-gradient(315deg, rgba(255, 163, 219, 1) 25%, rgba(165, 42, 42, 1) 25%, rgba(165, 42, 42, 1) 75%, rgba(255, 163, 219, 1) 75%);
 }
 
 .cardDesign-two {
-	--card-font-color: rgba(255,165,163,1);
-	--third-color: radial-gradient(circle, rgba(255,165,163,1) 40%, rgba(163,228,255,1) 40%);
+	--card-font-color: rgba(255, 165, 163, 1);
+	--third-color: radial-gradient(circle, rgba(255, 165, 163, 1) 40%, rgba(163, 228, 255, 1) 40%);
 }
 
 .cardDesign-three {
-	--card-font-color: rgba(163,163,255,1);
-	--third-color: linear-gradient(90deg, rgba(229,236,182,1) 25%, rgba(163,163,255,1) 25%, rgba(163,163,255,1) 75%, rgba(229,236,182,1) 75%); 
+	--card-font-color: rgba(163, 163, 255, 1);
+	--third-color: linear-gradient(90deg, rgba(229, 236, 182, 1) 25%, rgba(163, 163, 255, 1) 25%, rgba(163, 163, 255, 1) 75%, rgba(229, 236, 182, 1) 75%);
 }
 
 html {
@@ -73,13 +73,13 @@ ul {
 
 #header {
 	position: fixed;
-  left: 0;
-  top: 0;
+	left: 0;
+	top: 0;
 	height: 10%;
-  width: 100%;
+	width: 100%;
 	display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
+	flex-direction: column-reverse;
+	justify-content: center;
 	color: var(--second-color);
 	font-family: var(--font);
 	font-size: 2rem;
@@ -114,13 +114,13 @@ ul {
 	height: 20rem;
 	width: 40rem;
 	display: flex;
-  align-items: center;
+	align-items: center;
 	justify-content: center;
 }
 
 .menu-item {
 	padding-top: 0.75rem;
-  font-size: 3em;
+	font-size: 3em;
 	border: none;
 	background-color: transparent;
 }
@@ -198,18 +198,18 @@ ul {
 
 .gamebutton {
 
-  font-size: 2rem;
+	font-size: 2rem;
 	border: none;
 	background-color: transparent;
 }
 
 .subMenuBody-settings {
-	font-family: var(--paragraph-font);	
+	font-family: var(--paragraph-font);
 }
 
 .subMenuBtn {
 	height: auto;
-  width: auto;
+	width: auto;
 	margin-top: 0.5rem;
 	font-size: 1.5rem;
 	border: 1px solid var(--second-color);
@@ -268,17 +268,31 @@ ul {
 	float: left;
 }
 
-.introCardOne { transform: matrix(1, -0.5, 0.5, 1, 0, 10); }
-.introCardTwo { transform: matrix(1, -0.25, 0.25, 1, 0, -25); }
-.introCardThree { transform: matrix(1, 0, 0, 1, 0, -40); }
-.introCardFour { transform: matrix(1, 0.25, -0.25, 1, 0, -25); }
-.introCardFive { transform: matrix(1, 0.5, -0.5, 1, 0, 10); }
+.introCardOne {
+	transform: matrix(1, -0.5, 0.5, 1, 0, 10);
+}
+
+.introCardTwo {
+	transform: matrix(1, -0.25, 0.25, 1, 0, -25);
+}
+
+.introCardThree {
+	transform: matrix(1, 0, 0, 1, 0, -40);
+}
+
+.introCardFour {
+	transform: matrix(1, 0.25, -0.25, 1, 0, -25);
+}
+
+.introCardFive {
+	transform: matrix(1, 0.5, -0.5, 1, 0, 10);
+}
 
 .cardDesign-container {
 	height: 8rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
 .cardDesign {
@@ -289,9 +303,17 @@ ul {
 	border-radius: 15px;
 }
 
-.cardDesign--one { background: linear-gradient(315deg, rgba(255,163,219,1) 25%, rgba(165,42,42,1) 25%, rgba(165,42,42,1) 75%, rgba(255,163,219,1) 75%); }
-.cardDesign--two { background: radial-gradient(circle, rgba(255,165,163,1) 40%, rgba(163,228,255,1) 40%); }
-.cardDesign--three { background: linear-gradient(90deg, rgba(229,236,182,1) 25%, rgba(163,163,255,1) 25%, rgba(163,163,255,1) 75%, rgba(229,236,182,1) 75%); }
+.cardDesign--one {
+	background: linear-gradient(315deg, rgba(255, 163, 219, 1) 25%, rgba(165, 42, 42, 1) 25%, rgba(165, 42, 42, 1) 75%, rgba(255, 163, 219, 1) 75%);
+}
+
+.cardDesign--two {
+	background: radial-gradient(circle, rgba(255, 165, 163, 1) 40%, rgba(163, 228, 255, 1) 40%);
+}
+
+.cardDesign--three {
+	background: linear-gradient(90deg, rgba(229, 236, 182, 1) 25%, rgba(163, 163, 255, 1) 25%, rgba(163, 163, 255, 1) 75%, rgba(229, 236, 182, 1) 75%);
+}
 
 /*------------------------------------------------------result-*/
 
@@ -345,13 +367,13 @@ ul {
 
 #footer {
 	position: fixed;
-  left: 0;
-  bottom: 0;
+	left: 0;
+	bottom: 0;
 	height: 10%;
-  width: 100%;
+	width: 100%;
 	display: flex;
 	align-items: center;
-  justify-content: center;
+	justify-content: center;
 	color: var(--second-color);
 	text-align: center;
 	font-size: 1rem;
@@ -379,18 +401,33 @@ ul {
 .spinCard {
 	animation: spinCard 1s linear forwards;
 }
- @keyframes spinCard {
-	20% {transform: rotateY(180deg);}
-	90% {background: var(--third-color);}
-	100% {background: var(--light-color);}
+
+@keyframes spinCard {
+	20% {
+		transform: rotateY(180deg);
+	}
+
+	90% {
+		background: var(--third-color);
+	}
+
+	100% {
+		background: var(--light-color);
+	}
 }
 
 .showResult {
 	animation: showResult 1s linear forwards;
 }
+
 @keyframes showResult {
-	0% {transform: scale(0);}
-	100% {transform: scale(2);}
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(2);
+	}
 }
 
 /*---------------------------------------------------particle--*/
@@ -399,10 +436,10 @@ particle {
 	height: 0.3rem;
 	width: 0.3rem;
 	border-radius: 50%;
-  left: 0;	
-  pointer-events: none;
-  position: fixed;
-  top: 0;
+	left: 0;
+	pointer-events: none;
+	position: fixed;
+	top: 0;
 	opacity: 0;
 	z-index: 1060;
 }
@@ -413,6 +450,7 @@ particle {
 	html {
 		font-size: 16px;
 	}
+
 	#intro-container {
 		transform: scale(1.2);
 	}
@@ -425,29 +463,35 @@ particle {
 	html {
 		font-size: 14px;
 	}
+
 	#intro-container {
 		transform: scale(0.7);
 	}
+
 	#game-container {
 		transform: scale(0.8);
 		padding-top: 2rem;
 	}
+
 	#result {
 		width: 14rem;
 	}
 }
 
-@media screen and  (max-width: 375px) {
+@media screen and (max-width: 375px) {
 	html {
 		font-size: 13px;
 	}
+
 	#intro-container {
 		transform: scale(0.6);
 	}
+
 	#game-container {
 		transform: scale(0.8);
 		padding-top: 3rem;
 	}
+
 	#result {
 		width: 12rem;
 	}
@@ -457,13 +501,16 @@ particle {
 	html {
 		font-size: 12px;
 	}
+
 	#intro-container {
 		transform: scale(0.6);
 	}
+
 	#game-container {
 		transform: scale(0.9);
 		padding-top: 2.5rem;
 	}
+
 	#result {
 		width: 12rem;
 	}

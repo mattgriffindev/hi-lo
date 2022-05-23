@@ -225,9 +225,9 @@ The site's responsiveness was tested manually, using the Google Chrome DevTools,
 
 The site was responsive on all screen sizes from 320x480px to 1920x1200px.
 
-**Known Bugs**
+**Jest Automated Testing**
 
-No bugs have been identified.
+TBC
 
 **Testing User Objectives**
 

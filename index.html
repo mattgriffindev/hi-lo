@@ -19,7 +19,9 @@
 	<link href="assets/style/style.css" rel="stylesheet" type="text/css">
 	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" async></script>
 	<script>
-		(function () {emailjs.init("jg53fM6y9nHAaBhsy");}) ();
+		(function () {
+			emailjs.init("jg53fM6y9nHAaBhsy");
+		})();
 	</script>
 </head>
 
@@ -34,15 +36,17 @@
 			<div class="col col-top-right d-flex justiny-contents-flex-end">
 				<div><i id="themeLight" class="far fa-sun me-3"></i><i id="themeDark" class="fas fa-moon me-3"></i>
 				</div>
-				<div><i id="audioOn" class="fas fa-volume-up me-3"></i><i id="audioOff" class="fas fa-volume-mute me-3"></i>
+				<div><i id="audioOn" class="fas fa-volume-up me-3"></i><i id="audioOff"
+						class="fas fa-volume-mute me-3"></i>
 				</div>
 				<div class="dropdown">
-					<button class="menu-toggle dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-						aria-expanded="false" aria-label="Dropdown menu">
+					<button class="menu-toggle dropdown-toggle" type="button" id="dropdownMenuButton1"
+						data-bs-toggle="dropdown" aria-expanded="false" aria-label="Dropdown menu">
 						<i class="fas fa-ellipsis-h"></i>
 					</button>
 					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-						<li id="howToPlay-icon" class="itemLink my-2"><i class="fas fa-gamepad me-2"></i>How to play</li>
+						<li id="howToPlay-icon" class="itemLink my-2"><i class="fas fa-gamepad me-2"></i>How to play
+						</li>
 						<li id="contact-icon" class="itemLink my-2"><i class="fas fa-envelope me-3"></i>Contact us</li>
 						<li id="settings-icon" class="itemLink my-2"><i class="fas fa-cog me-3"></i>Settings</li>
 					</ul>
@@ -72,15 +76,18 @@
 					<button class="itemLink menu-item" aria-label="Play game" onclick="startGame()">Play</button>
 				</li>
 				<li>
-					<button id="showHowToPlay" class="itemLink menu-item" aria-label="How to play"><i class="fas fa-gamepad"></i> How to play
+					<button id="showHowToPlay" class="itemLink menu-item" aria-label="How to play"><i
+							class="fas fa-gamepad"></i> How to play
 					</button>
 				</li>
 				<li>
-					<button id="showContact" class="itemLink menu-item" aria-label="Contact us"><i class="fas fa-envelope"></i> Contact us
+					<button id="showContact" class="itemLink menu-item" aria-label="Contact us"><i
+							class="fas fa-envelope"></i> Contact us
 					</button>
 				</li>
 				<li>
-					<button id="showSettings" class="itemLink menu-item" aria-label="Settings"><i class="fas fa-cog"></i> Settings</button>
+					<button id="showSettings" class="itemLink menu-item" aria-label="Settings"><i
+							class="fas fa-cog"></i> Settings</button>
 				</li>
 			</ul>
 		</div>
@@ -90,7 +97,8 @@
 		<div class="subMenu" aria-hidden="true">
 			<h2 class="subMenuTitle">How to Play</h2>
 			<div class="subMenuBody">
-				<p>Use the up and down arrow buttons to guess whether the next card to be revealed will be higher or lower than
+				<p>Use the up and down arrow buttons to guess whether the next card to be revealed will be higher or
+					lower than
 					the previous card.</p>
 				<p>Get 5 in a row to win the game. Note, Ace (A) is low (1) and you don't get anything for a pair!</p>
 			</div>
@@ -106,11 +114,12 @@
 			<div class="subMenuBody">
 				<div id="contact-form">
 					<form id="contactForm" onsubmit="return sendMail(this);">
-						<input type="text" name="name" class="form-control mb-2" id="fullname" placeholder="Name" required />
-						<input type="text" name="emailaddress" class="form-control mb-2" id="emailaddress" placeholder="Email"
+						<input type="text" name="name" class="form-control mb-2" id="fullname" placeholder="Name"
 							required />
-						<textarea rows="2" name="messagebox" class="form-control mb-2" id="messagebox" placeholder="Your message"
-							style="resize:none" required></textarea>
+						<input type="text" name="emailaddress" class="form-control mb-2" id="emailaddress"
+							placeholder="Email" required />
+						<textarea rows="2" name="messagebox" class="form-control mb-2" id="messagebox"
+							placeholder="Your message" style="resize:none" required></textarea>
 						<button type="submit" class="subMenuBtn itemLink" aria-label="Send">Send</button>
 					</form>
 				</div>
@@ -127,12 +136,14 @@
 			<div class="subMenuBody subMenuBody-settings">
 				<ul>
 					<li>
-						<button id="audioToggle" class="itemLink settings-item" aria-label="Toggle sound">Toggle Sound</button>
+						<button id="audioToggle" class="itemLink settings-item" aria-label="Toggle sound">Toggle
+							Sound</button>
 						<span id="audioToggleOn" class="settings-item">(ON)</span><span id="audioToggleOff"
 							class="settings-item">(OFF)</span>
 					</li>
 					<li>
-						<button id="themeToggle" class="itemLink settings-item" aria-label="Toggle theme">Toggle Theme</button>
+						<button id="themeToggle" class="itemLink settings-item" aria-label="Toggle theme">Toggle
+							Theme</button>
 						<span id="themeToggleLight" class="settings-item">(LIGHT)</span><span id="themeToggleDark"
 							class="settings-item">(DARK)</span>
 					</li>
@@ -221,7 +232,8 @@
 		<div class="row">
 			<div>&copy; 2022. Hi-Lo.<span class="d-inline d-sm-none"><br></span> Made with <i
 					class="fas fa-heart hvr-pulse"></i>
-				by <a href="https://github.com/mattgriffindev" target="_blank" class="itemLink signature">mattgriffindev</a>
+				by <a href="https://github.com/mattgriffindev" target="_blank"
+					class="itemLink signature">mattgriffindev</a>
 			</div>
 		</div>
 	</div>
@@ -229,23 +241,25 @@
 
 	<!-- 	scripts-->
 	<script id="loseText" type="text/html">
-        <h4>Sorry, you lose!</h4>
-        <p class="itemLink" onclick="restartGame()">Play again</p>
-    </script>
+		<h4>Sorry, you lose!</h4>
+		<p class="itemLink" onclick="restartGame()">Play again</p>
+	</script>
 	<script id="winText" type="text/html">
-      <h4>You're a winner!</h4>
-      <p><a class="itemLink" href="https://www.twitter.com/share?text=I got 5 in a row on Hi-Lo! Take on the challenge:&url=https://www.google.com Made by @mattgriffindev" target="_blank" rel="noopener"><i class="fab fa-twitter"></i> Share your victory</a></p>
-			<p class="itemLink" onclick="restartGame()">Play again</p>
-    </script>
+		<h4>You're a winner!</h4>
+		<p><a class="itemLink"
+				href="https://www.twitter.com/share?text=I got 5 in a row on Hi-Lo! Take on the challenge:&url=https://www.google.com Made by @mattgriffindev"
+				target="_blank" rel="noopener"><i class="fab fa-twitter"></i> Share your victory</a></p>
+		<p class="itemLink" onclick="restartGame()">Play again</p>
+	</script>
 	<script id="drawText" type="text/html">
-        <h4>You don't get anything for a pair!</h4>
-        <p class="itemLink" onclick="restartGame()">Play again</p>
-    </script>
+		<h4>You don't get anything for a pair!</h4>
+		<p class="itemLink" onclick="restartGame()">Play again</p>
+	</script>
 
 	<script src="assets/script/script.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-		crossorigin="anonymous"></script>
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+	</script>
 	<!--scripts-->
 
 </body>
