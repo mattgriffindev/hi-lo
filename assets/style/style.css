@@ -22,6 +22,7 @@
 	--first-color: #394057;
 	--second-color: #b4eeb4;
 	--third-color: #90ee90;
+	--card-font-color: #90ee90;
 	--light-color: #FFFFFF;
 }
 
@@ -197,8 +198,7 @@ ul {
 }
 
 .gamebutton {
-
-	font-size: 2rem;
+	font-size: 3rem;
 	border: none;
 	background-color: transparent;
 }
