@@ -45,19 +45,15 @@ The website is a single-page site consisting of one HTML page (index.html). The 
 
 **Color Scheme**
 
-TBC
+The main color scheme consists of #394057 and #B6ECB6. These alternate between the background and foreground color depending on the user's theme preference, i.e. light or dark.
 
 **Typography**
 
-The main font is Irish Grover. This is used throughout the site with a cursive fallback font.
+The main font is Irish Grover. This is used throughout the site with a cursive fallback font. This font was chosen because of its fun and engaging look.
 
-The paragraph font is Roboto. This is used through the site with a sans-serif fallback font.
+The paragraph font is Roboto. This is used through the site with a sans-serif fallback font. This font was chosen because of its readability for smaller text.
 
 The signature font is M PLUS 1 Code. This is used in the footer with a cursive fallback font.
-
-**Imagery**
-
-TBC
 
 **Interactive Links**
 
@@ -229,7 +225,9 @@ The site was responsive on all screen sizes from 320x480px to 1920x1200px.
 
 **Jest Automated Testing**
 
-TBC
+Automated tests were performed using the Jest testing framework.
+
+No issues were experienced.
 
 **Testing User Objectives**
 
